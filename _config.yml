@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "Image1.png"
+  avatar           : "profile.png"
   name             : "Anujith Muraleedharan"
   pronouns         : # example: "she/her"  
   bio              : "Robot Motion Planning, Control, Intelligence"

@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : ""
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Anujith Muraleedharan"
 description              : &description "personal description"
@@ -24,9 +24,9 @@ author:
   avatar           : "profile.png"
   name             : "Anujith Muraleedharan"
   pronouns         : # example: "she/her"  
-  bio              : "Robotics, Motion Planning, Deep Representation Learning"
+  bio              : "Robot Motion Planning, Control, Intelligence"
   location         : "Kerala, India"
-  employer         : "Red Brick University"
+  employer         : "Indian Institute of Science"
   uri              : # URL
   email            : "anujithmuralidharan@gmail.com" 
 

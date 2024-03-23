@@ -22,13 +22,13 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Anujith Muraleedharan"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
+  bio              : "Robotics, Motion Planning, Deep Representation Learning"
+  location         : "Kerala, India"
   employer         : "Red Brick University"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "anujithmuralidharan@gmail.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile

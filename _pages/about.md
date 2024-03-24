@@ -18,16 +18,16 @@ My interest lies in the intersection of Robotics, control and perception. Specif
 
 ## News
 
-*  **Feb 2024**&nbsp; &nbsp; &nbsp;A paper regarding assistive HRI accepted in ACM IUI 2024
-*  **Nov 2023**&nbsp; &nbsp; &nbsp;A journal paper on computer vision based autonomous taxiing of aircraft accepted at Aviation                          
-*  **Aug 2023**&nbsp; &nbsp; &nbsp;Description of the item in the list                          
-*  **Jul 2023**&nbsp; &nbsp; &nbsp;Description of the item in the list
-*  **Mar 2023**&nbsp; &nbsp; &nbsp;Description of the item in the list 
-*  **Jul 2022**&nbsp; &nbsp; &nbsp;Description of the item in the list
-*  **Jul 2022**&nbsp; &nbsp; &nbsp;Description of the item in the list
-*  **Jul 2022**&nbsp; &nbsp; &nbsp;Description of the item in the list
-*  **Jul 2022**&nbsp; &nbsp; &nbsp;Completed Bachelor's degree from APJ Abdul Kalam Technological University in Electronics and Communication Engineering 
-*  **Jul 2022** &nbsp; &nbsp; &nbsp;Description of the item in the list                           
+*  [**Feb 2024**]&nbsp;A paper regarding assistive HRI accepted in ACM IUI 2024
+*  [**Nov 2023**]&nbsp;A journal paper on computer vision based autonomous taxiing of aircraft accepted at Aviation                          
+*  [**Aug 2023**]&nbsp;Description of the item in the list                          
+*  [**Jul 2023**]&nbsp;Description of the item in the list
+*  [**Mar 2023**]&nbsp;Description of the item in the list 
+*  [**Jul 2022**]&nbsp;Description of the item in the list
+*  [**Jul 2022**]&nbsp;Description of the item in the list
+*  [**Jul 2022**]&nbsp;Description of the item in the list
+*  [**Jul 2022**]&nbsp;Completed Bachelor's degree from APJ Abdul Kalam Technological University in Electronics and Communication Engineering 
+*  [**Jul 2022**]&nbsp;Description of the item in the list                           
 
 Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]
 ------

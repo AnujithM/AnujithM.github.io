@@ -12,9 +12,9 @@ Currently, I hold the position of Research Associate 2 at the [I3D lab](https://
 Research interests
 ======
 My interest lies in the intersection of Robotics, control and perception. Specifically in three fields
-1) Providing probabilistic safety assurances for autonomous systems in cluttered environments leveraging robust algorithms.
-2) Computer vision-based autonomous systems for real-world applications with a particular emphasis on controller evaluation and selection.
-3) Developing assistive robotic systems for enhanced autonomy.
+1. Providing probabilistic safety assurances for autonomous systems in cluttered environments leveraging robust algorithms.
+1. Computer vision-based autonomous systems for real-world applications with a particular emphasis on controller evaluation and selection.
+1. Developing assistive robotic systems for enhanced autonomy.
 
 News
 ======
@@ -23,7 +23,7 @@ News
 1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
 1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
 1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+1. Completed undergraduate studies
 
 Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]
 ------

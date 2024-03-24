@@ -18,11 +18,11 @@ My interest lies in the intersection of Robotics, control and perception. Specif
 
 ## News
 
-| Entry            | Item   |                                                              |
-| --------         | ------ | ------------------------------------------------------------ |
-| [John Doe](#)    | 2016   | Description of the item in the list                          |
-| [Jane Doe](#)    | 2019   | Description of the item in the list                          |
-| [Doe Doe](#)     | 2022   | Description of the item in the list                          |
+| Date             |                                                                       |
+| --------         |  ---------------------------------------------------------------      |
+| Jan 2021         |          Description of the item in the list                          |
+| Dec 2011         |          Description of the item in the list                          |
+| Dec 2022         |          Description of the item in the list                          |
 
 Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]
 ------

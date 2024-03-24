@@ -18,11 +18,9 @@ My interest lies in the intersection of Robotics, control and perception. Specif
 
 ## News
 
-| Date             |                                                                       |
-| --------         |  ---------------------------------------------------------------      |
-| Jan 2021         |          Description of the item in the list                          |
-| Dec 2011         |          Description of the item in the list                          |
-| Dec 2022         |          Description of the item in the list                          |
+| **Jan 2021**         |          Description of the item in the list                          |
+| **Dec 2011**         |          Description of the item in the list                          |
+| **Dec 2022**         |          Description of the item in the list                          |
 
 Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]
 ------

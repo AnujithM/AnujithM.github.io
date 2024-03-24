@@ -13,8 +13,8 @@ Research interests
 ======
 My interest lies in the intersection of Robotics, control and perception. Specifically in three fields
 1) Providing probabilistic safety assurances for autonomous systems in cluttered environments leveraging robust algorithms.
-2) computer vision-based autonomous systems for real-world applications with a particular emphasis on controller evaluation and selection.
-3) developing assistive robotic systems for enhanced autonomy.
+2) Computer vision-based autonomous systems for real-world applications with a particular emphasis on controller evaluation and selection.
+3) Developing assistive robotic systems for enhanced autonomy.
 
 News
 ======

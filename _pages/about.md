@@ -18,12 +18,16 @@ My interest lies in the intersection of Robotics, control and perception. Specif
 
 ## News
 
-*  **1st February 2024**            One paper regarding assistive HRI accepted in ACM IUI 2024
-*  **27th November 2023**            One paper on computer vision based autonomous taxiing of aircraft accepted at Aviation Journal                          
-*  **August 2023**            Description of the item in the list                          
-*  **July 2023**            Description of the item in the list
-*  **March 2023**            Description of the item in the list 
-*  **July 2022**            Description of the item in the list                           
+*  **Feb 2024**    |        A paper regarding assistive HRI accepted in ACM IUI 2024
+*  **Nov 2023**    |        A journal paper on computer vision based autonomous taxiing of aircraft accepted at Aviation                          
+*  **Aug 2023**    |        Description of the item in the list                          
+*  **Jul 2023**    |        Description of the item in the list
+*  **Mar 2023**    |        Description of the item in the list 
+*  **Jul 2022**    |        Description of the item in the list
+*  **Jul 2022**    |        Description of the item in the list
+*  **Jul 2022**    |        Description of the item in the list
+*  **Jul 2022**    |        Description of the item in the list
+*  **Jul 2022**    |        Description of the item in the list                           
 
 Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]
 ------

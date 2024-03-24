@@ -12,9 +12,9 @@ Currently, I hold the position of Research Associate 2 at the [I3D lab](https://
 Research interests
 ======
 My interest lies in the intersection of Robotics, control and perception. Specifically in three fields
-1. Providing probabilistic safety assurances for autonomous systems in cluttered environments leveraging robust algorithms.
-1. Computer vision-based autonomous systems for real-world applications with a particular emphasis on controller evaluation and selection.
-1. Developing assistive robotic systems for enhanced autonomy.
+1) Providing probabilistic safety assurances for autonomous systems in cluttered environments leveraging robust algorithms.
+2) Computer vision-based autonomous systems for real-world applications with a particular emphasis on controller evaluation and selection.
+3) Developing assistive robotic systems for enhanced autonomy.
 
 News
 ======

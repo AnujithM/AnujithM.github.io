@@ -31,21 +31,7 @@ My interest lies in the intersection of Robotics, control and perception. Specif
 
 Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]
 ------
----
-layout: post
-title:  "Consensus-Informed Optimization Over Mixtures for Ambiguity-Aware Object SLAM"
-date:   2021-07-31 22:21:59 +00:00
-image: /images/cards-exp.gif
-categories: research
-author: "Ziqi Lu"
-authors: "<strong>Ziqi Lu*</strong>, QiangQiang Huang*, Kevin Doherty, John Leonard"
-venue: "IROS"
-paper: https://ieeexplore.ieee.org/document/9636213
-arxiv: https://arxiv.org/abs/2107.09265
-video: https://www.youtube.com/watch?v=506VSt0tq4o&ab_channel=MITMarineRoboticsGroup
----
-
-A real-time object-based SLAM system that is robust to symmetry- or occlusion-induced pose ambiguity from individual 6D object pose predictions.
+![Image Description](/images/Image1.png)
 The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
 
 Create content & metadata

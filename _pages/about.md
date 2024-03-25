@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
+![Image Description](/images/image_to_text_vis.png){: .align-right width="300px"}
 Currently, I hold the position of Research Associate 2 at the [I3D lab](https://cambum.net/I3D.htm) within the Department of Design and Manufacturing(DnM) of the Indian Institute of Science, Bangalore, guided by [Pradipta Biswas](https://cambum.net/PB/). Prior to this role, I completed my undergraduate studies at RIT, Kottayam, specializing in Electronics and Communication Engineering. During my time at RIT, I was as an Undergraduate Researcher at the Centre for Advanced Signal Processing ([CASP lab](http://www.rit.ac.in/ece/CASP/)) under mentorship of [Manju Manuel](http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE).
 
 Research interests

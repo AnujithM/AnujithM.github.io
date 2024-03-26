@@ -31,7 +31,7 @@ My interest lies in the intersection of Robotics, control and perception. Specif
 Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]
 ------
 
-![Image Description](/images/image_to_text_vis.png){: .align-left width="350px"}
+![Image Description](/images/image_to_text_vis.png){: .align-left width="300px"}
 
 
 Create content & metadata

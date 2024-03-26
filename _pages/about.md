@@ -6,7 +6,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-![Image Description](/images/image_to_text_vis.png){: .align-right width="300px"}
 Currently, I hold the position of Research Associate 2 at the [I3D lab](https://cambum.net/I3D.htm) within the Department of Design and Manufacturing(DnM) of the Indian Institute of Science, Bangalore, guided by [Pradipta Biswas](https://cambum.net/PB/). Prior to this role, I completed my undergraduate studies at RIT, Kottayam, specializing in Electronics and Communication Engineering. During my time at RIT, I was as an Undergraduate Researcher at the Centre for Advanced Signal Processing ([CASP lab](http://www.rit.ac.in/ece/CASP/)) under mentorship of [Manju Manuel](http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE).
 
 Research interests
@@ -32,7 +31,7 @@ My interest lies in the intersection of Robotics, control and perception. Specif
 Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]
 ------
 
-![Image Description](/images/image_to_text_vis.png){: .align-right width="300px"}
+![Image Description](/images/image_to_text_vis.png){: .align-right width="350px"}
 
 
 Create content & metadata
@@ -49,7 +48,6 @@ How to edit your site's GitHub repository
 Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
 
 Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
 
 For more info
 ------

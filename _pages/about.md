@@ -42,7 +42,6 @@ Representative Works [[Google Scholar](https://scholar.google.com/citations?user
 * **Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment**
 * ACM Conference on Intelligent User Interfaces (ACM IUI) 2024
 
-
 **Markdown generator**
 
 I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator

@@ -33,7 +33,7 @@ Representative Works [[Google Scholar](https://scholar.google.com/citations?user
 
 ![Image Description](/images/Autotaxii.png){: .align-left width="300px"}
 * Prashant Gaikwad, Abhishek Mukhopadhyay , **Anujith Muraleedharan** , Mukund Mitra , Pradipta Biswas
-* **DEVELOPING A COMPUTER VISION BASED SYSTEM FOR AUTONOMOUS TAXIING OF AIRCRAFT**
+* **Developing a Computer Vision based system for Autonomous taxiing of Aircraft**
 * AVIATION Journal Vol 27 No 4 (2023)
 
 **Markdown generator**

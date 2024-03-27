@@ -15,35 +15,35 @@ Research interests
 2) Computer vision-based autonomous systems for real-world applications with a particular emphasis on controller evaluation and selection.
 3) Developing assistive robotic systems for enhanced autonomy</span>.
 
-News<span style="font-size: 14px;">
+News
 ------
 
-*  [**Feb 2024**]&nbsp;A paper regarding assistive HRI accepted in ACM IUI 2024
-*  [**Nov 2023**]&nbsp;A journal paper on computer vision based autonomous taxiing of aircraft accepted at Aviation                          
-*  [**Aug 2023**]&nbsp;Description of the item in the list                          
-*  [**Jul 2023**]&nbsp;Description of the item in the list
-*  [**Mar 2023**]&nbsp;Description of the item in the list 
-*  [**Jul 2022**]&nbsp;Description of the item in the list
-*  [**Jul 2022**]&nbsp;Description of the item in the list
-*  [**Jul 2022**]&nbsp;Description of the item in the list
-*  [**Jul 2022**]&nbsp;Completed Bachelor's degree from APJ Abdul Kalam Technological University in Electronics and Communication Engineering 
-*  [**Jul 2022**]&nbsp;Description of the item in the list</span>                           
+*  <span style="font-size: 14px;">[**Feb 2024**]&nbsp;A paper regarding assistive HRI accepted in ACM IUI 2024</span>
+*  <span style="font-size: 14px;">[**Nov 2023**]&nbsp;A journal paper on computer vision based autonomous taxiing of aircraft accepted at Aviation</span>                          
+*  <span style="font-size: 14px;">[**Aug 2023**]&nbsp;Description of the item in the list</span>                          
+*  <span style="font-size: 14px;">[**Jul 2023**]&nbsp;Description of the item in the list</span>
+*  <span style="font-size: 14px;">[**Mar 2023**]&nbsp;Description of the item in the list</span> 
+*  <span style="font-size: 14px;">[**Jul 2022**]&nbsp;Description of the item in the list</span>
+*  <span style="font-size: 14px;">[**Jul 2022**]&nbsp;Description of the item in the list</span>
+*  <span style="font-size: 14px;">[**Jul 2022**]&nbsp;Description of the item in the list</span>
+*  <span style="font-size: 14px;">[**Jul 2022**]&nbsp;Completed Bachelor's degree from APJ Abdul Kalam Technological University in Electronics and Communication Engineering</span> 
+*  <span style="font-size: 14px;">[**Jul 2022**]&nbsp;Description of the item in the list</span>                           
 
-Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]<span style="font-size: 14px;"><br><br>
+Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]<br><br>
 ------
 
 ![Image Description](/images/Autotaxii.png){: .align-left width="300px"}
-* Prashant Gaikwad, Abhishek Mukhopadhyay , **Anujith Muraleedharan** , Mukund Mitra , Pradipta Biswas
-* **Developing a Computer Vision based system for Autonomous taxiing of Aircraft**
-* AVIATION Journal Vol 27 No 4 (2023)<br><br>
+* <span style="font-size: 14px;">Prashant Gaikwad, Abhishek Mukhopadhyay , **Anujith Muraleedharan** , Mukund Mitra , Pradipta Biswas</span>
+* <span style="font-size: 14px;">**Developing a Computer Vision based system for Autonomous taxiing of Aircraft**</span>
+* <span style="font-size: 14px;">AVIATION Journal Vol 27 No 4 (2023)</span><br><br>
 
 
 
 
 ![Image Description](/images/Mat.png){: .align-left width="300px"}
-* **Anujith Muraleedharan**, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas
-* **Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment**
-* ACM Conference on Intelligent User Interfaces (ACM IUI) 2024<br><br></span>
+* <span style="font-size: 14px;">**Anujith Muraleedharan**, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas</span>
+* <span style="font-size: 14px;">**Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment**</span>
+* <span style="font-size: 14px;">ACM Conference on Intelligent User Interfaces (ACM IUI) 2024</span><br><br>
 
 **Markdown generator**
 

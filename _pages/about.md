@@ -32,8 +32,7 @@ Representative Works [[Google Scholar](https://scholar.google.com/citations?user
 ------
 
 ![Image Description](/images/image_to_text_vis.png){: .align-left width="300px"}
-Prashant GAIKWAD , Abhishek MUKHOPADHYAY , <span class="bolded"> Anujith MURALEEDHARAN</span> , 
-Mukund MITRA , Pradipta BISWAS
+Prashant Gaikwad, Abhishek Mukhopadhyay , **Anujith Muraleedharan** , Mukund Mitra , Pradipta Biswas
 
 Create content & metadata
 ------

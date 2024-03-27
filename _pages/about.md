@@ -13,19 +13,15 @@ Research interests
 <span style="font-size: 14px;">My interest lies in the intersection of Robotics, control and perception. Specifically in three fields
 1) Providing probabilistic safety assurances for autonomous systems in cluttered environments leveraging robust algorithms.
 2) Computer vision-based autonomous systems for real-world applications with a particular emphasis on controller evaluation and selection.
-3) Developing assistive robotic systems for enhanced autonomy</span>.
+3) Developing assistive robotic systems for enhanced autonomy</span>.                         
 
-                        
-
-Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]<br><br>
+Selected Publications [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]<br><br>
 ------
 
 ![Image Description](/images/Autotaxii.png){: .align-left width="300px"}
 * <span style="font-size: 14px;">Prashant Gaikwad, Abhishek Mukhopadhyay , **Anujith Muraleedharan** , Mukund Mitra , Pradipta Biswas</span>
 * <span style="font-size: 14px;">**Developing a Computer Vision based system for Autonomous taxiing of Aircraft**</span>
 * <span style="font-size: 14px;">AVIATION Journal Vol 27 No 4 (2023)</span><br><br>
-
-
 
 
 ![Image Description](/images/Mat.png){: .align-left width="300px"}
@@ -47,11 +43,7 @@ News
 *  <span style="font-size: 14px;">[**Jul 2022**]&nbsp;Completed Bachelor's degree from APJ Abdul Kalam Technological University in Electronics and Communication Engineering</span> 
 *  <span style="font-size: 14px;">[**Jul 2022**]&nbsp;Description of the item in the list</span><br><br>
 
-
 **Markdown generator**
 
 I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
 ) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the academicpages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
-
-
-

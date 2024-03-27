@@ -35,7 +35,10 @@ Representative Works [[Google Scholar](https://scholar.google.com/citations?user
 * Prashant Gaikwad, Abhishek Mukhopadhyay , **Anujith Muraleedharan** , Mukund Mitra , Pradipta Biswas
 * **Developing a Computer Vision based system for Autonomous taxiing of Aircraft**
 * AVIATION Journal Vol 27 No 4 (2023)
-
+![Image Description](/images/SSMI.mp4){: .align-left width="300px"}
+* **Anujith Muraleedharan**, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas
+* **Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment**
+* ACM Conference on Intelligent User Interfaces (ACM IUI) 2024
 **Markdown generator**
 
 I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator

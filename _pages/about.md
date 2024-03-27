@@ -1,3 +1,8 @@
+<style>
+body {
+    font-size: 14px; /* Adjust the value as needed */
+}
+</style>
 ---
 permalink: /
 title: "About Me"

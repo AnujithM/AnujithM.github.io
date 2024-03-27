@@ -6,19 +6,19 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Currently, I hold the position of Research Associate 2 at the [I3D lab](https://cambum.net/I3D.htm) within the Department of Design and Manufacturing(DnM) of the Indian Institute of Science, Bangalore, guided by [Pradipta Biswas](https://cambum.net/PB/). Prior to this role, I completed my undergraduate studies at RIT, Kottayam, specializing in Electronics and Communication Engineering. During my time at RIT, I was as an Undergraduate Researcher at the Centre for Advanced Signal Processing ([CASP lab](http://www.rit.ac.in/ece/CASP/)) under mentorship of [Manju Manuel](http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE).
+<span style="font-size: 14px;">Currently, I hold the position of Research Associate 2 at the [I3D lab](https://cambum.net/I3D.htm) within the Department of Design and Manufacturing(DnM) of the Indian Institute of Science, Bangalore, guided by [Pradipta Biswas](https://cambum.net/PB/). Prior to this role, I completed my undergraduate studies at RIT, Kottayam, specializing in Electronics and Communication Engineering. During my time at RIT, I was as an Undergraduate Researcher at the Centre for Advanced Signal Processing ([CASP lab](http://www.rit.ac.in/ece/CASP/)) under mentorship of [Manju Manuel](http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE)</span>.
 
 Research interests
 ======
-My interest lies in the intersection of Robotics, control and perception. Specifically in three fields
+<span style="font-size: 14px;">My interest lies in the intersection of Robotics, control and perception. Specifically in three fields
 1) Providing probabilistic safety assurances for autonomous systems in cluttered environments leveraging robust algorithms.
 2) Computer vision-based autonomous systems for real-world applications with a particular emphasis on controller evaluation and selection.
-3) Developing assistive robotic systems for enhanced autonomy.
+3) Developing assistive robotic systems for enhanced autonomy</span>.
 
 News
 ------
 
-*  [**Feb 2024**]&nbsp;A paper regarding assistive HRI accepted in ACM IUI 2024
+*  <span style="font-size: 14px;">[**Feb 2024**]&nbsp;A paper regarding assistive HRI accepted in ACM IUI 2024
 *  [**Nov 2023**]&nbsp;A journal paper on computer vision based autonomous taxiing of aircraft accepted at Aviation                          
 *  [**Aug 2023**]&nbsp;Description of the item in the list                          
 *  [**Jul 2023**]&nbsp;Description of the item in the list
@@ -27,13 +27,13 @@ News
 *  [**Jul 2022**]&nbsp;Description of the item in the list
 *  [**Jul 2022**]&nbsp;Description of the item in the list
 *  [**Jul 2022**]&nbsp;Completed Bachelor's degree from APJ Abdul Kalam Technological University in Electronics and Communication Engineering 
-*  [**Jul 2022**]&nbsp;Description of the item in the list                           
+*  [**Jul 2022**]&nbsp;Description of the item in the list</span>                           
 
 Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]<br><br>
 ------
 
 ![Image Description](/images/Autotaxii.png){: .align-left width="300px"}
-* Prashant Gaikwad, Abhishek Mukhopadhyay , **Anujith Muraleedharan** , Mukund Mitra , Pradipta Biswas
+* <span style="font-size: 14px;">Prashant Gaikwad, Abhishek Mukhopadhyay , **Anujith Muraleedharan** , Mukund Mitra , Pradipta Biswas
 * **Developing a Computer Vision based system for Autonomous taxiing of Aircraft**
 * AVIATION Journal Vol 27 No 4 (2023)<br><br>
 
@@ -43,7 +43,7 @@ Representative Works [[Google Scholar](https://scholar.google.com/citations?user
 ![Image Description](/images/Mat.png){: .align-left width="300px"}
 * **Anujith Muraleedharan**, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas
 * **Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment**
-* ACM Conference on Intelligent User Interfaces (ACM IUI) 2024<br><br>
+* ACM Conference on Intelligent User Interfaces (ACM IUI) 2024<br><br></span>
 
 **Markdown generator**
 

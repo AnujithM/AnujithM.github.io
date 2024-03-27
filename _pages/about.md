@@ -28,13 +28,13 @@ My interest lies in the intersection of Robotics, control and perception. Specif
 *  [**Jul 2022**]&nbsp;Completed Bachelor's degree from APJ Abdul Kalam Technological University in Electronics and Communication Engineering 
 *  [**Jul 2022**]&nbsp;Description of the item in the list                           
 
-Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]
+Representative Works [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]<br><br>
 ------
 
 ![Image Description](/images/Autotaxii.png){: .align-left width="300px"}
 * Prashant Gaikwad, Abhishek Mukhopadhyay , **Anujith Muraleedharan** , Mukund Mitra , Pradipta Biswas
 * **Developing a Computer Vision based system for Autonomous taxiing of Aircraft**
-* AVIATION Journal Vol 27 No 4 (2023)
+* AVIATION Journal Vol 27 No 4 (2023)<br><br>
 
 
 
@@ -42,7 +42,7 @@ Representative Works [[Google Scholar](https://scholar.google.com/citations?user
 ![Image Description](/images/Mat.png){: .align-left width="300px"}
 * **Anujith Muraleedharan**, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas
 * **Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment**
-* ACM Conference on Intelligent User Interfaces (ACM IUI) 2024
+* ACM Conference on Intelligent User Interfaces (ACM IUI) 2024<br><br>
 
 **Markdown generator**
 

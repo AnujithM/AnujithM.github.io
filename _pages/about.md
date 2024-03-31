@@ -34,12 +34,11 @@ News
 
 *  <span style="font-size: 14px;">[**Feb 2024**]&nbsp;A paper regarding assistive HRI accepted in ACM IUI 2024</span>
 *  <span style="font-size: 14px;">[**Nov 2023**]&nbsp;A journal paper on computer vision based autonomous taxiing of aircraft accepted at Aviation</span>
-*  <span style="font-size: 14px;">[**Jul 2023**]&nbsp;Joined as a Research Assistant at I3D lab, Indian Institute of Science</span>                          
-*  <span style="font-size: 14px;">[**Jul 2023**]&nbsp;Offered admission to M.Tech. Programme in IIT Kharagpur</span>                          
-*  <span style="font-size: 14px;">[**Jul 2023**]&nbsp;Offered admission to M.Tech. Programme in IIT Madras</span>
+*  <span style="font-size: 14px;">[**Aug 2023**]&nbsp;Joined as a Research Assistant at I3D lab, Indian Institute of Science</span>                                                   
+*  <span style="font-size: 14px;">[**Jul 2023**]&nbsp;Offered admission to M.Tech. Programme in IIT Madras and IIT Kharagpur</span>
 *  <span style="font-size: 14px;">[**Jun 2023**]&nbsp;Provisionally selected for M.Tech. Programme after written Test and Interview on offline mode under (RA/RAP) category</span> 
 *  <span style="font-size: 14px;">[**May 2023**]&nbsp;Appeared for Interview examination at IIT Bombay</span>
-*  <span style="font-size: 14px;">[**Mar 2023**]&nbsp;Achieved an overall rank within the top 1.58 percentile among 70,361 candidates in the Electronics and Communication Engineering stream</span>
+*  <span style="font-size: 14px;">[**Mar 2023**]&nbsp;Achieved an overall rank within the top 1.58 percentile among 70,361 candidates registered in the Electronics and Communication Engineering stream</span>
 *  <span style="font-size: 14px;">[**Feb 2023**]&nbsp;Appeared for GATE ECE & GATE IN</span>
 *  <span style="font-size: 14px;">[**Aug 2022**]&nbsp;Completed Bachelor's degree from APJ Abdul Kalam Technological University in Electronics and Communication Engineering</span>
 *  <span style="font-size: 14px;">[**Jun 2022**]&nbsp;Tenure ended as Undergraduate Researcher</span> 

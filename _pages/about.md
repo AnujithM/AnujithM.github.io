@@ -46,7 +46,7 @@ News
 *  <span style="font-size: 14px;">[**Mar 2023**]&nbsp;Achieved an overall rank within the top 1.58 percentile among 70,361 candidates registered in the Electronics and Communication Engineering stream</span>
 *  <span style="font-size: 14px;">[**Feb 2023**]&nbsp;Appeared for GATE ECE & GATE IN</span>
 *  <span style="font-size: 14px;">[**Aug 2022**]&nbsp;Completed Bachelor's degree from APJ Abdul Kalam Technological University in Electronics and Communication Engineering</span>
-*  <span style="font-size: 14px;">[**Jun 2022**]&nbsp;Tenure ended as Undergraduate Researcher</span> 
+<!--*  <span style="font-size: 14px;">[**Jun 2022**]&nbsp;Tenure ended as Undergraduate Researcher</span> -->
 *  <span style="font-size: 14px;">[**Jan 2021**]&nbsp;Joined as Undergraduate Researcher in CASP Lab, RIT KOTTAYAM</span><br><br>
 
 <!-- **Markdown generator**

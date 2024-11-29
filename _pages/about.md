@@ -29,9 +29,9 @@ Selected Publications [[Google Scholar](https://scholar.google.com/citations?use
 * <span style="font-size: 14px;">**Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment** [[Project page](https://anujithm.github.io/Eye-Gaze-Controlled-Robot.github.io/)], [[Paper](https://dl.acm.org/doi/10.1145/3640544.3645236)]</span>
 * <span style="font-size: 14px;">ACM Conference on Intelligent User Interfaces (ACM IUI) 2024</span><br><br>
 
-![Image Description](/images/Access.png){: .align-left width="300px"}
-* <span style="font-size: 14px;">Utkarsha Singh, Jeevithashree Divya Venkatesh, **Anujith Muraleedharan**, KamalPreet Singh Saluja, Anamika JH, Pradipta Biswas</span>
-* <span style="font-size: 14px;">**Accessibility analysis of educational websites using WCAG 2.0**  [[Paper](https://dl.acm.org/doi/full/10.1145/3696318)]</span>
+![Image Description](/images/Ssmi.png){: .align-left width="300px"}
+* <span style="font-size: 14px;">**Anujith Muraleedharan**, Anamika JH</span>
+* <span style="font-size: 14px;">**Advancing Rehabilitation: Adaptive Robotic Arm for Safe Block Printing with Gaze Control**[[Project page](https://anujithm.github.io/Eye-Gaze-Controlled-Robot.github.io/)], [[Paper](https://dl.acm.org/doi/full/10.1145/3696318)]</span>
 * <span style="font-size: 14px;">Digital Government: Research and Practice, Volume 5, Issue 3 2024</span><br><br>
 
 News

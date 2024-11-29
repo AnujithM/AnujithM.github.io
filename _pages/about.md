@@ -29,6 +29,11 @@ Selected Publications [[Google Scholar](https://scholar.google.com/citations?use
 * <span style="font-size: 14px;">**Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment** [[Project page](https://anujithm.github.io/Eye-Gaze-Controlled-Robot.github.io/)], [[Paper](https://dl.acm.org/doi/10.1145/3640544.3645236)]</span>
 * <span style="font-size: 14px;">ACM Conference on Intelligent User Interfaces (ACM IUI) 2024</span><br><br>
 
+![Image Description](/images/Autotaxii.png){: .align-left width="300px"}
+* <span style="font-size: 14px;">Utkarsha Singh, Jeevithashree Divya Venkatesh, **Anujith Muraleedharan**, KamalPreet Singh Saluja, Anamika JH, Pradipta Biswas</span>
+* <span style="font-size: 14px;">**Accessibility analysis of educational websites using WCAG 2.0** [[Project page](https://anujithm.github.io/Autonomous-Taxiing-of-Aircraft.github.io/)], [[Paper](https://journals.vilniustech.lt/index.php/Aviation/article/view/20588)]</span>
+* <span style="font-size: 14px;">AVIATION Journal Vol 27 No 4 (2023)</span><br><br>
+
 News
 ------
 

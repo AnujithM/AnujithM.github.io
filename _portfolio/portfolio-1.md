@@ -1,6 +1,6 @@
 ---
 title: "Autonomous Racing: MPC vs LQR"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/Tracking.gif' alt='Tracking Animation' width='320' height='240'>"
+excerpt: "Short description of portfolio item number 1<br/><img src='/images/Tracking.gif' alt='Tracking Animation' width='500' height='300'>"
 collection: portfolio
 ---
 

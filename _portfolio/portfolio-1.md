@@ -1,6 +1,6 @@
 ---
 title: "Autonomous Racing: MPC vs LQR"
-excerpt: "Short description of portfolio item number 1<br/><video width='320' height='240' controls><source src='/videos/Tracking.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+excerpt: "Short description of portfolio item number 1<br/><video width='320' height='240' controls><source src='/videos/Tracking.gif' type='video/mp4'>Your browser does not support the video tag.</video>"
 collection: portfolio
 ---
 

@@ -9,6 +9,7 @@ date: 2009-10-01
 #citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 
-![Paper Image](/images/Tracking.png)
+https://raw.githubusercontent.com/AnujithM/AnujithM.github.io/main/images/Tracking.png
+
 
 

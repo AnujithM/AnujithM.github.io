@@ -1,5 +1,5 @@
 ---
-title: "Autonomous Racing: MPC vs LQR"
+title: "<a href='https://anujithm.github.io/MPC-vs-LQR.github.io/' target='_blank'>Autonomous Racing: MPC vs LQR</a>"
 excerpt: "Short description of portfolio item number 1<br/><img src='/images/Tracking.gif' alt='Tracking Animation' width='500' height='300'>"
 collection: portfolio
 ---

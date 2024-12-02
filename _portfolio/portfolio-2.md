@@ -1,6 +1,6 @@
 ---
 title: "Interactive 3D Holographic Display"
-excerpt: "<video width='500' height='300' controls><source src='/images/hologram11.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+excerpt: "<img src='/images/holo.gif' alt='Tracking Animation' width='500' height='300'>"
 collection: portfolio
 link: "https://anamika-jh.github.io/Autostereoscopic-display.github.io/"
 ---

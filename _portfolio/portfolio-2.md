@@ -1,6 +1,6 @@
 ---
 title: "Interactive 3D Holographic Display"
-excerpt: "<img src='/images/holo.gif' alt='Tracking Animation' width='500' height='200'>"
+excerpt: "<img src='/images/holo.gif' alt='Tracking Animation' width='500' height='250'>"
 collection: portfolio
 link: "https://anamika-jh.github.io/Autostereoscopic-display.github.io/"
 ---

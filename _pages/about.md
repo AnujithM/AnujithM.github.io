@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<span style="font-size: 14px;">I am currently working as a Pre-doctoral researcher under the guidance of M. Hanmandlu, IIT Delhi. Previously, I held the position of Research Associate 2 at the [I3D lab](https://cambum.net/I3D.htm) of the Indian Institute of Science, Bangalore, guided by [Pradipta Biswas](https://cambum.net/PB/), focusing on human-robot interaction. I completed my undergraduate studies at RIT, Kottayam, specializing in Electronics and Communication Engineering. During my time at RIT, I was as an Undergraduate Researcher at the Centre for Advanced Signal Processing ([CASP lab](http://www.rit.ac.in/ece/CASP/)) under mentorship of [Manju Manuel](http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE), where I worked on FPGA design and implementation.</span>.
+<span style="font-size: 14px;">I am currently working as a Pre-doctoral researcher under the guidance of [M. Hanmandlu](https://ctech.iitd.ac.in/hanmandlu.html), IIT Delhi. Previously, I held the position of Research Associate 2 at the [I3D lab](https://cambum.net/I3D.htm) of the Indian Institute of Science, Bangalore, guided by [Pradipta Biswas](https://cambum.net/PB/), focusing on human-robot interaction. I completed my undergraduate studies at RIT, Kottayam, specializing in Electronics and Communication Engineering. During my time at RIT, I was as an Undergraduate Researcher at the Centre for Advanced Signal Processing ([CASP lab](http://www.rit.ac.in/ece/CASP/)) under mentorship of [Manju Manuel](http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE), where I worked on FPGA design and implementation.</span>.
 
 Research interests
 ======

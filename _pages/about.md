@@ -28,7 +28,7 @@ Selected Publications [[Google Scholar](https://scholar.google.com/citations?use
 
 ![Image Description](/images/Ssmi.png){: .align-left width="300px"}
 * <span style="font-size: 14px;">**Anujith Muraleedharan**, Anamika JH</span>
-* <span style="font-size: 14px;">**Advancing Rehabilitation: Adaptive Robotic Arm for Safe Block Printing with Gaze Control**[[Project page](https://anujithm.github.io/Eye-Gaze-Controlled-Robot.github.io/)], [[Paper](https://dl.acm.org/doi/full/10.1145/3696318)]</span>
+* <span style="font-size: 14px;">**Advancing Rehabilitation: Adaptive Robotic Arm for Safe Block Printing with Gaze Control**[[Project page](https://anujithm.github.io/Eye-Gaze-Controlled-Robot.github.io/)]</span>
 * <span style="font-size: 14px;">Intelligent Service Robotics 2024</span><br><br>
 
 News

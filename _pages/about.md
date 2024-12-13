@@ -10,7 +10,7 @@ redirect_from:
 
 Research interests
 ======
-<span style="font-size: 14px;">My research interests focus on the intersection of reinforcement learning and robotic perception, aiming to develop systems that operate in unstructured, human-centric environments and formulate policies for safe and efficient human collaboration.</span>.                         
+<span style="font-size: 14px;">My research lie at the intersection of reinforcement learning and robotic perception, aiming to develop systems that operate in unstructured, human-centric environments and formulate policies for safe and efficient human collaboration.</span>.                         
 
 Selected Publications [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]<br><br>
 ------

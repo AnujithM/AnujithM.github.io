@@ -34,7 +34,7 @@ Selected Publications [[Google Scholar](https://scholar.google.com/citations?use
 News
 ------
 
-*  <span style="font-size: 14px;">[**June 2024**]&nbsp;Started working as a Pre-doctoral Researcher under Prof. M. Hanmandlu at IIT Delhi.</span>
+*  <span style="font-size: 14px;">[**June 2024**]&nbsp;Started working as a Pre-doctoral Researcher under the guidance of Prof. M. Hanmandlu at IIT Delhi.</span>
 *  <span style="font-size: 14px;">[**April 2024**]&nbsp;Offered admission to M.tech. Robotics and Autonomous Systems Programme at IISc Bangalore</span>
 *  <span style="font-size: 14px;">[**Feb 2024**]&nbsp;A paper regarding assistive HRI accepted in ACM IUI 2024</span>
 *  <span style="font-size: 14px;">[**Nov 2023**]&nbsp;A journal paper on computer vision based autonomous taxiing of aircraft accepted at Aviation</span>

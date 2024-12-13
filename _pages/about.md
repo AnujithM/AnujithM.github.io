@@ -10,10 +10,7 @@ redirect_from:
 
 Research interests
 ======
-<span style="font-size: 14px;">My interest lies in the intersection of Robotics, control and perception. Specifically in three fields
-1) Providing probabilistic safety assurances for autonomous systems in cluttered environments leveraging robust algorithms.
-2) Computer vision-based autonomous systems for real-world applications with a particular emphasis on controller evaluation and selection.
-3) Developing assistive robotic systems for enhanced autonomy</span>.                         
+<span style="font-size: 14px;">My research interests focus on the intersection of reinforcement learning and robotic perception, aiming to develop systems that operate in unstructured, human-centric environments and formulate policies for safe and efficient human collaboration.</span>.                         
 
 Selected Publications [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]<br><br>
 ------

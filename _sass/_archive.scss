@@ -2,43 +2,30 @@
    ARCHIVE
    ========================================================================== */
 
-   .archive {
-    display: grid; /* Enables grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates responsive columns */
-    gap: 1.5rem; /* Adds spacing between items */
-    margin-bottom: 2em; /* Adds bottom margin to the archive container */
-  
-    .archive__item {
-      text-align: left; /* Aligns content to the left */
-      background: #fff; /* Optional: Adds a white background for items */
-      border-radius: 8px; /* Optional: Rounds item corners */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-      overflow: hidden; /* Ensures no overflow from child elements */
-  
-      .archive__item-teaser img {
-        width: 100%; /* Ensures images span the full width of their container */
-        height: auto; /* Maintains aspect ratio */
-      }
-  
-      .archive__item-title {
-        font-size: 1.2rem; /* Adjusts font size */
-        margin: 0.5em 0; /* Adds vertical spacing around titles */
-        text-align: center; /* Optional: Center-aligns titles */
-      }
-    }
-  
-    a {
-      text-decoration: underline; /* Adds underline to links */
-  
-      &:hover {
-        text-decoration: none; /* Removes underline on hover */
-        img {
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* Adds hover shadow effect */
-        }
+.archive {
+  margin-bottom: 2em;
+
+  @include breakpoint($medium) {
+    @include span(12 of 12);
+  }
+
+  @include breakpoint($large) {
+    @include span(10 of 12 last);
+    @include prefix(0.5 of 12);
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+
+      img {
+        box-shadow: 0 0 10px rgba(#000, 0.25);
       }
     }
   }
-  
+}
 
 .archive__subtitle {
   margin: 1.414em 0 0;

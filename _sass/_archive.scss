@@ -3,6 +3,25 @@
    ========================================================================== */
 
 .archive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+  .archive__item {
+    margin-bottom: 2em;
+
+    .archive__item-teaser {
+      img {
+        width: 100%;
+        border-radius: $border-radius;
+      }
+    }
+
+    .archive__item-title {
+      font-size: $type-size-5;
+    }
+  }
+
   margin-bottom: 2em;
 
   @include breakpoint($medium) {

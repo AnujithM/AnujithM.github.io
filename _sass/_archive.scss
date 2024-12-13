@@ -4,21 +4,24 @@
 
 .archive {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates a responsive grid */
+  gap: 2rem; /* Adds spacing between grid items */
 
   .archive__item {
-    margin-bottom: 2em;
+    text-align: left; /* Ensures text is aligned properly */
+    background: #fff; /* Optional: add a background if needed */
+    border-radius: $border-radius; /* Optional: round corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    overflow: hidden;
 
-    .archive__item-teaser {
-      img {
-        width: 100%;
-        border-radius: $border-radius;
-      }
+    .archive__item-teaser img {
+      width: 100%; /* Ensures images are responsive */
+      height: auto; /* Maintains aspect ratio */
     }
 
     .archive__item-title {
       font-size: $type-size-5;
+      margin: 0.5em 0;
     }
   }
 

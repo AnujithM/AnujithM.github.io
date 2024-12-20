@@ -1,6 +1,6 @@
 ---
 title: "Human AV Interaction"
-excerpt: "<video width='500' height='300' controls loop autoplay muted><source src='/images/AV1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+excerpt: "<video width='480' height='300' controls loop autoplay muted><source src='/images/AV1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
 collection: portfolio
 link: "https://anamika-jh.github.io/Human-AV-interaction.github.io/"
 ---

@@ -9,56 +9,56 @@ author_profile: true
 
 <div class="project-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
   {% for post in site.portfolio %}
-  <div class="project-item" style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; border-radius: 8px;">
-    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-      {% if post.header.teaser %}
-        {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-      {% else %}
-        {% assign teaser = site.teaser %}
-      {% endif %}
-
-      {% if post.id %}
-        {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-      {% else %}
-        {% assign title = post.title %}
-      {% endif %}
-
-      <div class="archive__item-teaser">
-        {% if teaser %}
-          <img src=
-            {% if teaser contains "://" %}
-              "{{ teaser }}"
-            {% else %}
-              "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-            {% endif %}
-            alt="">
-        {% endif %}
-      </div>
-
-      <h2 class="archive__item-title" itemprop="headline">
-        {% if post.link %}
-          <a href="{{ post.link }}" target="_blank" style="text-decoration: none; color: #00008B;">{{ title }}</a>
+    <div class="project-item" style="box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; border-radius: 8px;">
+      <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+        {% if post.header.teaser %}
+          {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
         {% else %}
-          <a href="{{ base_path }}{{ post.url }}" rel="permalink" style="text-decoration: none; color: #00008B;">{{ title }}</a>
+          {% assign teaser = site.teaser %}
         {% endif %}
-      </h2>
 
-      {% if post.excerpt %}
-        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
-      {% endif %}
+        {% if post.id %}
+          {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+        {% else %}
+          {% assign title = post.title %}
+        {% endif %}
 
-      {% if post.read_time %}
-        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
-      {% endif %}
+        <div class="archive__item-teaser">
+          {% if teaser %}
+            <img src=
+              {% if teaser contains "://" %}
+                "{{ teaser }}"
+              {% else %}
+                "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+              {% endif %}
+              alt="">
+          {% endif %}
+        </div>
 
-      {% if post.citation and post.paperurl %}
-        <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}">{{ post.paperurl }}</a></p>
-      {% elsif post.citation %}
-        <p>Recommended citation: {{ post.citation }}</p>
-      {% elsif post.paperurl %}
-        <p class="wordwrap">Download <a href="{{ post.paperurl }}">here</a></p>
-      {% endif %}
-    </article>
-  </div>
+        <h2 class="archive__item-title" itemprop="headline">
+          {% if post.link %}
+            <a href="{{ post.link }}" target="_blank" style="text-decoration: none; color: #00008B;">{{ title }}</a>
+          {% else %}
+            <a href="{{ base_path }}{{ post.url }}" rel="permalink" style="text-decoration: none; color: #00008B;">{{ title }}</a>
+          {% endif %}
+        </h2>
+
+        {% if post.excerpt %}
+          <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+        {% endif %}
+
+        {% if post.read_time %}
+          <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+        {% endif %}
+
+        {% if post.citation and post.paperurl %}
+          <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}">{{ post.paperurl }}</a></p>
+        {% elsif post.citation %}
+          <p>Recommended citation: {{ post.citation }}</p>
+        {% elsif post.paperurl %}
+          <p class="wordwrap">Download <a href="{{ post.paperurl }}">here</a></p>
+        {% endif %}
+      </article>
+    </div>
   {% endfor %}
 </div>

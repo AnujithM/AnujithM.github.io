@@ -1,6 +1,6 @@
 ---
 title: "Autonomous Racing: MPC vs LQR"
-excerpt: "<img src='/images/Tracking.gif' alt='Tracking Animation' width='500' height='300'>"
+excerpt: "<img src='/images/Tracking.gif' alt='Tracking Animation' width='300' height='100'>"
 collection: portfolio
 link: "https://anujithm.github.io/MPC-vs-LQR.github.io/"
 ---

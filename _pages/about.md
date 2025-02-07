@@ -13,7 +13,7 @@ Research interests
 <span style="font-size: 14px;">My research interests lie at the intersection of reinforcement learning and robotic perception, focusing on developing systems capable of operating in unstructured, human-centric environments while formulating policies for safe and efficient human collaboration</span>.                         
 
 Selected Publications [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]<br><br>
-------
+======
 
 ![Image Description](/images/Autotaxii.png){: .align-left width="300px"}
 * <span style="font-size: 14px;">Prashant Gaikwad, Abhishek Mukhopadhyay , **Anujith Muraleedharan** , Mukund Mitra , Pradipta Biswas</span>

@@ -1,8 +1,8 @@
 ---
 title: "Vision-Enabled and Natural Language Control for Mobile Robots"
-excerpt: "<video width='470' height='300' controls loop autoplay muted><source src='/images/AV1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+excerpt: "<video width='470' height='300' controls loop autoplay muted><source src='/images/VLM turtle.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
 collection: portfolio
-link: "https://anamika-jh.github.io/Human-AV-interaction.github.io/"
+link: "https://github.com/Anamika-JH/turtle_vlm_ws"
 ---
 
 <a href="https://anamika-jh.github.io/Human-AV-interaction.github.io/" target="_blank" style="color: #00008B; font-weight: bold; text-decoration: none;">Human AV Interaction</a>

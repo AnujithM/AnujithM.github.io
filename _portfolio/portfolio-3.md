@@ -1,6 +1,6 @@
 ---
 title: "Vision-Enabled and Natural Language Control for Mobile Robots"
-excerpt: "<video width='470' height='300' controls loop autoplay muted><source src='/images/VLM turtle.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+excerpt: "<video width='470' height='300' controls loop autoplay muted><source src='/images/VLM_turtle.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
 collection: portfolio
 link: "https://github.com/Anamika-JH/turtle_vlm_ws"
 ---

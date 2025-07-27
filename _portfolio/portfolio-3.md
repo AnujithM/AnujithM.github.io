@@ -1,5 +1,5 @@
 ---
-title: "Human AV Interaction"
+title: "Vision-Enabled and Natural Language Control for Mobile Robots"
 excerpt: "<video width='470' height='300' controls loop autoplay muted><source src='/images/AV1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
 collection: portfolio
 link: "https://anamika-jh.github.io/Human-AV-interaction.github.io/"

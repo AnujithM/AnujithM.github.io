@@ -1,6 +1,6 @@
 ---
 title: "Get-3D"
-excerpt: "<video width='470' height='300' controls loop autoplay muted><source src='/images/clip.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+excerpt: "<video width='470' height='330' controls loop autoplay muted><source src='/images/clip.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
 collection: portfolio
 link: "https://anujithm.github.io/Get-3D.github.io/"
 ---

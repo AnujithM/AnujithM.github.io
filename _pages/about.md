@@ -8,9 +8,10 @@ redirect_from:
 ---
 <span style="font-size: 14px;">I am currently working as a Research Associate under the guidance of [M. Hanmandlu](https://ctech.iitd.ac.in/hanmandlu.html), IIT Delhi. Previously, I held the position of Research Associate 2 at the [I3D lab](https://cambum.net/I3D.htm) of the Indian Institute of Science, Bangalore, guided by [Pradipta Biswas](https://cambum.net/PB/), focusing on human-robot interaction. I completed my undergraduate studies at RIT, Kottayam, specializing in Electronics and Communication Engineering. During my time at RIT, I was as an Undergraduate Researcher at the Centre for Advanced Signal Processing ([CASP lab](http://www.rit.ac.in/ece/CASP/)) under mentorship of [Manju Manuel](http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE), where I worked on FPGA design and implementation.</span>.
 
-Research interests
+Research
 ======
-<span style="font-size: 14px;">My research interests lie at the intersection of reinforcement learning and robotic perception, focusing on developing systems capable of operating in unstructured, human-centric environments while formulating policies for safe and efficient human collaboration</span>.                         
+<span style="font-size: 14px;">My research interests lie at the intersection of reinforcement learning and robotic perception, focusing on developing systems capable of operating in unstructured, human-centric environments while formulating policies for safe and efficient human collaboration</span>.
+[Research Statement (as of Feb 2025)](https://your-website-link.com/research-statement-july-2025)                    
 
 Selected Publications [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]<br><br>
 ======

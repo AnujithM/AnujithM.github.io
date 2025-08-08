@@ -52,7 +52,7 @@ News
 
 <!-- ClustrMaps Visitor Map -->
 <div id="visitor-map" style="margin-top: 40px; text-align: center;">
-  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=296&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&ct=000000'></script>
+  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=410&t=n&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
 </div>
 <!-- **Markdown generator**
 

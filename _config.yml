@@ -24,7 +24,7 @@ author:
   avatar           : "Image1.png"
   name             : "Anujith Muraleedharan"
   pronouns         : # example: "she/her"  
-  counter          : <script type="text/javascript" src="//rf.revolvermaps.com/0/0/0.js?i=5a06n00w5bi&amp;d=3&amp;p=1&amp;b=0&amp;w=218&amp;g=2&amp;f=calibri&amp;fs=12&amp;r=0&amp;c0=000000&amp;c1=007eff&amp;c2=000000&amp;ic0=0&amp;ic1=0" async="async"></script>
+  counter          : <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=YOUR_MAP_ID&cl=ffffff&w=a"></script>
   bio              : "Perception & Control"
   location         : "Kerala, India"
   employer         : "Indian Institute of Science"

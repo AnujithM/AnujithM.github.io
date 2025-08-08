@@ -51,7 +51,7 @@ News
 *  <span style="font-size: 14px;">[**Jan 2021**]&nbsp;Joined as Undergraduate Researcher in CASP Lab, RIT KOTTAYAM</span><br><br>
 
 <!-- ClustrMaps Visitor Map -->
-<div id="visitor-map" style="margin-top: 40px; text-align: center;">
+<div id="visitor-map" style="margin-top: 38px; text-align: center;">
   <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&cl=ffffff&w=a"></script>
 </div>
 <!-- **Markdown generator**

@@ -17,8 +17,19 @@ Research
 
 Selected Publications [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]<br><br>
 ======
+![Image Description](/images/Mat.png){: .align-left width="300px"}
+* <span style="font-size: 14px;">**Anujith Muraleedharan**, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas</span>
+* <span style="font-size: 14px;">**Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment**, [[Paper](https://dl.acm.org/doi/10.1145/3640544.3645236)]</span>
+* <span style="font-size: 14px;">ACM Conference on Intelligent User Interfaces (ACM IUI) 2024</span><br><br>
+
 
 ![Image Description](/images/Mat.png){: .align-left width="300px"}
+* <span style="font-size: 14px;">**Anujith Muraleedharan**, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas</span>
+* <span style="font-size: 14px;">**Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment**, [[Paper](https://dl.acm.org/doi/10.1145/3640544.3645236)]</span>
+* <span style="font-size: 14px;">ACM Conference on Intelligent User Interfaces (ACM IUI) 2024</span><br><br>
+
+
+![Image Description](/images/Ssmi.png){: .align-left width="300px"}
 * <span style="font-size: 14px;">**Anujith Muraleedharan**, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas</span>
 * <span style="font-size: 14px;">**Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment**, [[Paper](https://dl.acm.org/doi/10.1145/3640544.3645236)]</span>
 * <span style="font-size: 14px;">ACM Conference on Intelligent User Interfaces (ACM IUI) 2024</span><br><br>

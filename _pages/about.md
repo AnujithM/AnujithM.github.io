@@ -25,7 +25,7 @@ Selected Publications [[Google Scholar](https://scholar.google.com/citations?use
 
 ![Image Description](/images/sparqwebp.gif){: .align-left width="300px"}
 * <span style="font-size: 14px;">**Anujith Muraleedharan**, Anamika J H</span>
-* <span style="font-size: 14px;">**SPARQ: Selective Progress-Aware Resource Querying**, [[Paper](https://dl.acm.org/doi/10.1145/3640544.3645236)]</span>
+* <span style="font-size: 14px;">**SPARQ: Selective Progress-Aware Resource Querying**, [[Paper](https://arxiv.org/pdf/2509.20541)]</span>
 * <span style="font-size: 14px;">CoRL 2025 Workshop on Resource-Rational Robot Learning</span><br><br>
 
 

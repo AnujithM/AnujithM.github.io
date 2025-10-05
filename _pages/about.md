@@ -21,7 +21,7 @@ Research
 
 <!-- ######## U-LAG ######## -->
 <div style="display:flex; align-items:flex-start; gap:16px; margin:18px 0; padding:10px 0; border-bottom:1px solid rgba(0,0,0,.08);">
-  <img src="/images/ULAGGIF - Made with Clipchamp" alt="U-LAG" style="width:170px; border-radius:8px; flex:0 0 auto;">
+  <img src="/images/ulag.gif" alt="U-LAG" style="width:170px; border-radius:8px; flex:0 0 auto;">
   <div style="flex:1 1 auto; min-width:0;">
     <div style="font-weight:700; font-size:18px; line-height:1.3; color:inherit;">
       U-LAG: Uncertainty-Aware, Lag-Adaptive Goal Retargeting for Robotic Manipulation

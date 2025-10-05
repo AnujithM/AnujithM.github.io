@@ -147,23 +147,37 @@ Research
 News
 ------
 
-*  <span style="font-size: 14px;">[**June 2024**]&nbsp;Started working as a Research Associate under the guidance of Prof. M. Hanmandlu at IIT Delhi.</span>
-*  <span style="font-size: 14px;">[**April 2024**]&nbsp;Offered admission to M.tech. Robotics and Autonomous Systems Programme at IISc Bangalore</span>
-*  <span style="font-size: 14px;">[**Feb 2024**]&nbsp;A paper regarding assistive HRI accepted in ACM IUI 2024</span>
-*  <span style="font-size: 14px;">[**Nov 2023**]&nbsp;A journal paper on computer vision based autonomous taxiing of aircraft accepted at Aviation</span>
-*  <span style="font-size: 14px;">[**Aug 2023**]&nbsp;Joined as a Research Assistant at I3D lab, Indian Institute of Science</span>                                                   
-*  <span style="font-size: 14px;">[**Jul 2023**]&nbsp;Offered admission to M.Tech. Programme at IIT Madras and IIT Kharagpur</span>
-*  <span style="font-size: 14px;">[**Jun 2023**]&nbsp;Provisionally selected for M.Tech. Integrated Circuits and Systems Programme at IIT Bombay after written Test and Interview on offline mode under (RA/RAP) category</span> 
-*  <span style="font-size: 14px;">[**Mar 2023**]&nbsp;Achieved an overall rank within the top 1.58 percentile among 70,361 candidates registered in the Electronics and Communication Engineering stream</span>
-*  <span style="font-size: 14px;">[**Oct 2022**]&nbsp;Started working as simulation developer at RobotX Workshops, Berlin.</span>
-*  <span style="font-size: 14px;">[**Aug 2022**]&nbsp;Completed Bachelor's degree from APJ Abdul Kalam Technological University in Electronics and Communication Engineering</span>
-<!--*  <span style="font-size: 14px;">[**Jun 2022**]&nbsp;Tenure ended as Undergraduate Researcher</span> -->
-*  <span style="font-size: 14px;">[**Jan 2021**]&nbsp;Joined as Undergraduate Researcher in CASP Lab, RIT KOTTAYAM</span><br><br>
+<!-- scrollable news box -->
+<div class="news-box" style="
+  max-height: calc(6 * 2.6em);   /* ≈ 6 items tall; tweak if needed */
+  overflow-y: auto;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: rgba(0,0,0,0.02);
+  margin: 12px 0 24px 0;
+">
+  <ul style="margin:0; padding-left: 1.1em; list-style: disc;">
+    <li><span style="font-size:14px;"><strong>June 2024</strong>&nbsp; Started working as a Research Associate under the guidance of Prof. M. Hanmandlu at IIT Delhi.</span></li>
+    <li><span style="font-size:14px;"><strong>April 2024</strong>&nbsp; Offered admission to M.Tech. Robotics and Autonomous Systems Programme at IISc Bangalore.</span></li>
+    <li><span style="font-size:14px;"><strong>Feb 2024</strong>&nbsp; A paper regarding assistive HRI accepted in ACM IUI 2024.</span></li>
+    <li><span style="font-size:14px;"><strong>Nov 2023</strong>&nbsp; A journal paper on computer-vision-based autonomous taxiing of aircraft accepted at <em>Aviation</em>.</span></li>
+    <li><span style="font-size:14px;"><strong>Aug 2023</strong>&nbsp; Joined as a Research Assistant at I3D Lab, Indian Institute of Science.</span></li>
+    <li><span style="font-size:14px;"><strong>Jul 2023</strong>&nbsp; Offered admission to the M.Tech. programme at IIT Madras and IIT Kharagpur.</span></li>
+    <li><span style="font-size:14px;"><strong>Jun 2023</strong>&nbsp; Provisionally selected for M.Tech. Integrated Circuits and Systems at IIT Bombay (RA/RAP).</span></li>
+    <li><span style="font-size:14px;"><strong>Mar 2023</strong>&nbsp; Ranked within top 1.58% among 70,361 candidates in ECE.</span></li>
+    <li><span style="font-size:14px;"><strong>Oct 2022</strong>&nbsp; Started working as Simulation Developer at RobotX Workshops, Berlin.</span></li>
+    <li><span style="font-size:14px;"><strong>Aug 2022</strong>&nbsp; Completed B.E. (ECE), APJ Abdul Kalam Technological University.</span></li>
+    <!-- <li><span style="font-size:14px;"><strong>Jun 2022</strong>&nbsp; Tenure ended as Undergraduate Researcher.</span></li> -->
+    <li><span style="font-size:14px;"><strong>Jan 2021</strong>&nbsp; Joined as Undergraduate Researcher in CASP Lab, RIT Kottayam.</span></li>
+  </ul>
+</div>
 
 <!-- ClustrMaps Visitor Map -->
-<div id="visitor-map" style="margin-top: 40px; text-align: center;">
+<div id="visitor-map" style="margin-top: 10px; text-align: center;">
   <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
 </div>
+
 <!-- **Markdown generator**
 
 I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator

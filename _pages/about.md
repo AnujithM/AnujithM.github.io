@@ -13,111 +13,137 @@ Research
 <span style="font-size: 14px;">My research interests lie at the intersection of reinforcement learning and robotic perception, focusing on developing systems capable of operating in unstructured, human-centric environments while formulating policies for safe and efficient human collaboration</span>.<br>
 <span style="font-size: 14px;">
 [Research Statement (as of Feb 2025)](https://anujithm.github.io/files/research_statement_2025.html)
-</span>              
-
+</span>    
+          
 ## Selected Publications [Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)
 
-<style>
-.pub{display:flex;align-items:center;gap:20px;margin:22px 0}
-.pub img{width:300px;border-radius:10px}
-.pub-actions{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
-.btn{display:inline-block;padding:6px 10px;font-size:12px;line-height:1;border:1px solid rgba(0,0,0,.25);border-radius:4px;background:transparent;text-decoration:none}
-.btn:hover{background:rgba(0,0,0,.06);text-decoration:none}
-details.abs{display:inline-block}
-details.abs>summary{list-style:none;cursor:pointer}
-details.abs>summary::-webkit-details-marker{display:none}
-details.abs>summary.btn{display:inline-block}
-.abs-body{margin-top:8px;padding:10px;border-left:3px solid rgba(0,0,0,.2);font-size:14px;max-width:60ch}
-@media (max-width:720px){
-  .pub{flex-direction:column;align-items:flex-start}
-  .pub img{width:100%;max-width:520px;height:auto}
-  .abs-body{max-width:100%}
-}
-</style>
+<!-- ====== shared inline style helpers (classless) ====== -->
+<div style="font-size:0; height:8px;"></div>
 
-<!-- U-LAG -->
-<div class="pub" markdown="1">
-  <img src="/images/Mat.png" alt="U-LAG">
-  <div>
-    **U-LAG: Uncertainty-Aware, Lag-Adaptive Goal Retargeting for Robotic Manipulation**  
-    **Anujith Muraleedharan**, Anamika J H  
-    IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments
-    <div class="pub-actions">
-      <details class="abs">
-        <summary class="btn">ABS</summary>
-        <div class="abs-body">
-          A lag-aware retargeting layer that adapts goal waypoints under sensing latency
-          and sudden object shifts, improving success on pick/place, push, stacking, and peg tasks.
+<!-- ######## U-LAG ######## -->
+<div style="display:flex; align-items:flex-start; gap:16px; margin:18px 0; padding:10px 0; border-bottom:1px solid rgba(0,0,0,.08);">
+  <img src="/images/Mat.png" alt="U-LAG" style="width:170px; border-radius:8px; flex:0 0 auto;">
+  <div style="flex:1 1 auto; min-width:0;">
+    <div style="font-weight:700; font-size:18px; line-height:1.3; color:inherit;">
+      U-LAG: Uncertainty-Aware, Lag-Adaptive Goal Retargeting for Robotic Manipulation
+    </div>
+    <div style="margin-top:4px; color:inherit;">
+      <strong>Anujith Muraleedharan</strong>, Anamika J H
+    </div>
+    <div style="margin-top:4px; font-style:italic; opacity:.9;">
+      IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments
+    </div>
+
+    <!-- actions -->
+    <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
+      <details style="display:inline-block;">
+        <summary style="display:inline-block; padding:6px 10px; font-size:12px; border:1px solid rgba(100,100,100,.6); border-radius:4px; cursor:pointer; list-style:none;">ABS</summary>
+        <div style="margin-top:8px; padding:10px; border-left:3px solid rgba(100,100,100,.4); max-width:62ch;">
+          A lag-aware retargeting layer that adapts goal waypoints under sensing latency and sudden object shifts, improving success across pick/place, push, stacking, and peg tasks.
         </div>
       </details>
-      <a class="btn" href="https://dl.acm.org/doi/10.1145/3640544.3645236" target="_blank" rel="noopener">PAPER</a>
-      <a class="btn" href="https://anamika-jh.github.io/" target="_blank" rel="noopener">WEBSITE</a>
+
+      <a href="https://dl.acm.org/doi/10.1145/3640544.3645236" target="_blank" rel="noopener"
+         style="display:inline-block; padding:6px 10px; font-size:12px; border:1px solid rgba(100,100,100,.6); border-radius:4px; text-decoration:none; color:inherit;">PAPER</a>
+      <a href="https://anamika-jh.github.io/" target="_blank" rel="noopener"
+         style="display:inline-block; padding:6px 10px; font-size:12px; border:1px solid rgba(100,100,100,.6); border-radius:4px; text-decoration:none; color:inherit;">WEBSITE</a>
     </div>
   </div>
 </div>
 
-<!-- SPARQ -->
-<div class="pub" markdown="1">
-  <img src="/images/demo_after_1.gif" alt="SPARQ">
-  <div>
-    **SPARQ: Selective Progress-Aware Resource Querying**  
-    **Anujith Muraleedharan**, Anamika J H  
-    CoRL 2025 Workshop on Resource-Rational Robot Learning
-    <div class="pub-actions">
-      <details class="abs">
-        <summary class="btn">ABS</summary>
-        <div class="abs-body">
-          A robot-gated HiL-RL policy that queries humans only when learning stalls,
-          reaching near-oracle performance with roughly half the feedback of always-querying baselines.
+<!-- ######## SPARQ ######## -->
+<div style="display:flex; align-items:flex-start; gap:16px; margin:18px 0; padding:10px 0; border-bottom:1px solid rgba(0,0,0,.08);">
+  <img src="/images/demo_after_1.gif" alt="SPARQ" style="width:170px; border-radius:8px; flex:0 0 auto;">
+  <div style="flex:1 1 auto; min-width:0;">
+    <div style="font-weight:700; font-size:18px; line-height:1.3; color:inherit;">
+      SPARQ: Selective Progress-Aware Resource Querying
+    </div>
+    <div style="margin-top:4px; color:inherit;">
+      <strong>Anujith Muraleedharan</strong>, Anamika J H
+    </div>
+    <div style="margin-top:4px; font-style:italic; opacity:.9;">
+      CoRL 2025 Workshop on Resource-Rational Robot Learning
+    </div>
+
+    <!-- optional award line (red) -->
+    <!-- <div style="margin-top:6px; color:#b53232; font-weight:600;">🏆 Winner: Best Paper Award @ XYZ Workshop, 2025</div> -->
+
+    <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
+      <details style="display:inline-block;">
+        <summary style="display:inline-block; padding:6px 10px; font-size:12px; border:1px solid rgba(100,100,100,.6); border-radius:4px; cursor:pointer; list-style:none;">ABS</summary>
+        <div style="margin-top:8px; padding:10px; border-left:3px solid rgba(100,100,100,.4); max-width:62ch;">
+          A robot-gated HiL-RL policy that queries a human only when learning stalls, achieving near-oracle success with roughly half the feedback of always-querying baselines.
         </div>
       </details>
-      <a class="btn" href="https://arxiv.org/pdf/2509.20541" target="_blank" rel="noopener">ARXIV</a>
-      <a class="btn" href="https://your-sparq-page.example" target="_blank" rel="noopener">WEBSITE</a>
+
+      <a href="https://arxiv.org/pdf/2509.20541" target="_blank" rel="noopener"
+         style="display:inline-block; padding:6px 10px; font-size:12px; border:1px solid rgba(100,100,100,.6); border-radius:4px; text-decoration:none; color:inherit;">ARXIV</a>
+      <a href="https://your-sparq-page.example" target="_blank" rel="noopener"
+         style="display:inline-block; padding:6px 10px; font-size:12px; border:1px solid rgba(100,100,100,.6); border-radius:4px; text-decoration:none; color:inherit;">WEBSITE</a>
     </div>
   </div>
 </div>
 
-<!-- IUI Assistive Robot -->
-<div class="pub" markdown="1">
-  <img src="/images/Ssmi.png" alt="Assistive Robotic Stamp Printing">
-  <div>
-    **Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment**  
-    **Anujith Muraleedharan**, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas  
-    ACM Conference on Intelligent User Interfaces (ACM IUI) 2024
-    <div class="pub-actions">
-      <details class="abs">
-        <summary class="btn">ABS</summary>
-        <div class="abs-body">
-          A gaze-controlled, safety-aware robotic workflow that enables users with SSMI to perform
-          block-printing tasks through intuitive eye-tracking and constrained motion planning.
+<!-- ######## IUI Assistive ######## -->
+<div style="display:flex; align-items:flex-start; gap:16px; margin:18px 0; padding:10px 0; border-bottom:1px solid rgba(0,0,0,.08);">
+  <img src="/images/Ssmi.png" alt="Assistive Robotic Stamp Printing" style="width:170px; border-radius:8px; flex:0 0 auto;">
+  <div style="flex:1 1 auto; min-width:0;">
+    <div style="font-weight:700; font-size:18px; line-height:1.3; color:inherit;">
+      Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment
+    </div>
+    <div style="margin-top:4px; color:inherit;">
+      <strong>Anujith Muraleedharan</strong>, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas
+    </div>
+    <div style="margin-top:4px; font-style:italic; opacity:.9;">
+      ACM Conference on Intelligent User Interfaces (ACM IUI) 2024
+    </div>
+
+    <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
+      <details style="display:inline-block;">
+        <summary style="display:inline-block; padding:6px 10px; font-size:12px; border:1px solid rgba(100,100,100,.6); border-radius:4px; cursor:pointer; list-style:none;">ABS</summary>
+        <div style="margin-top:8px; padding:10px; border-left:3px solid rgba(100,100,100,.4); max-width:62ch;">
+          A gaze-controlled, safety-aware robotic workflow that enables users with SSMI to perform block-printing via intuitive eye-tracking and constrained motion planning.
         </div>
       </details>
-      <a class="btn" href="https://dl.acm.org/doi/10.1145/3640544.3645236" target="_blank" rel="noopener">PAPER</a>
-      <a class="btn" href="https://anujithm.github.io/Eye-Gaze-Controlled-Robot.github.io/" target="_blank" rel="noopener">WEBSITE</a>
+
+      <a href="https://dl.acm.org/doi/10.1145/3640544.3645236" target="_blank" rel="noopener"
+         style="display:inline-block; padding:6px 10px; font-size:12px; border:1px solid rgba(100,100,100,.6); border-radius:4px; text-decoration:none; color:inherit;">PAPER</a>
+      <a href="https://anujithm.github.io/Eye-Gaze-Controlled-Robot.github.io/" target="_blank" rel="noopener"
+         style="display:inline-block; padding:6px 10px; font-size:12px; border:1px solid rgba(100,100,100,.6); border-radius:4px; text-decoration:none; color:inherit;">WEBSITE</a>
     </div>
   </div>
 </div>
 
-<!-- Autonomous Taxiing -->
-<div class="pub" markdown="1">
-  <img src="/images/Autotaxii.png" alt="Autonomous Taxiing of Aircraft">
-  <div>
-    **Developing a Computer Vision based system for Autonomous Taxiing of Aircraft**  
-    Prashant Gaikwad, Abhishek Mukhopadhyay, **Anujith Muraleedharan**, Mukund Mitra, Pradipta Biswas  
-    AVIATION Journal Vol 27 No 4 (2023)
-    <div class="pub-actions">
-      <details class="abs">
-        <summary class="btn">ABS</summary>
-        <div class="abs-body">
-          A monocular camera pipeline for runway/route perception and rule-based taxiing,
-          with real-time detection and path-following on a lab testbed.
+<!-- ######## Autonomous Taxiing ######## -->
+<div style="display:flex; align-items:flex-start; gap:16px; margin:18px 0; padding:10px 0;">
+  <img src="/images/Autotaxii.png" alt="Autonomous Taxiing of Aircraft" style="width:170px; border-radius:8px; flex:0 0 auto;">
+  <div style="flex:1 1 auto; min-width:0;">
+    <div style="font-weight:700; font-size:18px; line-height:1.3; color:inherit;">
+      Developing a Computer Vision based system for Autonomous Taxiing of Aircraft
+    </div>
+    <div style="margin-top:4px; color:inherit;">
+      Prashant Gaikwad, Abhishek Mukhopadhyay, <strong>Anujith Muraleedharan</strong>, Mukund Mitra, Pradipta Biswas
+    </div>
+    <div style="margin-top:4px; font-style:italic; opacity:.9;">
+      AVIATION Journal Vol 27 No 4 (2023)
+    </div>
+
+    <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
+      <details style="display:inline-block;">
+        <summary style="display:inline-block; padding:6px 10px; font-size:12px; border:1px solid rgba(100,100,100,.6); border-radius:4px; cursor:pointer; list-style:none;">ABS</summary>
+        <div style="margin-top:8px; padding:10px; border-left:3px solid rgba(100,100,100,.4); max-width:62ch;">
+          A monocular pipeline for runway/route perception and rule-based taxiing with real-time detection and path following on a lab testbed.
         </div>
       </details>
-      <a class="btn" href="https://journals.vilniustech.lt/index.php/Aviation/article/view/20588" target="_blank" rel="noopener">PAPER</a>
-      <a class="btn" href="https://anujithm.github.io/Autonomous-Taxiing-of-Aircraft.github.io/" target="_blank" rel="noopener">WEBSITE</a>
+
+      <a href="https://journals.vilniustech.lt/index.php/Aviation/article/view/20588" target="_blank" rel="noopener"
+         style="display:inline-block; padding:6px 10px; font-size:12px; border:1px solid rgba(100,100,100,.6); border-radius:4px; text-decoration:none; color:inherit;">PAPER</a>
+      <a href="https://anujithm.github.io/Autonomous-Taxiing-of-Aircraft.github.io/" target="_blank" rel="noopener"
+         style="display:inline-block; padding:6px 10px; font-size:12px; border:1px solid rgba(100,100,100,.6); border-radius:4px; text-decoration:none; color:inherit;">WEBSITE</a>
     </div>
   </div>
 </div>
+
 
 News
 ------

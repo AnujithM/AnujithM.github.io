@@ -15,44 +15,109 @@ Research
 [Research Statement (as of Feb 2025)](https://anujithm.github.io/files/research_statement_2025.html)
 </span>              
 
-## Selected Publications [[Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)]
+## Selected Publications [Google Scholar](https://scholar.google.com/citations?user=4-55tyYAAAAJ&hl=en)
 
-<div style="display: flex; align-items: center; margin-bottom: 25px;">
-  <img src="/images/Mat.png" alt="U-LAG" style="width:300px; margin-right:20px; border-radius:10px;">
+<style>
+.pub{display:flex;align-items:center;gap:20px;margin:22px 0}
+.pub img{width:300px;border-radius:10px}
+.pub-actions{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:6px 10px;font-size:12px;line-height:1;border:1px solid rgba(0,0,0,.25);border-radius:4px;background:transparent;text-decoration:none}
+.btn:hover{background:rgba(0,0,0,.06);text-decoration:none}
+details.abs{display:inline-block}
+details.abs>summary{list-style:none;cursor:pointer}
+details.abs>summary::-webkit-details-marker{display:none}
+details.abs>summary.btn{display:inline-block}
+.abs-body{margin-top:8px;padding:10px;border-left:3px solid rgba(0,0,0,.2);font-size:14px;max-width:60ch}
+@media (max-width:720px){
+  .pub{flex-direction:column;align-items:flex-start}
+  .pub img{width:100%;max-width:520px;height:auto}
+  .abs-body{max-width:100%}
+}
+</style>
+
+<!-- U-LAG -->
+<div class="pub" markdown="1">
+  <img src="/images/Mat.png" alt="U-LAG">
   <div>
-    <p style="font-size:14px; margin:0;"><strong>U-LAG: Uncertainty-Aware, Lag-Adaptive Goal Retargeting for Robotic Manipulation</strong> [[Paper](https://dl.acm.org/doi/10.1145/3640544.3645236)]</p>
-    <p style="font-size:14px; margin:0;"><strong>Anujith Muraleedharan</strong>, Anamika J H</p>
-    <p style="font-size:14px; margin:0;">IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments</p>
+    **U-LAG: Uncertainty-Aware, Lag-Adaptive Goal Retargeting for Robotic Manipulation**  
+    **Anujith Muraleedharan**, Anamika J H  
+    IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments
+    <div class="pub-actions">
+      <details class="abs">
+        <summary class="btn">ABS</summary>
+        <div class="abs-body">
+          A lag-aware retargeting layer that adapts goal waypoints under sensing latency
+          and sudden object shifts, improving success on pick/place, push, stacking, and peg tasks.
+        </div>
+      </details>
+      <a class="btn" href="https://dl.acm.org/doi/10.1145/3640544.3645236" target="_blank" rel="noopener">PAPER</a>
+      <a class="btn" href="https://anamika-jh.github.io/" target="_blank" rel="noopener">WEBSITE</a>
+    </div>
   </div>
 </div>
 
-<div style="display: flex; align-items: center; margin-bottom: 25px;">
-  <img src="/images/demo_after_1.gif" alt="SPARQ" style="width:300px; margin-right:20px; border-radius:10px;">
+<!-- SPARQ -->
+<div class="pub" markdown="1">
+  <img src="/images/demo_after_1.gif" alt="SPARQ">
   <div>
-    <p style="font-size:14px; margin:0;"><strong>SPARQ: Selective Progress-Aware Resource Querying</strong> [[Paper](https://arxiv.org/pdf/2509.20541)]</p>
-    <p style="font-size:14px; margin:0;"><strong>Anujith Muraleedharan</strong>, Anamika J H</p>
-    <p style="font-size:14px; margin:0;">CoRL 2025 Workshop on Resource-Rational Robot Learning</p>
+    **SPARQ: Selective Progress-Aware Resource Querying**  
+    **Anujith Muraleedharan**, Anamika J H  
+    CoRL 2025 Workshop on Resource-Rational Robot Learning
+    <div class="pub-actions">
+      <details class="abs">
+        <summary class="btn">ABS</summary>
+        <div class="abs-body">
+          A robot-gated HiL-RL policy that queries humans only when learning stalls,
+          reaching near-oracle performance with roughly half the feedback of always-querying baselines.
+        </div>
+      </details>
+      <a class="btn" href="https://arxiv.org/pdf/2509.20541" target="_blank" rel="noopener">ARXIV</a>
+      <a class="btn" href="https://your-sparq-page.example" target="_blank" rel="noopener">WEBSITE</a>
+    </div>
   </div>
 </div>
 
-<div style="display: flex; align-items: center; margin-bottom: 25px;">
-  <img src="/images/Ssmi.png" alt="Assistive Robot" style="width:300px; margin-right:20px; border-radius:10px;">
+<!-- IUI Assistive Robot -->
+<div class="pub" markdown="1">
+  <img src="/images/Ssmi.png" alt="Assistive Robotic Stamp Printing">
   <div>
-    <p style="font-size:14px; margin:0;"><strong>Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment</strong> [[Paper](https://dl.acm.org/doi/10.1145/3640544.3645236)]</p>
-    <p style="font-size:14px; margin:0;"><strong>Anujith Muraleedharan</strong>, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas</p>
-    <p style="font-size:14px; margin:0;">ACM Conference on Intelligent User Interfaces (ACM IUI) 2024</p>
+    **Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment**  
+    **Anujith Muraleedharan**, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas  
+    ACM Conference on Intelligent User Interfaces (ACM IUI) 2024
+    <div class="pub-actions">
+      <details class="abs">
+        <summary class="btn">ABS</summary>
+        <div class="abs-body">
+          A gaze-controlled, safety-aware robotic workflow that enables users with SSMI to perform
+          block-printing tasks through intuitive eye-tracking and constrained motion planning.
+        </div>
+      </details>
+      <a class="btn" href="https://dl.acm.org/doi/10.1145/3640544.3645236" target="_blank" rel="noopener">PAPER</a>
+      <a class="btn" href="https://anujithm.github.io/Eye-Gaze-Controlled-Robot.github.io/" target="_blank" rel="noopener">WEBSITE</a>
+    </div>
   </div>
 </div>
 
-<div style="display: flex; align-items: center; margin-bottom: 25px;">
-  <img src="/images/Autotaxii.png" alt="Autonomous Taxiing" style="width:300px; margin-right:20px; border-radius:10px;">
+<!-- Autonomous Taxiing -->
+<div class="pub" markdown="1">
+  <img src="/images/Autotaxii.png" alt="Autonomous Taxiing of Aircraft">
   <div>
-    <p style="font-size:14px; margin:0;"><strong>Developing a Computer Vision based system for Autonomous Taxiing of Aircraft</strong> [[Project page](https://anujithm.github.io/Autonomous-Taxiing-of-Aircraft.github.io/)] [[Paper](https://journals.vilniustech.lt/index.php/Aviation/article/view/20588)]</p>
-    <p style="font-size:14px; margin:0;">Prashant Gaikwad, Abhishek Mukhopadhyay, <strong>Anujith Muraleedharan</strong>, Mukund Mitra, Pradipta Biswas</p>
-    <p style="font-size:14px; margin:0;">AVIATION Journal Vol 27 No 4 (2023)</p>
+    **Developing a Computer Vision based system for Autonomous Taxiing of Aircraft**  
+    Prashant Gaikwad, Abhishek Mukhopadhyay, **Anujith Muraleedharan**, Mukund Mitra, Pradipta Biswas  
+    AVIATION Journal Vol 27 No 4 (2023)
+    <div class="pub-actions">
+      <details class="abs">
+        <summary class="btn">ABS</summary>
+        <div class="abs-body">
+          A monocular camera pipeline for runway/route perception and rule-based taxiing,
+          with real-time detection and path-following on a lab testbed.
+        </div>
+      </details>
+      <a class="btn" href="https://journals.vilniustech.lt/index.php/Aviation/article/view/20588" target="_blank" rel="noopener">PAPER</a>
+      <a class="btn" href="https://anujithm.github.io/Autonomous-Taxiing-of-Aircraft.github.io/" target="_blank" rel="noopener">WEBSITE</a>
+    </div>
   </div>
 </div>
-
 
 News
 ------

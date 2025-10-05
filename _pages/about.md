@@ -144,7 +144,7 @@ Research
 </div>
 
 
-News
+news
 ------
 
 <!-- scrollable news box -->

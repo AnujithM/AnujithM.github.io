@@ -23,7 +23,7 @@ Selected Publications [[Google Scholar](https://scholar.google.com/citations?use
 * <span style="font-size: 14px;">IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments.</span><br><br>
 
 
-![Image Description](/images/sparqwebp.gif){: .align-left width="300px"}
+![Image Description](/images/demo_after_1.gif){: .align-left width="300px"}
 * <span style="font-size: 14px;">**Anujith Muraleedharan**, Anamika J H</span>
 * <span style="font-size: 14px;">**SPARQ: Selective Progress-Aware Resource Querying**, [[Paper](https://arxiv.org/pdf/2509.20541)]</span>
 * <span style="font-size: 14px;">CoRL 2025 Workshop on Resource-Rational Robot Learning</span><br><br>

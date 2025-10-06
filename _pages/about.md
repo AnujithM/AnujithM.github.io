@@ -6,14 +6,20 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<span style="font-size: 14px;">I am currently working as a Research Associate under the guidance of [M. Hanmandlu](https://ctech.iitd.ac.in/hanmandlu.html), IIT Delhi. Previously, I held the position of Research Associate 2 at the [I3D lab](https://cambum.net/I3D.htm) of the Indian Institute of Science, Bangalore, guided by [Pradipta Biswas](https://cambum.net/PB/), focusing on human-robot interaction. I completed my undergraduate studies at RIT, Kottayam, specializing in Electronics and Communication Engineering. During my time at RIT, I was as an Undergraduate Researcher at the Centre for Advanced Signal Processing ([CASP lab](http://www.rit.ac.in/ece/CASP/)) under mentorship of [Manju Manuel](http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE), where I worked on FPGA design and implementation.</span>.
+<span style="font-size: 14px;">I am a Research Associate working with Prof. <a href="https://ctech.iitd.ac.in/hanmandlu.html">M. Hanmandlu</a>, building practical, human centered robotic systems. My focus is at the meeting point of learning and perception. The aim is simple: help robots behave reliably around people, stay steady under noise and latency, and work in everyday environments.</span>
 
-Research
+<span style="font-size: 14px;">Earlier, at the <a href="https://cambum.net/I3D.htm">I3D Lab</a> at the Indian Institute of Science (IISc), Bangalore with <a href="https://cambum.net/PB/">Pradipta Biswas</a>, I worked on assistive human robot interaction and designed the controller for an autonomous aircraft taxiing prototype.</span>
+
+<span style="font-size: 14px;">I earned a B.Tech. in Electronics and Communication Engineering from RIT, Kottayam. As an undergraduate researcher in the Centre for Advanced Signal Processing (<a href="http://www.rit.ac.in/ece/CASP/">CASP lab</a>) with <a href="http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE">Dr. Manju Manuel</a>, I worked on FPGA design and implementation. For details on my current directions, see my <a href="https://anujithm.github.io/files/research_statement_2025.html">Research Statement (as of Feb 2025)</a>.</span>
+
+
+
+<!--Research
 ======
 <span style="font-size: 14px;">My research interests lie at the intersection of reinforcement learning and robotic perception, focusing on developing systems capable of operating in unstructured, human-centric environments while formulating policies for safe and efficient human collaboration</span>.<br>
 <span style="font-size: 14px;">
 [Research Statement (as of Feb 2025)](https://anujithm.github.io/files/research_statement_2025.html)
-</span>    
+</span>   --> 
 
 ## selected publications 
 <!-- ====== shared inline style helpers (classless) ====== -->

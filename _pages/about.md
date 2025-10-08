@@ -270,10 +270,11 @@ redirect_from:
   .pub-body{ padding-right:0; }
 }
 .photo-caption .email{
-  font-size: 14px;
-  color: #444;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  letter-spacing: .1px;
+  font-size: 15px;
+  /* typewriter-style font stack */
+  font-family: "American Typewriter", "Courier New", Courier, "Lucida Typewriter", monospace;
+  letter-spacing: 0.3px;
+  color: #333;
   margin-top: 2px;
 }
 

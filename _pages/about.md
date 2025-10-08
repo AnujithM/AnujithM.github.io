@@ -13,6 +13,29 @@ redirect_from:
   --mila-hover:#e91e63;
   --btn-border: rgba(0,0,0,.55);
 }
+/* Make the text column read like a tall, narrow column */
+.intro-grid{
+  column-gap: 36px;                           /* a little more breathing room */
+}
+
+.intro-text{
+  max-width: 65ch;                            /* limit line length -> taller column */
+}
+
+/* Paragraph shaping */
+.intro-text p{
+  text-align: justify;                        /* justify the text */
+  text-justify: inter-word;                   /* better spacing for justification */
+  hyphens: auto;                              /* allow soft hyphenation for cleaner edges */
+  margin: 0 0 1.1em 0;                        /* consistent paragraph spacing */
+}
+
+/* On small screens let it be full width again */
+@media (max-width: 720px){
+  .intro-text{
+    max-width: none;
+  }
+}
 
 /* base text column */
 .page__content{

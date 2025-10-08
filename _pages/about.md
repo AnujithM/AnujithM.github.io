@@ -147,15 +147,6 @@ redirect_from:
   .pub-year{ display:none; }
   .pub-body{ padding-right:0; }
 }
-/* Nudge portrait into the left gutter + make it a bit smaller on large screens */
-@media (min-width: 992px){
-  .about-rect{
-    width: clamp(220px, 24vw, 320px);  /* smaller than current */
-    margin-left: -140px;               /* push into the empty left space */
-    margin-top: 4px;                   /* small top alignment tweak */
-  }
-}
-
 </style>
 
 <!-- Rectangular portrait placed before the intro paragraph -->

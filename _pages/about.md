@@ -288,13 +288,15 @@ redirect_from:
 <div class="intro-grid">
   <h1 class="intro-title">Anujith Muraleedharan</h1>
 
-  <div class="intro-photo">
-    <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
-    <div class="photo-caption">
-      <div class="aka">a.k.a <strong>ToNY</strong></div>
-      <div class="role">Research Associate</div>
-    </div>
+  <!-- Photo + caption (floats left; text will flow on the right) -->
+<div class="portrait">
+  <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
+  <div class="photo-caption">
+    <div class="aka">a.k.a <strong>ToNY</strong></div>
+    <div class="role">Research Associate</div>
   </div>
+</div>
+
 
   <div class="intro-text">
     <!-- your paragraphs -->

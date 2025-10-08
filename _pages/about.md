@@ -139,17 +139,6 @@ redirect_from:
 .author__urls li:has(i.fa-building),
 .author__urls li:has(i.fa-briefcase) { display:none !important; }
 
-/* ===== Rectangular portrait in main column ===== */
-.about-rect{
-  float: left;
-  width: clamp(200px, 22vw, 300px);  /* smaller width but same responsiveness */
-  aspect-ratio: 4 / 5;               /* keep portrait ratio identical */
-  object-fit: cover;
-  margin: 4px 20px 10px 0;           /* same positioning / slight spacing */
-  border-radius: 12px;
-  box-shadow: 0 12px 26px rgba(0,0,0,.16);
-}
-
 /* Clear float after content so later sections don’t wrap */
 .page__content::after{
   content:"";
@@ -169,37 +158,15 @@ redirect_from:
 /* Hide theme's default page title (we'll add our own) */
 .page__title { display: none; }
 
-/* Intro layout: title on top, image + text aligned under it */
-.intro-grid{
-  display: grid;
-  grid-template-columns: minmax(220px, 280px) 1fr;
-  column-gap: 28px;
-  align-items: start;
-  margin-top: 4px;
-}
 
 /* Big custom title */
 .intro-title{
-  grid-column: 1 / -1;
   font-size: clamp(36px, 5vw, 44px);
   font-weight: 800;
   line-height: 1.1;
   margin: 0 0 12px 0;
 }
 
-//* Left column container: image + caption */
-.intro-photo{
-  grid-row: 2;
-  grid-column: 1;
-}
-
-/* Image inside that container */
-.intro-photo .about-rect{
-  float: none;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  margin: 0;
-}
 /* Two-line caption directly under the photo */
 .photo-caption{
   margin-top: 10px;
@@ -219,28 +186,6 @@ redirect_from:
   font-size: 15px;
   color: #555;
   letter-spacing: .2px;
-}
-
-/* Text block sits in column 2 */
-.intro-text{
-  grid-row: 2;
-  grid-column: 2;
-}
-
-/* Stack on mobile */
-@media (max-width: 720px){
-  .intro-grid{
-    grid-template-columns: 1fr;
-  }
-  .intro-grid .about-rect{
-    width: 100%;
-    max-width: 420px;
-    margin: 0 0 18px 0;
-    justify-self: start;
-  }
-  .intro-text{
-    grid-column: 1;
-  }
 }
 
 
@@ -285,10 +230,10 @@ redirect_from:
 }
 </style>
 
-<div class="intro-grid">
-  <h1 class="intro-title">Anujith Muraleedharan</h1>
+<!-- Title -->
+<h1 class="intro-title">Anujith Muraleedharan</h1>
 
-  <!-- Photo + caption (floats left; text will flow on the right) -->
+<!-- Photo + caption (floats left; text flows on the right) -->
 <div class="portrait">
   <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
   <div class="photo-caption">
@@ -297,8 +242,6 @@ redirect_from:
   </div>
 </div>
 
-
-  <div class="intro-text">
     <!-- your paragraphs -->
   </div>
 </div>

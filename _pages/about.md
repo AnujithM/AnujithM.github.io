@@ -156,6 +156,9 @@ redirect_from:
 }
 </style>
 
+<img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
+
+
 <p>I am a Research Associate working with Prof. <a href="https://ctech.iitd.ac.in/hanmandlu.html">M. Hanmandlu</a>, building practical, human-centered robotic systems. My focus is at the meeting point of learning and perception. The aim is simple: help robots behave reliably around people, stay steady under noise and latency, and work in everyday environments.</p>
 
 <p>Earlier, at the <a href="https://cambum.net/I3D.htm">I3D Lab</a> at the Indian Institute of Science (IISc), Bangalore with <a href="https://cambum.net/PB/">Pradipta Biswas</a>, I worked on assistive human–robot interaction and designed the controller for an autonomous aircraft taxiing prototype.</p>
@@ -164,6 +167,40 @@ redirect_from:
 
 <!-- Centered social icons (auto-filled by JS using your sidebar links) -->
 <div id="social-inline" class="social-inline" aria-label="social-links below research statement"></div>
+/* Hide the circular avatar shown in the left sidebar */
+.sidebar .author__avatar{
+  display: none !important;
+}
+
+/* Hero-style rectangular portrait in the main column (left edge) */
+.about-rect{
+  float: left;
+  width: clamp(260px, 28vw, 360px);  /* responsive width similar to the reference */
+  aspect-ratio: 4 / 5;               /* portrait ratio */
+  object-fit: cover;                  /* safe, neat crop */
+  margin: 2px 24px 12px 0;           /* space to the right & below the image */
+  border-radius: 12px;               /* rounded rectangle edges */
+  box-shadow: 0 12px 26px rgba(0,0,0,.16); /* subtle depth */
+}
+
+/* Clear the float after the main content block so later sections don’t wrap */
+.page__content::after{
+  content:"";
+  display: table;
+  clear: both;
+}
+
+/* On small screens, stack image above text and center it */
+@media (max-width: 720px){
+  .about-rect{
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 18px auto;
+  }
+}
+
 
 ## selected publications
 <div class="eq-note">* denotes equal contribution.</div>

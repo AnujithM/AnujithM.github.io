@@ -6,12 +6,89 @@ redirect_from:
   - /about/
   - /about.html
 ---
+<!-- Day/Night toggle (fixed top-right) -->
+<button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+  <!-- moon (default icon) -->
+  <svg id="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+    <path fill="currentColor" d="M21 12.79A9 9 0 0 1 12.21 3a.75.75 0 0 0-.85.99A7.5 7.5 0 1 0 20.01 12.64a.75.75 0 0 0 .99-.85Z"/>
+  </svg>
+  <!-- sun (hidden initially) -->
+  <svg id="icon-sun" viewBox="0 0 24 24" aria-hidden="true" style="display:none">
+    <path fill="currentColor" d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zm10.48 0 1.79-1.79 1.41 1.41-1.79 1.8-1.41-1.42zM12 4h0V1h0v3zm0 19h0v-3h0v3zM4 12H1v0h3v0zm22 0h-3v0h3v0zM6.76 19.16l-1.8 1.79-1.41-1.41 1.79-1.8 1.42 1.42zm12.19 1.79-1.79-1.8 1.41-1.41 1.8 1.79-1.42 1.42zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+  </svg>
+</button>
 
 <style>
 :root{
   --mila:#c2185b;
   --mila-hover:#e91e63;
   --btn-border: rgba(0,0,0,.55);
+}
+/* === THEME TOKENS === */
+:root{
+  /* light defaults (already close to your current palette) */
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --soft: #f6f6f7;
+  --hairline: rgba(0,0,0,.12);
+}
+
+/* Dark theme variables */
+html[data-theme="dark"]{
+  --bg: #0f0f10;
+  --text: #e9e9ea;
+  --muted: #b9bbc0;
+  --soft: #17181a;
+  --hairline: rgba(255,255,255,.16);
+}
+
+/* apply tokens to key surfaces */
+body{ background:var(--bg); color:var(--text); }
+.page, .page__content{ background:transparent; color:var(--text); }
+
+/* links inherit your Mila color already; keep that for both themes */
+.page__content a{ color:var(--mila); }
+.page__content a:hover{ color:var(--mila-hover); }
+
+/* fine-tune components for dark */
+.pub-row{ border-bottom:1px solid var(--hairline); }
+.pub-venue{ color:var(--muted); }
+.news-box{ background:var(--soft); border-color:var(--hairline); }
+.pub-year{ color: color-mix(in oklab, var(--text) 12%, transparent); }
+
+/* === SOCIAL ICONS should start as text color, Mila on hover === */
+.social-inline .si,
+.social-inline .si:link,
+.social-inline .si:visited{
+  color:var(--text) !important;    /* black in light, light in dark */
+  text-decoration:none;
+}
+.social-inline .si:hover{
+  color:var(--mila) !important;
+}
+
+/* === Theme toggle button (fixed top-right) === */
+.theme-toggle{
+  position:fixed;
+  top:10px; right:16px;
+  width:36px; height:36px;
+  display:flex; align-items:center; justify-content:center;
+  background: var(--soft);
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  color: var(--text);
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform .12s ease, background .12s ease, color .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+.theme-toggle:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+.theme-toggle svg{
+  width:18px; height:18px;
+  display:block;
 }
 
 /* base text column */
@@ -275,6 +352,41 @@ redirect_from:
 </div>
 
 <script>
+<script>
+/* === Theme init: prefer user choice, else system === */
+(function(){
+  const key = 'site-theme';
+  const stored = localStorage.getItem(key);
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = stored || (prefersDark ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+  updateIcons(theme);
+})();
+
+/* === Toggle click === */
+document.getElementById('theme-toggle')?.addEventListener('click', () => {
+  const html = document.documentElement;
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('site-theme', next);
+  updateIcons(next);
+});
+
+/* swap icon (moon for light target, sun for dark target) */
+function updateIcons(theme){
+  const moon = document.getElementById('icon-moon');
+  const sun  = document.getElementById('icon-sun');
+  if(!moon || !sun) return;
+  if(theme === 'dark'){
+    moon.style.display = 'none';
+    sun.style.display  = 'block';
+  }else{
+    moon.style.display = 'block';
+    sun.style.display  = 'none';
+  }
+}
+</script>
+
 /* Build centered icon row from your sidebar links, render as inline SVG (no external icon lib) */
 (function(){
   const defs = {

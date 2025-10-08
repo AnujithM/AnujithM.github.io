@@ -24,6 +24,19 @@ redirect_from:
 .page__content a{ color:var(--mila); font-weight:600; text-decoration:none; }
 .page__content a:hover{ color:var(--mila-hover); text-decoration:underline; }
 
+/* Force social icons to be BLACK by default, Mila on hover */
+.social-inline .si,
+.social-inline .si:link,
+.social-inline .si:visited{
+  color:#000 !important;        /* default black */
+  text-decoration:none;
+}
+
+.social-inline .si:hover{
+  color:var(--mila) !important; /* turn Mila on hover */
+}
+
+
 /* section headers */
 .page__content h2{ font-family:"Roboto","Lato",system-ui,sans-serif; font-size:34px; font-weight:300; line-height:1.25; margin:2.2em 0 .9em 0; text-transform:lowercase; }
 .page__content h3{ font-weight:600; margin:2em 0 .8em 0; }

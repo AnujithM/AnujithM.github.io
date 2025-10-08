@@ -50,40 +50,6 @@ redirect_from:
 .intro-grid{
   row-gap: 20px;            /* keep some breathing room in the grid */
 }
-
-/* === Photo caption: "a.k.a ToNY" + Steam icon/ID under the image === */
-.photo-caption{
-  clear: left;              /* sits under the floated image if needed */
-  margin: 10px 0 24px 0;    /* space around the caption */
-  font-size: 15px;
-  line-height: 1.35;
-  font-family: "Inter","Roboto","Lato",system-ui,sans-serif;
-  color: #333;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.photo-caption .aka strong{ font-weight: 700; }
-
-.photo-caption a.steam{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #000;                    /* black by default */
-  text-decoration: none;
-  font-weight: 600;
-}
-.photo-caption a.steam:hover{ color: var(--mila); }  /* Mila on hover */
-
-.photo-caption .steam svg{
-  width: 20px; height: 20px; display: block;
-}
-.photo-caption .steam-id{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  font-size: 14px;
-}
-
 /* keep the image left-floated, as you have now */
 .about-rect{ /* your existing rule stays; nothing else to change here */ }
 
@@ -221,14 +187,38 @@ redirect_from:
   margin: 0 0 12px 0;
 }
 
-/* Override when image lives inside intro grid */
-.intro-grid .about-rect{
+//* Left column container: image + caption */
+.intro-photo{
   grid-row: 2;
   grid-column: 1;
+}
+
+/* Image inside that container */
+.intro-photo .about-rect{
   float: none;
   width: 100%;
   aspect-ratio: 4 / 5;
   margin: 0;
+}
+/* Two-line caption directly under the photo */
+.photo-caption{
+  margin-top: 10px;
+  text-align: left;
+  font-family: "Inter","Roboto","Lato",system-ui,sans-serif;
+  line-height: 1.4;
+}
+
+.photo-caption .aka{
+  font-size: 17px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.photo-caption .role{
+  font-size: 15px;
+  color: #555;
+  letter-spacing: .2px;
 }
 
 /* Text block sits in column 2 */
@@ -295,15 +285,23 @@ redirect_from:
 }
 </style>
 
-<!-- Rectangular portrait placed before the intro paragraph -->
 <div class="intro-grid">
   <h1 class="intro-title">Anujith Muraleedharan</h1>
 
-<img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
-<div class="photo-caption">
-  <div class="aka"><strong>a.k.a ToNY</strong></div>
-  <div class="role">Research Associate</div>
+  <div class="intro-photo">
+    <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
+    <div class="photo-caption">
+      <div class="aka">a.k.a <strong>ToNY</strong></div>
+      <div class="role">Research Associate</div>
+    </div>
+  </div>
+
+  <div class="intro-text">
+    <!-- your paragraphs -->
+  </div>
 </div>
+
+
 
 
 

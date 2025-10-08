@@ -9,11 +9,12 @@ redirect_from:
 
 <!-- ===== Reference-like typography & layout (local to this page) ===== -->
 <style>
-/* --- base page --- */
 :root{
-  --mila: #c2185b;      /* Mila Québec primary */
-  --mila-hover:#e91e63; /* hover accent */
+  --mila:#c2185b;          /* Mila Québec primary */
+  --mila-hover:#e91e63;    /* brighter hover */
 }
+
+/* --- base page --- */
 .page__content{
   font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-size:17px; line-height:1.8; color:#1a1a1a;
@@ -21,22 +22,17 @@ redirect_from:
 }
 .page__content p{ margin:0 0 1.3em 0; }
 
-/* Links in Mila color */
+/* inline links */
 .page__content a{ color:var(--mila); font-weight:600; text-decoration:none; }
 .page__content a:hover{ color:var(--mila-hover); text-decoration:underline; }
 
-/* Headings (match reference: larger, lowercase, lighter weight) */
+/* section heading (reference-like) */
 .page__content h2{
   font-family:"Roboto","Lato",system-ui,sans-serif;
-  font-size:34px;        /* ~reference scale */
-  font-weight:300;       /* light, not bold */
-  line-height:1.25;
-  margin:2.2em 0 0.9em 0;
-  text-transform:lowercase;
+  font-size:34px; font-weight:300; line-height:1.25;
+  margin:2.2em 0 .9em 0; text-transform:lowercase;
 }
-.page__content h3{
-  font-weight:600; margin:2em 0 .8em 0;
-}
+.page__content h3{ font-weight:600; margin:2em 0 .8em 0; }
 
 /* ---------- Publication cards ---------- */
 .pub-row{
@@ -51,52 +47,47 @@ redirect_from:
   box-shadow:0 1px 4px rgba(0,0,0,0.15);
 }
 
-.pub-body{
-  flex:1 1 auto; position:relative;
-  padding-right:120px; /* room for year so it never overlaps */
-}
-
-/* Title/boldness tuned to reference */
+.pub-body{ flex:1 1 auto; position:relative; padding-right:120px; }
 .pub-title{
-  font-weight:600;       /* lighter than 700 so it reads like ref */
-  font-size:20px;
-  line-height:1.45;
-  margin:0 0 6px 0;
+  font-weight:500; font-size:20px; line-height:1.45;
+  margin:0 0 6px 0; letter-spacing:.1px;
 }
 .pub-auth{ font-size:16px; margin:0 0 4px 0; }
 .pub-venue{ font-style:italic; color:#555; opacity:.9; margin:0 0 6px 0; }
 
-/* Year tag to far right */
+/* year in right gutter */
 .pub-year{
   position:absolute; right:-12px; top:2px;
-  font-size:34px; color:rgba(0,0,0,0.08); font-weight:500;
-  pointer-events:none;
+  font-size:34px; color:rgba(0,0,0,0.08); font-weight:500; pointer-events:none;
 }
 
-/* Buttons (PAPER/WEBSITE/ARXIV) */
+/* ---------- Buttons (PAPER/WEBSITE/ARXIV) in Mila color ---------- */
 .link-btn{
   display:inline-flex; align-items:center; justify-content:center;
   padding:6px 12px; min-height:34px; line-height:1;
-  font-size:12px; border:1px solid rgba(0,0,0,0.35);
-  border-radius:4px; background:#fff; color:inherit; text-decoration:none; cursor:pointer;
+  font-size:12px; border:1px solid var(--mila);
+  border-radius:6px; background:#fff; color:var(--mila);
+  text-decoration:none; cursor:pointer;
 }
-.link-btn:hover{ background:#fafafa; border-color:var(--mila); color:var(--mila); }
+.link-btn:hover{ background:#fff4f8; border-color:var(--mila-hover); color:var(--mila-hover); }
 
-/* ABS details — Mila colored button + accent abstract box */
+/* ---------- ABS details — EXACT same color as other buttons ---------- */
 .abs{ display:inline-block; }
 .abs > summary{ list-style:none; }
 .abs > summary::-webkit-details-marker{ display:none; }
 .abs > summary{
   display:inline-flex; align-items:center; justify-content:center;
-  padding:6px 12px; min-height:34px; line-height:1; font-size:12px;
-  border:1px solid var(--mila); border-radius:4px; background:#fff; color:var(--mila); cursor:pointer;
+  padding:6px 12px; min-height:34px; line-height:1;
+  font-size:12px; border:1px solid var(--mila);
+  border-radius:6px; background:#fff; color:var(--mila); cursor:pointer;
 }
-.abs > summary:hover{ background:#fff4f8; }
+.abs > summary:hover{ background:#fff4f8; border-color:var(--mila-hover); color:var(--mila-hover); }
 .abs[open] > summary{ background:#fff0f6; border-color:var(--mila-hover); color:var(--mila-hover); }
 
+/* Abstract panel with matching Mila outline */
 .abs-box{
-  margin-top:8px; padding:10px; background:#fafafa;
-  border-left:3px solid var(--mila); max-width:65ch;
+  margin-top:8px; padding:12px 14px; background:#fff;
+  border:1px solid var(--mila); border-radius:8px; max-width:65ch;
 }
 
 /* News box */
@@ -108,7 +99,7 @@ redirect_from:
 .news-box ul{ margin:0; padding-left:1.1em; list-style:disc; }
 .news-box li{ margin:0.35em 0; }
 
-/* Mobile: hide year + remove right padding */
+/* Mobile */
 @media (max-width:700px){
   .pub-year{ display:none; }
   .pub-body{ padding-right:0; }
@@ -123,7 +114,6 @@ redirect_from:
 
 ## selected publications
 
-<!-- spacer -->
 <div style="height:6px;"></div>
 
 <!-- ######## U-LAG ######## -->
@@ -144,7 +134,7 @@ redirect_from:
       </details>
 
       <a class="link-btn" href="https://dl.acm.org/doi/10.1145/3640544.3645236" target="_blank" rel="noopener">PAPER</a>
-      <a class="link-btn" href="https://anamika-jh.github.io/" target="_blank" rel="noopener">WEBSITE</a>
+      <a class="link-btn coming-soon" href="#">WEBSITE</a>
     </div>
   </div>
 </div>
@@ -167,7 +157,7 @@ redirect_from:
       </details>
 
       <a class="link-btn" href="https://arxiv.org/pdf/2509.20541" target="_blank" rel="noopener">ARXIV</a>
-      <a class="link-btn" href="https://your-sparq-page.example" target="_blank" rel="noopener">WEBSITE</a>
+      <a class="link-btn coming-soon" href="#">WEBSITE</a>
     </div>
   </div>
 </div>
@@ -240,3 +230,14 @@ redirect_from:
 <div id="visitor-map" style="margin-top: 10px; text-align: center;">
   <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
 </div>
+
+<!-- Coming soon handler for selected WEBSITE buttons -->
+<script>
+document.addEventListener('click', function(e){
+  const el = e.target.closest('a.coming-soon');
+  if(el){
+    e.preventDefault();
+    alert('Coming soon.');
+  }
+}, {passive:false});
+</script>

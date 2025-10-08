@@ -279,6 +279,7 @@ redirect_from:
   <div class="photo-caption">
     <div class="aka">a.k.a <strong>ToNY</strong></div>
     <div class="role">Research Associate</div>
+    <div class="mail">anujithmuralidharan@gmail.com</div>
   </div>
 </div>
 

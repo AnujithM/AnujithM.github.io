@@ -25,9 +25,9 @@ author:
   name             : "Anujith Muraleedharan"
   pronouns         : # example: "she/her"  
   counter          : 
-  bio              : "Perception & Control"
-  location         : "Kerala, India"
-  employer         : "Indian Institute of Science"
+  bio              : #"Perception & Control"
+  location         : #"Kerala, India"
+  employer         : #"Indian Institute of Science"
   uri              : # URL
   email            : "anujithmuralidharan@gmail.com" 
 

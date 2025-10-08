@@ -131,7 +131,7 @@ redirect_from:
       <details class="abs">
         <summary>ABS</summary>
         <div class="abs-box">
-          A lag-aware retargeting layer that adapts goal waypoints under sensing latency and sudden object shifts, improving success across pick/place, push, stacking, and peg tasks.
+          Robots manipulating in changing environments must act on percepts that are late, noisy, or stale. We present U-LAG, a mid-execution goal-retargeting layer that leaves the low-level controller unchanged while re-aiming task goals (pre-contact, contact, post) as new observations arrive. Unlike motion retargeting or generic visual servoing, U-LAG treats in-flight goal re-aiming as a first-class, pluggable module between perception and control. Our main technical contribution is UAR–PF, an uncertainty-aware retargeter that maintains a distribution over object pose under sensing lag and selects goals that maximize expected progress. We instantiate a reproducible Shift×Lag stress test in PyBullet/PandaGym for pick, push, stacking, and peg insertion, where the object undergoes abrupt in-plane shifts while synthetic perception lag is injected during approach. Across 0–10 cm shifts and 0–400 ms lags, UAR–PF and ICP degrade gracefully relative to a no-retarget baseline, achieving higher success with modest end-effector travel and fewer aborts; simple operational safeguards further improve stability. Contributions: (1) UAR–PF for lag-adaptive, uncertainty-aware goal retargeting; (2) a pluggable retargeting interface; and (3) a reproducible Shift×Lag benchmark with evaluation on pick, push, stacking, and peg insertion.
         </div>
       </details>
 
@@ -154,7 +154,7 @@ redirect_from:
       <details class="abs">
         <summary>ABS</summary>
         <div class="abs-box">
-          A robot-gated HiL-RL policy that queries a human only when learning stalls, achieving near-oracle success with roughly half the feedback of always-querying baselines.
+          Human feedback can greatly accelerate robot learning, but in real-world settings, such feedback is costly and limited. Existing human-in-the-loop reinforcement learning (HiL-RL) methods often assume abundant feedback, limiting their practicality for physical robot deployment. In this work, we introduce SPARQ, a progress-aware query policy that requests feedback only when learning stagnates or worsens, thereby reducing unnecessary oracle calls. We evaluate SPARQ on a simulated UR5 cube-picking task in PyBullet, comparing against three baselines: no feedback, random querying, and always querying. Our experiments show that SPARQ achieves near-perfect task success, matching the performance of always querying while consuming about half the feedback budget. It also provides more stable and efficient learning than random querying, and significantly improves over training without feedback. These findings suggest that selective, progress-based query strategies can make HiL-RL more efficient and scalable for robots operating under realistic human effort constraints.
         </div>
       </details>
 
@@ -177,7 +177,7 @@ redirect_from:
       <details class="abs">
         <summary>ABS</summary>
         <div class="abs-box">
-          A gaze-controlled, safety-aware robotic workflow that enables users with SSMI to perform block-printing via intuitive eye-tracking and constrained motion planning.
+          Robotics is a trailblazing technology that has found extensive applications in the field of assistive aids for individuals with severe speech and motor impairment (SSMI). This article describes the design and development of an eye gaze-controlled user interface to manipulate the robotic arm. User studies were reported to engage users through eye gaze input to select stamps from the two designs and select the stamping location on cards using three designated boxes present in the User Interface. The entire process, from stamp selection to stamping location selection, is controlled by eye movements. The user interface contains the print button to initiate the robotic arm that enables the user to independently create personalized stamped cards. Extensive user interface trials revealed that individuals with severe speech and motor impairment showed improvements with a 33.2% reduction in the average time taken and a 42.8% reduction in the standard deviation for the completion of the task. This suggests the effectiveness and potential to enhance the autonomy and creativity of individuals with SSMI, contributing to the development of inclusive assistive technologies.
         </div>
       </details>
 
@@ -200,7 +200,7 @@ redirect_from:
       <details class="abs">
         <summary>ABS</summary>
         <div class="abs-box">
-          A monocular pipeline for runway/route perception and rule-based taxiing with real-time detection and path following on a lab testbed.
+          Authors of this paper propose a computer vision based autonomous system for the taxiing of an aircraft in the real world. The system integrates both lane detection and collision detection and avoidance models. The lane detection component employs a segmentation model consisting of two parallel architectures. An airport dataset is proposed, and the collision detection model is evaluated with it to avoid collision with any ground vehicle. The lane detection model identifies the aircraft’s path and transmits control signals to the steer-control algorithm. The steer-control algorithm, in turn, utilizes a controller to guide the aircraft along the central line with 0.013 cm resolution. To determine the most effective controller, a comparative analysis is conducted, ultimately highlighting the Linear Quadratic Regulator (LQR) as the superior choice, boasting an average deviation of 0.26 cm from the central line. In parallel, the collision detection model is also compared with other state-of-the-art models on the same dataset and proved its superiority. A detailed study is conducted in different lighting conditions to prove the efficacy of the proposed system. It is observed that lane detection and collision avoidance modules achieve true positive rates of 92.59% and 85.19%, respectively.
         </div>
       </details>
 

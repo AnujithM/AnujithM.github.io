@@ -46,18 +46,28 @@ redirect_from:
 }
 .si svg{ width:22px; height:22px; display:block; }
 
-/* Hide left sidebar versions (keep in DOM so JS can read URLs) */
+/* Hide left sidebar links (keep in DOM so JS can read URLs) */
 .author__urls li:has(a[href^="mailto:"]),
 .author__urls li:has(a[href*="scholar.google"]),
 .author__urls li:has(a[href*="github.com"]),
 .author__urls li:has(a[href*="linkedin.com"]),
-.author__urls li:has(a[href*="twitter.com"]) { display:none !important; }
+.author__urls li:has(a[href*="twitter.com"]),
+.author__urls li:has(a[href*="orcid.org"]) { display:none !important; }
 /* Fallback for browsers without :has */
 .author__urls a[href^="mailto:"],
 .author__urls a[href*="scholar.google"],
 .author__urls a[href*="github.com"],
 .author__urls a[href*="linkedin.com"],
-.author__urls a[href*="twitter.com"] { display:none !important; }
+.author__urls a[href*="twitter.com"],
+.author__urls a[href*="orcid.org"] { display:none !important; }
+
+/* Also hide common Institution/Location items in the sidebar */
+.author__urls li:has(i.fa-map-marker),
+.author__urls li:has(i.fa-map-marker-alt),
+.author__urls li:has(i.fa-location-dot),
+.author__urls li:has(i.fa-university),
+.author__urls li:has(i.fa-building),
+.author__urls li:has(i.fa-briefcase) { display:none !important; }
 
 /* ===== Publications ===== */
 .pub-row{ display:flex; align-items:flex-start; gap:22px; margin:26px 0; padding:0 0 20px 0; border-bottom:1px solid rgba(0,0,0,0.08); }
@@ -241,8 +251,16 @@ redirect_from:
     scholar:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3 2 9l10 6 10-6-10-6Zm0 8.2L6.4 9 12 5.8 17.6 9 12 11.2ZM4 13l8 4.8L20 13v3l-8 4.8L4 16v-3Z"/></svg>',
     github: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.6-3.37-1.2-3.37-1.2-.45-1.15-1.1-1.46-1.1-1.46-.9-.61.07-.6.07-.6 1 .07 1.52 1.05 1.52 1.05.89 1.52 2.33 1.08 2.9.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03A9.6 9.6 0 0 1 12 7.5c.85 0 1.7.12 2.5.34 1.9-1.3 2.74-1.03 2.74-1.03.55 1.37.2 2.39.1 2.64.64.7 1.02 1.6 1.02 2.69 0 3.83-2.34 4.67-4.57 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>',
     linkedin:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.94 20.5H3.56V9.4h3.38v11.1ZM5.25 8.03a2 2 0 1 1 0-4.01 2 2 0 0 1 0 4ZM21 20.5h-3.38v-5.72c0-1.36-.03-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.82H10.2V9.4h3.25v1.51h.05c.45-.85 1.54-1.75 3.18-1.75 3.4 0 4.03 2.24 4.03 5.15v6.19Z"/></svg>',
-    twitter:'<svg viewBox="0 0 24 24"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.38 8.59 8.59 0 0 1-2.72 1.04 4.29 4.29 0 0 0-7.33 3.91A12.18 12.18 0 0 1 3.15 4.6a4.29 4.29 0 0 0 1.33 5.73 4.23 4.23 0 0 1-1.94-.54v.05a4.29 4.29 0 0 0 3.44 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.97 8.6 8.6 0 0 1-5.32 1.83A8.77 8.77 0 0 1 2 18.58a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19l-.01-.56A8.7 8.7 0 0 0 22.46 6Z"/></svg>'
+    twitter:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.38 8.59 8.59 0 0 1-2.72 1.04 4.29 4.29 0 0 0-7.33 3.91A12.18 12.18 0 0 1 3.15 4.6a4.29 4.29 0 0 0 1.33 5.73 4.23 4.23 0 0 1-1.94-.54v.05a4.29 4.29 0 0 0 3.44 4.2 4.3 4.3 0 0 1-1.93.07 4.29 4.29 0 0 0 4 2.97 8.6 8.6 0 0 1-5.32 1.83A8.77 8.77 0 0 1 2 18.58a12.13 12.13 0 0 0 6.56 1.92c7.88 0 12.19-6.53 12.19-12.19l-.01-.56A8.7 8.7 0 0 0 22.46 6Z"/></svg>'
+  };
 
+  // Optional manual fallbacks (use only if a link is missing from the sidebar)
+  const FALLBACK = {
+    // email:   "mailto:your@email.com",
+    // scholar: "https://scholar.google.com/citations?user=XXXX",
+    // github:  "https://github.com/AnujithM",
+    // linkedin:"https://www.linkedin.com/in/YOURID/",
+    // twitter: "https://twitter.com/YOURID"
   };
 
   const sources = [
@@ -257,12 +275,20 @@ redirect_from:
   if(!row) return;
 
   sources.forEach(s => {
-    const src = document.querySelector('.author__urls ' + s.sel);
-    if(!src) return;
+    // Try to get from sidebar
+    let href = '';
+    const node = document.querySelector('.author__urls ' + s.sel);
+    if (node) href = node.getAttribute('href') || '';
+
+    // Fallback if provided
+    if (!href && FALLBACK[s.key]) href = FALLBACK[s.key];
+
+    if (!href) return; // skip if nothing found
+
     const a = document.createElement('a');
     a.className = 'si';
-    a.href = src.getAttribute('href');
-    a.target = src.getAttribute('target') || '_blank';
+    a.href = href;
+    a.target = '_blank';
     a.rel = 'noopener';
     a.setAttribute('aria-label', s.label);
     a.innerHTML = defs[s.key];
@@ -270,7 +296,7 @@ redirect_from:
   });
 })();
 
-/* "Under construction" for placeholder websites */
+/* "Under construction" for placeholder websites (publications) */
 document.addEventListener('click', function(e){
   const el = e.target.closest('a.coming-soon');
   if(el){ e.preventDefault(); alert('Under construction.'); }

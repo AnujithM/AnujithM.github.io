@@ -13,6 +13,53 @@ redirect_from:
   --mila-hover:#e91e63;
   --btn-border: rgba(0,0,0,.55);
 }
+/* Photo + caption container (floats left) */
+.portrait{
+  float: left;
+  width: clamp(200px, 22vw, 300px);
+  margin: 4px 28px 12px 0;  /* space to its right & below */
+}
+
+/* The image inside the portrait container */
+.portrait > img{
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 12px 26px rgba(0,0,0,.16);
+  display: block;
+}
+
+/* Two-line caption under the image */
+.photo-caption{
+  margin-top: 10px;
+  text-align: left;
+  font-family: "Inter","Roboto","Lato",system-ui,sans-serif;
+  line-height: 1.4;
+}
+.photo-caption .aka{
+  font-size: 17px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+}
+.photo-caption .role{
+  font-size: 15px;
+  color: #555;
+  letter-spacing: .2px;
+}
+
+/* Mobile: stack image + caption above text */
+@media (max-width: 720px){
+  .portrait{
+    float: none;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 18px;
+  }
+  .intro-text{ max-width: none; }
+}
+
 /* Make the text column read like a tall, narrow column */
 .intro-grid{
   column-gap: 36px;                           /* a little more breathing room */
@@ -230,9 +277,6 @@ redirect_from:
 }
 </style>
 
-<!-- Title -->
-<h1 class="intro-title">Anujith Muraleedharan</h1>
-
 <!-- Photo + caption (floats left; text flows on the right) -->
 <div class="portrait">
   <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
@@ -242,10 +286,8 @@ redirect_from:
   </div>
 </div>
 
-    <!-- your paragraphs -->
-  </div>
-</div>
-  <div class="intro-text">
+<div class="intro-text">
+
     <p>I am a Research Associate working with Prof. <a href="https://ctech.iitd.ac.in/hanmandlu.html">M. Hanmandlu</a>, building practical, human-centered robotic systems. My focus is at the meeting point of learning and perception. The aim is simple: help robots behave reliably around people, stay steady under noise and latency, and work in everyday environments.</p>
 
     <p>Earlier, at the <a href="https://cambum.net/I3D.htm">I3D Lab</a> at the Indian Institute of Science (IISc), Bangalore with <a href="https://cambum.net/PB/">Pradipta Biswas</a>, I worked on assistive human–robot interaction and designed the controller for an autonomous aircraft taxiing prototype.</p>

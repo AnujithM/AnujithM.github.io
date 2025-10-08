@@ -270,11 +270,10 @@ redirect_from:
   .pub-body{ padding-right:0; }
 }
 .photo-caption .email{
-  font-size: 15px;
-  /* typewriter-style font stack */
-  font-family: "American Typewriter", "Courier New", Courier, "Lucida Typewriter", monospace;
-  letter-spacing: 0.3px;
-  color: #333;
+  font-size: 14px;
+  color: #444;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  letter-spacing: .1px;
   margin-top: 2px;
 }
 
@@ -288,7 +287,7 @@ redirect_from:
   <div class="photo-caption">
     <div class="aka">a.k.a <strong>ToNY</strong></div>
     <div class="role">Research Associate</div>
-    <div class="email">anujithmuralidharan[at]gmail[dot]com</div>
+    <div class="mail">anujithmuralidharan@gmail.com</div>
   </div>
 </div>
 

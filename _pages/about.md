@@ -227,6 +227,11 @@ redirect_from:
   </ul>
 </div>
 
+<!-- ClustrMaps Visitor Map -->
+<div id="visitor-map" style="margin-top: 10px; text-align: center;">
+  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
+</div>
+
 <!-- Simple "Under construction" alert for selected WEBSITE buttons -->
 <script>
 document.addEventListener('click', function(e){

@@ -38,9 +38,13 @@ redirect_from:
 .social-inline .si,
 .social-inline .si:link,
 .social-inline .si:visited{
-  color:#000 !important;
+  color:#000;                 /* no !important */
   text-decoration:none;
 }
+.social-inline .si:hover{
+  color:var(--mila);
+}
+
 .si{
   width:64px; height:64px; border:none; border-radius:0; background:transparent;
   display:flex; align-items:center; justify-content:center;

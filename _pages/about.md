@@ -299,11 +299,12 @@ redirect_from:
 <div class="intro-grid">
   <h1 class="intro-title">Anujith Muraleedharan</h1>
 
-  <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
+<img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
 <div class="photo-caption">
   <div class="aka"><strong>a.k.a ToNY</strong></div>
   <div class="role">Research Associate</div>
 </div>
+
 
 
   <div class="intro-text">

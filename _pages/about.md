@@ -21,6 +21,15 @@ redirect_from:
 .intro-text{
   max-width: 65ch;                            /* limit line length -> taller column */
 }
+/* Increase vertical breathing room around the title and content */
+.intro-title {
+  margin-bottom: 26px;   /* more gap between the name and the photo/text */
+}
+
+.intro-grid {
+  row-gap: 20px;         /* adds vertical spacing between rows (title ↔ image/text) */
+  column-gap: 40px;      /* slight horizontal gap tweak */
+}
 
 /* Paragraph shaping */
 .intro-text p{

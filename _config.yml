@@ -22,7 +22,7 @@ repository               : "AnujithM/AnujithM.github.io"
 author:
   # Biographic information
   avatar           : "Image1.png"
-  name             : "Anujith Muraleedharan"
+  name             : #"Anujith Muraleedharan"
   pronouns         : # example: "she/her"  
   counter          : 
   bio              : #"Perception & Control"

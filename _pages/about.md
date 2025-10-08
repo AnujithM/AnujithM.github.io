@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About Me"
+title: "Anujith Muraleedharan (ToNY)"
 author_profile: true
 redirect_from:
   - /about/

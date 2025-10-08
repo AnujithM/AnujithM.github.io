@@ -66,7 +66,7 @@ redirect_from:
 }
 
 .intro-text{
-  max-width: 75ch;                            /* limit line length -> taller column */
+  max-width: 85ch;                            /* limit line length -> taller column */
 }
 /* Increase vertical breathing room around the title and content */
 
@@ -187,7 +187,7 @@ redirect_from:
   clear: both;
 }
 /* On small screens, stack image above text */
-@media (max-width: 980px){
+@media (max-width: 1080px){
   .about-rect{
     float: none;
     display: block;

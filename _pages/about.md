@@ -269,6 +269,14 @@ redirect_from:
   .pub-year{ display:none; }
   .pub-body{ padding-right:0; }
 }
+.photo-caption .email{
+  font-size: 14px;
+  color: #444;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  letter-spacing: .1px;
+  margin-top: 2px;
+}
+
 </style>
 
 <!-- Photo + caption (floats left; text flows on the right) -->
@@ -279,6 +287,7 @@ redirect_from:
   <div class="photo-caption">
     <div class="aka">a.k.a <strong>ToNY</strong></div>
     <div class="role">Research Associate</div>
+    <div class="email">anujithmuralidharan[at]gmail[dot]com</div>
   </div>
 </div>
 

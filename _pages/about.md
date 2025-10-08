@@ -81,7 +81,7 @@ redirect_from:
      lines up with the main column (approx. sidebar width + gutter) */
   .masthead,
   .masthead__inner-wrap,
-  .greedy-nav { padding-left: 320px; }   /* tweak 300–340px if needed */
+  .greedy-nav { padding-left: 340px; }   /* tweak 300–340px if needed */
 
   /* equal spacing between Home / Projects / CV */
   .greedy-nav .visible-links > li + li { margin-left: 28px; }
@@ -187,7 +187,7 @@ redirect_from:
   clear: both;
 }
 /* On small screens, stack image above text */
-@media (max-width: 1280px){
+@media (max-width: 1080px){
   .about-rect{
     float: none;
     display: block;

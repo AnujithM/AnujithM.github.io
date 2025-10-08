@@ -183,35 +183,6 @@ redirect_from:
   border-radius: 12px;
   box-shadow: 0 12px 26px rgba(0,0,0,.16);
 }
-<style>
-  /* ...your existing styles... */
-
-  .about-rect{
-    /* your image sizing/positioning */
-  }
-
-  /* === Caption directly below the photo (like reference layout) === */
-  .photo-caption {
-    margin-top: 10px;
-    margin-left: 4px;
-    text-align: left;
-    font-family: "Inter", "Roboto", sans-serif;
-    line-height: 1.4;
-  }
-  .photo-caption .aka {
-    font-size: 17px;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 2px;
-  }
-  .photo-caption .role {
-    font-size: 15px;
-    color: #555;
-    letter-spacing: 0.2px;
-  }
-
-  /* ...rest of your styles... */
-</style>
 
 /* Clear float after content so later sections don’t wrap */
 .page__content::after{
@@ -329,11 +300,7 @@ redirect_from:
   <h1 class="intro-title">Anujith Muraleedharan</h1>
 
   <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
-  <div class="photo-caption">
-  <div class="aka"><strong>a.k.a ToNY</strong></div>
-  <div class="role">Research Associate</div>
-</div>
-
+  
 
   <div class="intro-text">
     <p>I am a Research Associate working with Prof. <a href="https://ctech.iitd.ac.in/hanmandlu.html">M. Hanmandlu</a>, building practical, human-centered robotic systems. My focus is at the meeting point of learning and perception. The aim is simple: help robots behave reliably around people, stay steady under noise and latency, and work in everyday environments.</p>

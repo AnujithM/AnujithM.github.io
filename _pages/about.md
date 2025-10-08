@@ -250,7 +250,7 @@ redirect_from:
     { sel:'a[href*="scholar.google"]',  key:'scholar', label:'Google Scholar' },
     { sel:'a[href*="github.com"]',      key:'github',  label:'GitHub' },
     { sel:'a[href*="linkedin.com"]',    key:'linkedin',label:'LinkedIn' },
-    { sel:'a[href*="twitter.com"]', key:'twitter', label:'Twitter' }
+    { sel:'a[href*="twitter.com"]',     key:'twitter', label:'Twitter' }
   ];
 
   const row = document.getElementById('social-inline');

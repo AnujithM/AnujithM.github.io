@@ -12,24 +12,21 @@ redirect_from:
 /* Page container */
 .page__content{
   font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:17px;
-  line-height:1.8;
-  color:#1a1a1a;
-  max-width:780px;                 /* readable column */
-  margin:0 auto;
+  font-size:17px; line-height:1.8; color:#1a1a1a;
+  max-width:780px; margin:0 auto;
 }
 
 /* Paragraph rhythm */
 .page__content p{ margin:0 0 1.3em 0; }
 
-/* Mila Québec accent color for links */
+/* Mila Québec accent for links */
 .page__content a{
-  color:#c2185b;                   /* Mila primary */
+  color:#c2185b;             /* Mila primary */
   font-weight:600;
   text-decoration:none;
 }
 .page__content a:hover{
-  color:#e91e63;                   /* hover accent */
+  color:#e91e63;             /* hover accent */
   text-decoration:underline;
 }
 
@@ -40,10 +37,10 @@ redirect_from:
   text-transform:lowercase;
 }
 
-/* ---------- Publication cards (reference-like) ---------- */
+/* ---------- Publication cards ---------- */
 .pub-row{
   display:flex; align-items:flex-start; gap:22px;
-  margin:26px 0; padding-bottom:20px;
+  margin:26px 0; padding:0 0 20px 0;
   border-bottom:1px solid rgba(0,0,0,0.08);
 }
 .pub-row:last-of-type{ border-bottom:none; }
@@ -52,29 +49,42 @@ redirect_from:
   width:190px; border-radius:10px; flex:0 0 auto;
   box-shadow:0 1px 4px rgba(0,0,0,0.15);
 }
+.pub-body{
+  flex:1 1 auto; position:relative;
+  padding-right:120px;        /* space so year never overlaps text */
+}
 
-.pub-body{ flex:1 1 auto; position:relative; }
 .pub-title{ font-weight:700; font-size:19px; line-height:1.45; margin:0 0 6px 0; }
 .pub-auth{ font-size:16px; margin:0 0 4px 0; }
 .pub-venue{ font-style:italic; color:#555; opacity:.9; margin:0 0 6px 0; }
 
-/* Faint year tag aligned right (optional, include span.pub-year in HTML) */
+/* Year tag in right gutter */
 .pub-year{
-  position:absolute; right:0; top:0;
-  font-size:30px; color:rgba(0,0,0,0.07); font-weight:500;
+  position:absolute; right:-12px; top:2px;
+  font-size:34px; color:rgba(0,0,0,0.08); font-weight:500;
+  pointer-events:none;
 }
 
-/* Buttons */
-.link-btn,.abs-toggle{
-  display:inline-block; padding:6px 12px; font-size:12px;
-  border:1px solid rgba(0,0,0,0.35); border-radius:4px;
-  text-decoration:none; color:inherit; cursor:pointer; background:#fff;
+/* Unified buttons */
+.link-btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:6px 12px; min-height:34px; line-height:1;
+  font-size:12px; border:1px solid rgba(0,0,0,0.35);
+  border-radius:4px; background:#fff; color:inherit; text-decoration:none; cursor:pointer;
 }
 .link-btn:hover{ background:#fafafa; border-color:#c2185b; color:#c2185b; }
 
-/* Abstract */
-.abs-toggle{ list-style:none; }
-.abs-toggle::-webkit-details-marker{ display:none; }
+/* ABS details — only SUMMARY is styled like a button */
+.abs{ display:inline-block; }
+.abs > summary{ list-style:none; }
+.abs > summary::-webkit-details-marker{ display:none; }
+.abs > summary{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:6px 12px; min-height:34px; line-height:1; font-size:12px;
+  border:1px solid rgba(0,0,0,0.35); border-radius:4px; background:#fff; cursor:pointer;
+}
+.abs[open] > summary{ background:#fafafa; border-color:#c2185b; color:#c2185b; }
+
 .abs-box{
   margin-top:8px; padding:10px; background:#fafafa;
   border-left:3px solid rgba(0,0,0,0.25); max-width:65ch;
@@ -82,16 +92,18 @@ redirect_from:
 
 /* News box */
 .news-box{
-  max-height: calc(6 * 2.6em);
-  overflow-y:auto;
-  border:1px solid rgba(0,0,0,.12);
-  border-radius:10px;
-  padding:10px 14px;
-  background:rgba(0,0,0,0.02);
-  margin:12px 0 24px 0;
+  max-height:calc(6 * 2.6em); overflow-y:auto;
+  border:1px solid rgba(0,0,0,.12); border-radius:10px;
+  padding:10px 14px; background:rgba(0,0,0,0.02); margin:12px 0 24px 0;
 }
 .news-box ul{ margin:0; padding-left:1.1em; list-style:disc; }
 .news-box li{ margin:0.35em 0; }
+
+/* Mobile: hide year + remove right padding */
+@media (max-width:700px){
+  .pub-year{ display:none; }
+  .pub-body{ padding-right:0; }
+}
 </style>
 
 <p>I am a Research Associate working with Prof. <a href="https://ctech.iitd.ac.in/hanmandlu.html">M. Hanmandlu</a>, building practical, human-centered robotic systems. My focus is at the meeting point of learning and perception. The aim is simple: help robots behave reliably around people, stay steady under noise and latency, and work in everyday environments.</p>
@@ -115,8 +127,8 @@ redirect_from:
     <div class="pub-venue">IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments</div>
 
     <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
-      <details class="abs-toggle">
-        <summary class="abs-toggle">ABS</summary>
+      <details class="abs">
+        <summary>ABS</summary>
         <div class="abs-box">
           A lag-aware retargeting layer that adapts goal waypoints under sensing latency and sudden object shifts, improving success across pick/place, push, stacking, and peg tasks.
         </div>
@@ -138,8 +150,8 @@ redirect_from:
     <div class="pub-venue">CoRL 2025 Workshop on Resource-Rational Robot Learning</div>
 
     <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
-      <details class="abs-toggle">
-        <summary class="abs-toggle">ABS</summary>
+      <details class="abs">
+        <summary>ABS</summary>
         <div class="abs-box">
           A robot-gated HiL-RL policy that queries a human only when learning stalls, achieving near-oracle success with roughly half the feedback of always-querying baselines.
         </div>
@@ -161,8 +173,8 @@ redirect_from:
     <div class="pub-venue">ACM Conference on Intelligent User Interfaces (ACM IUI) 2024</div>
 
     <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
-      <details class="abs-toggle">
-        <summary class="abs-toggle">ABS</summary>
+      <details class="abs">
+        <summary>ABS</summary>
         <div class="abs-box">
           A gaze-controlled, safety-aware robotic workflow that enables users with SSMI to perform block-printing via intuitive eye-tracking and constrained motion planning.
         </div>
@@ -184,8 +196,8 @@ redirect_from:
     <div class="pub-venue">AVIATION Journal Vol 27 No 4 (2023)</div>
 
     <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
-      <details class="abs-toggle">
-        <summary class="abs-toggle">ABS</summary>
+      <details class="abs">
+        <summary>ABS</summary>
         <div class="abs-box">
           A monocular pipeline for runway/route perception and rule-based taxiing with real-time detection and path following on a lab testbed.
         </div>

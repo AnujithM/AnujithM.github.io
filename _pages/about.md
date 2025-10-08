@@ -32,7 +32,6 @@ redirect_from:
 .social-inline{
   display:flex; gap:14px; flex-wrap:wrap;
   margin:10px 0 28px 0;
-  justify-content:center;            /* center aligned */
 }
 .si{
   width:46px; height:46px; border:1px solid #000; border-radius:12px;
@@ -50,14 +49,12 @@ redirect_from:
 .author__urls li:has(a[href^="mailto:"]),
 .author__urls li:has(a[href*="scholar.google"]),
 .author__urls li:has(a[href*="github.com"]),
-.author__urls li:has(a[href*="linkedin.com"]),
-.author__urls li:has(a[href*="orcid.org"]) { display:none !important; }
+.author__urls li:has(a[href*="linkedin.com"]) { display:none !important; }
 /* Fallback for browsers without :has */
 .author__urls a[href^="mailto:"],
 .author__urls a[href*="scholar.google"],
 .author__urls a[href*="github.com"],
-.author__urls a[href*="linkedin.com"],
-.author__urls a[href*="orcid.org"] { display:none !important; }
+.author__urls a[href*="linkedin.com"] { display:none !important; }
 
 /* ===== Publications (kept from your tuned version) ===== */
 .pub-row{ display:flex; align-items:flex-start; gap:22px; margin:26px 0; padding:0 0 20px 0; border-bottom:1px solid rgba(0,0,0,0.08); }
@@ -93,7 +90,7 @@ redirect_from:
 
 <p>I earned a B.Tech. in Electronics and Communication Engineering from RIT, Kottayam. As an undergraduate researcher in the Centre for Advanced Signal Processing (<a href="http://www.rit.ac.in/ece/CASP/">CASP lab</a>) with <a href="http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE">Dr. Manju Manuel</a>, I worked on FPGA design and implementation. For details on my current directions, see my <a href="https://anujithm.github.io/files/research_statement_2025.html">Research Statement (as of Feb 2025)</a>.</p>
 
-<!-- Social icons row (auto-filled by JS using your sidebar links) -->
+<!-- Social icons row (will be auto-filled by JS using your sidebar links) -->
 <div id="social-inline" class="social-inline" aria-label="social-links below research statement"></div>
 
 ## selected publications
@@ -223,8 +220,7 @@ redirect_from:
     email:  '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>',
     scholar:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3 2 9l10 6 10-6-10-6Zm0 8.2L6.4 9 12 5.8 17.6 9 12 11.2ZM4 13l8 4.8L20 13v3l-8 4.8L4 16v-3Z"/></svg>',
     github: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.68c-2.78.6-3.37-1.2-3.37-1.2-.45-1.15-1.1-1.46-1.1-1.46-.9-.61.07-.6.07-.6 1 .07 1.52 1.05 1.52 1.05.89 1.52 2.33 1.08 2.9.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.03A9.6 9.6 0 0 1 12 7.5c.85 0 1.7.12 2.5.34 1.9-1.3 2.74-1.03 2.74-1.03.55 1.37.2 2.39.1 2.64.64.7 1.02 1.6 1.02 2.69 0 3.83-2.34 4.67-4.57 4.92.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>',
-    linkedin:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.94 20.5H3.56V9.4h3.38v11.1ZM5.25 8.03a2 2 0 1 1 0-4.01 2 2 0 0 1 0 4ZM21 20.5h-3.38v-5.72c0-1.36-.03-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.82H10.2V9.4h3.25v1.51h.05c.45-.85 1.54-1.75 3.18-1.75 3.4 0 4.03 2.24 4.03 5.15v6.19Z"/></svg>',
-    orcid:  '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" opacity=".12"/><path fill="currentColor" d="M9.3 7.5h1.6v9H9.3v-9Zm4.6 9h-1.5V9.7h1.5c2.2 0 3.7 1.3 3.7 3.4s-1.5 3.4-3.7 3.4Zm.1-5.7h-.7v4.7h.7c1.5 0 2.4-.9 2.4-2.4 0-1.5-.9-2.3-2.4-2.3ZM8.4 6.1c0-.5.4-.9.9-.9s.9.4.9.9-.4.9-.9.9a.9.9 0 0 1-.9-.9Z"/></svg>'
+    linkedin:'<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.94 20.5H3.56V9.4h3.38v11.1ZM5.25 8.03a2 2 0 1 1 0-4.01 2 2 0 0 1 0 4ZM21 20.5h-3.38v-5.72c0-1.36-.03-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.82H10.2V9.4h3.25v1.51h.05c.45-.85 1.54-1.75 3.18-1.75 3.4 0 4.03 2.24 4.03 5.15v6.19Z"/></svg>'
   };
 
   const sources = [
@@ -232,7 +228,6 @@ redirect_from:
     { sel:'a[href*="scholar.google"]',  key:'scholar', label:'Google Scholar' },
     { sel:'a[href*="github.com"]',      key:'github',  label:'GitHub' },
     { sel:'a[href*="linkedin.com"]',    key:'linkedin',label:'LinkedIn' },
-    { sel:'a[href*="orcid.org"]',       key:'orcid',   label:'ORCID' }
   ];
 
   const row = document.getElementById('social-inline');

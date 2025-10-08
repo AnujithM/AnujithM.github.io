@@ -15,6 +15,15 @@ redirect_from:
   --btn-border: rgba(0,0,0,.55); /* black-ish outline for all buttons */
 }
 
+/* equal-contribution legend */
+.eq-note{
+  font-size:13px;
+  line-height:1.4;
+  color:#6b6b6b;
+  margin:-8px 0 16px 0;   /* tucks it closer to the heading */
+  font-style:italic;
+}
+
 /* --- base page --- */
 .page__content{
   font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
@@ -114,6 +123,7 @@ redirect_from:
 <p>I earned a B.Tech. in Electronics and Communication Engineering from RIT, Kottayam. As an undergraduate researcher in the Centre for Advanced Signal Processing (<a href="http://www.rit.ac.in/ece/CASP/">CASP lab</a>) with <a href="http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE">Dr. Manju Manuel</a>, I worked on FPGA design and implementation. For details on my current directions, see my <a href="https://anujithm.github.io/files/research_statement_2025.html">Research Statement (as of Feb 2025)</a>.</p>
 
 ## selected publications
+<div class="eq-note">* denotes equal contribution.</div>
 
 <div style="height:6px;"></div>
 

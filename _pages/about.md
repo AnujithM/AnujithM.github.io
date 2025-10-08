@@ -66,7 +66,7 @@ redirect_from:
 }
 
 .intro-text{
-  max-width: 85ch;                            /* limit line length -> taller column */
+  max-width: 95ch;                            /* limit line length -> taller column */
 }
 /* Increase vertical breathing room around the title and content */
 

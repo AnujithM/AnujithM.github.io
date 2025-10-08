@@ -12,6 +12,7 @@ redirect_from:
 :root{
   --mila:#c2185b;          /* Mila Québec primary */
   --mila-hover:#e91e63;    /* brighter hover */
+  --btn-border: rgba(0,0,0,.55); /* black-ish outline for all buttons */
 }
 
 /* --- base page --- */
@@ -61,36 +62,38 @@ redirect_from:
   font-size:34px; color:rgba(0,0,0,0.08); font-weight:500; pointer-events:none;
 }
 
-/* ---------- Buttons (PAPER/WEBSITE/ARXIV) in Mila color ---------- */
+/* ---------- Buttons (ABS / PAPER / WEBSITE) ---------- */
+/* Black outline, Mila text */
 .link-btn{
   display:inline-flex; align-items:center; justify-content:center;
   padding:6px 12px; min-height:34px; line-height:1;
-  font-size:12px; border:1px solid var(--mila);
-  border-radius:6px; background:#fff; color:var(--mila);
+  font-size:12px;
+  border:1px solid var(--btn-border);   /* black outline */
+  border-radius:6px; background:#fff; color:var(--mila); /* Mila text */
   text-decoration:none; cursor:pointer;
 }
-.link-btn:hover{ background:#fff4f8; border-color:var(--mila-hover); color:var(--mila-hover); }
+.link-btn:hover{ background:#fafafa; border-color:#000; color:var(--mila-hover); }
 
-/* ---------- ABS details — EXACT same color as other buttons ---------- */
+/* ABS details — SUMMARY styled exactly like the .link-btn above */
 .abs{ display:inline-block; }
 .abs > summary{ list-style:none; }
 .abs > summary::-webkit-details-marker{ display:none; }
 .abs > summary{
   display:inline-flex; align-items:center; justify-content:center;
-  padding:6px 12px; min-height:34px; line-height:1;
-  font-size:12px; border:1px solid var(--mila);
+  padding:6px 12px; min-height:34px; line-height:1; font-size:12px;
+  border:1px solid var(--btn-border);
   border-radius:6px; background:#fff; color:var(--mila); cursor:pointer;
 }
-.abs > summary:hover{ background:#fff4f8; border-color:var(--mila-hover); color:var(--mila-hover); }
-.abs[open] > summary{ background:#fff0f6; border-color:var(--mila-hover); color:var(--mila-hover); }
+.abs > summary:hover{ background:#fafafa; border-color:#000; color:var(--mila-hover); }
 
-/* Abstract panel with matching Mila outline */
+/* ABS dropdown panel: like the reference (no full box, soft bg, Mila left bar) */
 .abs-box{
-  margin-top:8px; padding:12px 14px; background:#fff;
-  border:1px solid var(--mila); border-radius:8px; max-width:65ch;
+  margin-top:10px; padding:12px 14px; background:#f5f5f5;
+  border-left:3px solid var(--mila); max-width:65ch;
+  border-radius:0;  /* not a rounded box */
 }
 
-/* News box */
+/* News box (unchanged) */
 .news-box{
   max-height:calc(6 * 2.6em); overflow-y:auto;
   border:1px solid rgba(0,0,0,.12); border-radius:10px;
@@ -104,6 +107,33 @@ redirect_from:
   .pub-year{ display:none; }
   .pub-body{ padding-right:0; }
 }
+
+/* ---------- Under-construction modal ---------- */
+.uc-backdrop{
+  position:fixed; inset:0; background:rgba(0,0,0,.45);
+  display:none; align-items:center; justify-content:center; z-index:9999;
+}
+.uc-card{
+  background:#fff; border-radius:14px; max-width:520px; width:min(92vw,520px);
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  padding:20px 22px 18px 22px; position:relative;
+  border:1px solid rgba(0,0,0,.1);
+}
+.uc-close{
+  position:absolute; top:8px; right:10px; border:none; background:transparent;
+  font-size:22px; line-height:1; cursor:pointer; color:#666;
+}
+.uc-title{
+  font-weight:600; font-size:18px; color:#222; margin:0 0 10px 0;
+}
+.uc-row{ display:flex; gap:14px; align-items:center; }
+.uc-illu{
+  width:78px; height:78px; flex:0 0 auto;
+  border-radius:12px; background:#fff4f8; display:grid; place-items:center;
+  border:1px solid rgba(0,0,0,.08);
+}
+.uc-text{ color:#444; line-height:1.6; }
+.uc-text a{ color:var(--mila); text-decoration:underline; }
 </style>
 
 <p>I am a Research Associate working with Prof. <a href="https://ctech.iitd.ac.in/hanmandlu.html">M. Hanmandlu</a>, building practical, human-centered robotic systems. My focus is at the meeting point of learning and perception. The aim is simple: help robots behave reliably around people, stay steady under noise and latency, and work in everyday environments.</p>
@@ -231,13 +261,44 @@ redirect_from:
   <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
 </div>
 
-<!-- Coming soon handler for selected WEBSITE buttons -->
+<!-- ===== Under-Construction Modal (custom, no browser alert) ===== -->
+<div class="uc-backdrop" id="uc">
+  <div class="uc-card" role="dialog" aria-modal="true" aria-labelledby="uctitle">
+    <button class="uc-close" aria-label="Close">&times;</button>
+    <div class="uc-title" id="uctitle">Under construction</div>
+    <div class="uc-row">
+      <div class="uc-illu" aria-hidden="true">
+        <!-- tiny inline SVG illustration -->
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none">
+          <rect x="2" y="15" width="20" height="6" rx="2" stroke="#c2185b" />
+          <path d="M4 15V7l6-3 6 3v8" stroke="#c2185b"/>
+          <circle cx="7" cy="21" r="1.2" fill="#c2185b"/>
+          <circle cx="17" cy="21" r="1.2" fill="#c2185b"/>
+          <path d="M8 10h8" stroke="#c2185b" />
+        </svg>
+      </div>
+      <div class="uc-text">
+        This project page is being prepared.  
+        Check back soon or ping me if you’d like early details.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Coming-soon behavior -->
 <script>
-document.addEventListener('click', function(e){
-  const el = e.target.closest('a.coming-soon');
-  if(el){
-    e.preventDefault();
-    alert('Coming soon.');
-  }
-}, {passive:false});
+(function(){
+  const uc = document.getElementById('uc');
+  const closeBtn = uc.querySelector('.uc-close');
+  function openModal(){ uc.style.display = 'flex'; }
+  function closeModal(){ uc.style.display = 'none'; }
+
+  document.addEventListener('click', function(e){
+    const el = e.target.closest('a.coming-soon');
+    if(el){ e.preventDefault(); openModal(); }
+    if(e.target === uc){ closeModal(); }   // click backdrop to close
+  });
+  closeBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
+})();
 </script>

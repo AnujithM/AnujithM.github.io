@@ -183,6 +183,35 @@ redirect_from:
   border-radius: 12px;
   box-shadow: 0 12px 26px rgba(0,0,0,.16);
 }
+<style>
+  /* ...your existing styles... */
+
+  .about-rect{
+    /* your image sizing/positioning */
+  }
+
+  /* === Caption directly below the photo (like reference layout) === */
+  .photo-caption {
+    margin-top: 10px;
+    margin-left: 4px;
+    text-align: left;
+    font-family: "Inter", "Roboto", sans-serif;
+    line-height: 1.4;
+  }
+  .photo-caption .aka {
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 2px;
+  }
+  .photo-caption .role {
+    font-size: 15px;
+    color: #555;
+    letter-spacing: 0.2px;
+  }
+
+  /* ...rest of your styles... */
+</style>
 
 /* Clear float after content so later sections don’t wrap */
 .page__content::after{
@@ -301,15 +330,8 @@ redirect_from:
 
   <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
   <div class="photo-caption">
-  <span class="aka">a.k.a <strong>ToNY</strong></span>
-
-  <a class="steam" href="https://steamcommunity.com/id/YOUR_STEAM_ID" target="_blank" rel="noopener" aria-label="Steam profile">
-    <!-- Steam icon (inline SVG uses currentColor) -->
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="currentColor" d="M12.001 2C6.479 2 2 6.477 2 11.999c0 5.523 4.479 10.001 10.001 10.001 5.132 0 9.377-3.877 9.95-8.87l-3.94-1.64a3.77 3.77 0 0 0-5.3-2.52L9.7 7.99c.03.206.047.417.047.632 0 2.102-1.703 3.805-3.805 3.805-.197 0-.39-.015-.578-.044l-1.64 3.94a10.03 10.03 0 0 0 8.277 4.216c5.522 0 10.001-4.478 10.001-10.001C21.999 6.477 17.523 2 12.001 2Zm2.92 6.04a2.62 2.62 0 1 1 0 5.24 2.62 2.62 0 0 1 0-5.24ZM5.94 12.8l1.74.72a2.53 2.53 0 0 0 2.244-4.555l1.18-.49a3.77 3.77 0 0 0 4.912 3.33 3.77 3.77 0 1 0-4.424-4.94l-1.18.49a2.53 2.53 0 0 0-4.472 2.63l-1.74-.72A3.81 3.81 0 0 0 5.94 12.8Z"/>
-    </svg>
-    <span class="steam-id">YOUR_STEAM_ID</span>
-  </a>
+  <div class="aka"><strong>a.k.a ToNY</strong></div>
+  <div class="role">Research Associate</div>
 </div>
 
 

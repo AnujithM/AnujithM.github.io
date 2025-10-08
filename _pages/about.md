@@ -300,7 +300,11 @@ redirect_from:
   <h1 class="intro-title">Anujith Muraleedharan</h1>
 
   <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
-  
+<div class="photo-caption">
+  <div class="aka"><strong>a.k.a ToNY</strong></div>
+  <div class="role">Research Associate</div>
+</div>
+
 
   <div class="intro-text">
     <p>I am a Research Associate working with Prof. <a href="https://ctech.iitd.ac.in/hanmandlu.html">M. Hanmandlu</a>, building practical, human-centered robotic systems. My focus is at the meeting point of learning and perception. The aim is simple: help robots behave reliably around people, stay steady under noise and latency, and work in everyday environments.</p>

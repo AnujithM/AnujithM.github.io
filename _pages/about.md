@@ -7,109 +7,72 @@ redirect_from:
   - /about.html
 ---
 
-<!-- ===== Reference-like typography & layout (local to this page) ===== -->
+<!-- ===== Page styles (adds to what we already built for publications) ===== -->
 <style>
 :root{
-  --mila:#c2185b;          /* Mila Québec primary */
-  --mila-hover:#e91e63;    /* brighter hover */
-  --btn-border: rgba(0,0,0,.55); /* black-ish outline for all buttons */
+  --mila:#c2185b;
+  --mila-hover:#e91e63;
+  --btn-border: rgba(0,0,0,.55);
 }
 
-/* equal-contribution legend */
-.eq-note{
-  font-size:13px;
-  line-height:1.4;
-  color:#6b6b6b;
-  margin:-8px 0 16px 0;   /* tucks it closer to the heading */
-  font-style:italic;
-}
-
-/* --- base page --- */
+/* base text column */
 .page__content{
   font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-size:17px; line-height:1.8; color:#1a1a1a;
   max-width:780px; margin:0 auto;
 }
 .page__content p{ margin:0 0 1.3em 0; }
-
-/* inline links */
 .page__content a{ color:var(--mila); font-weight:600; text-decoration:none; }
 .page__content a:hover{ color:var(--mila-hover); text-decoration:underline; }
 
-/* section heading (reference-like) */
-.page__content h2{
-  font-family:"Roboto","Lato",system-ui,sans-serif;
-  font-size:34px; font-weight:300; line-height:1.25;
-  margin:2.2em 0 .9em 0; text-transform:lowercase;
+/* ===== Social icons row under Research Statement ===== */
+.social-inline{
+  display:flex; gap:14px; flex-wrap:wrap;
+  margin:10px 0 28px 0;
 }
-.page__content h3{ font-weight:600; margin:2em 0 .8em 0; }
+.si{
+  width:46px; height:46px; border:1px solid #000; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  color:var(--mila); text-decoration:none; transition:transform .12s ease, color .12s ease, border-color .12s ease;
+}
+.si:hover{ color:var(--mila-hover); border-color:#000; transform:translateY(-1px); }
+.si i{ font-size:22px; line-height:1; }
 
-/* ---------- Publication cards ---------- */
-.pub-row{
-  display:flex; align-items:flex-start; gap:22px;
-  margin:26px 0; padding:0 0 20px 0;
-  border-bottom:1px solid rgba(0,0,0,0.08);
-}
+/* ===== Hide only these four items from the left sidebar ===== */
+.author__urls li:has(a[href^="mailto:"]),
+.author__urls li:has(a[href*="scholar.google"]),
+.author__urls li:has(a[href*="github.com"]),
+.author__urls li:has(a[href*="linkedin.com"]) { display:none !important; }
+
+/* Fallback (older browsers without :has): hide just the anchors */
+.author__urls a[href^="mailto:"],
+.author__urls a[href*="scholar.google"],
+.author__urls a[href*="github.com"],
+.author__urls a[href*="linkedin.com"] { display:none !important; }
+
+/* ===== Section heading, publications, ABS buttons, etc. (from earlier) ===== */
+.page__content h2{ font-family:"Roboto","Lato",system-ui,sans-serif; font-size:34px; font-weight:300; line-height:1.25; margin:2.2em 0 .9em 0; text-transform:lowercase; }
+.pub-row{ display:flex; align-items:flex-start; gap:22px; margin:26px 0; padding:0 0 20px 0; border-bottom:1px solid rgba(0,0,0,0.08); }
 .pub-row:last-of-type{ border-bottom:none; }
-
-.pub-thumb{
-  width:190px; border-radius:10px; flex:0 0 auto;
-  box-shadow:0 1px 4px rgba(0,0,0,0.15);
-}
-
+.pub-thumb{ width:190px; border-radius:10px; flex:0 0 auto; box-shadow:0 1px 4px rgba(0,0,0,0.15); }
 .pub-body{ flex:1 1 auto; position:relative; padding-right:120px; }
-.pub-title{
-  font-weight:500; font-size:20px; line-height:1.45;
-  margin:0 0 6px 0; letter-spacing:.1px;
-}
+.pub-title{ font-weight:500; font-size:20px; line-height:1.45; margin:0 0 6px 0; letter-spacing:.1px; }
 .pub-auth{ font-size:16px; margin:0 0 4px 0; }
 .pub-venue{ font-style:italic; color:#555; opacity:.9; margin:0 0 6px 0; }
+.pub-year{ position:absolute; right:-12px; top:2px; font-size:34px; color:rgba(0,0,0,0.08); font-weight:500; pointer-events:none; }
 
-/* year in right gutter */
-.pub-year{
-  position:absolute; right:-12px; top:2px;
-  font-size:34px; color:rgba(0,0,0,0.08); font-weight:500; pointer-events:none;
-}
-
-/* ---------- Buttons (ABS / PAPER / WEBSITE) ---------- */
-/* Black outline, Mila text, **bold** */
-.link-btn{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:6px 12px; min-height:34px; line-height:1;
-  font-size:12px; border:1px solid var(--btn-border);
-  border-radius:6px; background:#fff; color:var(--mila);
-  text-decoration:none; cursor:pointer; font-weight:600; /* make bold */
-}
+.link-btn{ display:inline-flex; align-items:center; justify-content:center; padding:6px 12px; min-height:34px; line-height:1; font-size:12px; border:1px solid var(--btn-border); border-radius:6px; background:#fff; color:var(--mila); text-decoration:none; cursor:pointer; font-weight:600; }
 .link-btn:hover{ background:#fafafa; border-color:#000; color:var(--mila-hover); }
-
-/* ABS details — SUMMARY styled exactly like other buttons, **bold** */
 .abs{ display:inline-block; }
-.abs > summary{ list-style:none; font-weight:600; } /* make bold */
+.abs > summary{ list-style:none; font-weight:600; }
 .abs > summary::-webkit-details-marker{ display:none; }
-.abs > summary{
-  display:inline-flex; align-items:center; justify-content:center;
-  padding:6px 12px; min-height:34px; line-height:1; font-size:12px;
-  border:1px solid var(--btn-border);
-  border-radius:6px; background:#fff; color:var(--mila); cursor:pointer;
-}
+.abs > summary{ display:inline-flex; align-items:center; justify-content:center; padding:6px 12px; min-height:34px; line-height:1; font-size:12px; border:1px solid var(--btn-border); border-radius:6px; background:#fff; color:var(--mila); cursor:pointer; }
 .abs > summary:hover{ background:#fafafa; border-color:#000; color:var(--mila-hover); }
+.abs-box{ margin-top:10px; padding:12px 14px; background:#f5f5f5; border-left:3px solid var(--mila); max-width:65ch; border-radius:0; }
 
-/* ABS dropdown panel: light bg + Mila left bar (like reference) */
-.abs-box{
-  margin-top:10px; padding:12px 14px; background:#f5f5f5;
-  border-left:3px solid var(--mila); max-width:65ch; border-radius:0;
-}
+.eq-note{ font-size:13px; line-height:1.4; color:#6b6b6b; margin:-8px 0 16px 0; font-style:italic; }
 
-/* News box */
-.news-box{
-  max-height:calc(6 * 2.6em); overflow-y:auto;
-  border:1px solid rgba(0,0,0,.12); border-radius:10px;
-  padding:10px 14px; background:rgba(0,0,0,0.02); margin:12px 0 24px 0;
-}
-.news-box ul{ margin:0; padding-left:1.1em; list-style:disc; }
-.news-box li{ margin:0.35em 0; }
-
-/* Mobile */
+/* Mobile tweaks */
 @media (max-width:700px){
   .pub-year{ display:none; }
   .pub-body{ padding-right:0; }
@@ -122,9 +85,13 @@ redirect_from:
 
 <p>I earned a B.Tech. in Electronics and Communication Engineering from RIT, Kottayam. As an undergraduate researcher in the Centre for Advanced Signal Processing (<a href="http://www.rit.ac.in/ece/CASP/">CASP lab</a>) with <a href="http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE">Dr. Manju Manuel</a>, I worked on FPGA design and implementation. For details on my current directions, see my <a href="https://anujithm.github.io/files/research_statement_2025.html">Research Statement (as of Feb 2025)</a>.</p>
 
+<!-- ===== New social icons row (auto-filled from your sidebar links) ===== -->
+<div id="social-inline" class="social-inline" aria-label="social-links below research statement"></div>
+
 ## selected publications
 <div class="eq-note">* denotes equal contribution.</div>
 
+<!-- spacer -->
 <div style="height:6px;"></div>
 
 <!-- ######## U-LAG ######## -->
@@ -133,7 +100,7 @@ redirect_from:
   <div class="pub-body">
     <span class="pub-year">2025</span>
     <div class="pub-title">U-LAG: Uncertainty-Aware, Lag-Adaptive Goal Retargeting for Robotic Manipulation</div>
-    <div class="pub-auth">Anamika J H*, <strong>Anujith Muraleedharan*</strong> </div>
+    <div class="pub-auth">Anamika J H*, <strong>Anujith Muraleedharan*</strong></div>
     <div class="pub-venue">IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments</div>
 
     <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
@@ -144,7 +111,7 @@ redirect_from:
         </div>
       </details>
 
-      <a class="link-btn" href="https://www.arxiv.org/abs/2510.02526" target="_blank" rel="noopener">ARXIV</a>
+      <a class="link-btn" href="https://dl.acm.org/doi/10.1145/3640544.3645236" target="_blank" rel="noopener">PAPER</a>
       <a class="link-btn coming-soon" href="#">WEBSITE</a>
     </div>
   </div>
@@ -156,7 +123,7 @@ redirect_from:
   <div class="pub-body">
     <span class="pub-year">2025</span>
     <div class="pub-title">SPARQ: Selective Progress-Aware Resource Querying</div>
-    <div class="pub-auth"><strong>Anujith Muraleedharan</strong>, Anamika J H</div>
+    <div class="pub-auth">Anamika J H*, <strong>Anujith Muraleedharan*</strong></div>
     <div class="pub-venue">CoRL 2025 Workshop on Resource-Rational Robot Learning</div>
 
     <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
@@ -167,7 +134,7 @@ redirect_from:
         </div>
       </details>
 
-      <a class="link-btn" href="https://arxiv.org/abs/2509.20541" target="_blank" rel="noopener">ARXIV</a>
+      <a class="link-btn" href="https://arxiv.org/pdf/2509.20541" target="_blank" rel="noopener">ARXIV</a>
       <a class="link-btn coming-soon" href="#">WEBSITE</a>
     </div>
   </div>
@@ -237,13 +204,33 @@ redirect_from:
   </ul>
 </div>
 
-<!-- ClustrMaps Visitor Map -->
-<div id="visitor-map" style="margin-top: 10px; text-align: center;">
-  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
-</div>
-
-<!-- Simple "Under construction" alert for selected WEBSITE buttons -->
+<!-- ===== JS: build the social row from your sidebar links & handle "coming soon" ===== -->
 <script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Build icon row from existing sidebar links
+  const map = [
+    { sel:'a[href^="mailto:"]',         icon:'fas fa-envelope',     label:'Email' },
+    { sel:'a[href*="scholar.google"]',  icon:'fas fa-graduation-cap',label:'Google Scholar' },
+    { sel:'a[href*="github.com"]',      icon:'fab fa-github',        label:'GitHub' },
+    { sel:'a[href*="linkedin.com"]',    icon:'fab fa-linkedin-in',   label:'LinkedIn' },
+  ];
+  const row = document.getElementById('social-inline');
+  map.forEach(m => {
+    const a = document.querySelector('.author__urls ' + m.sel);
+    if(a && row){
+      const link = document.createElement('a');
+      link.href = a.getAttribute('href');
+      link.className = 'si';
+      link.target = (a.getAttribute('target') || '_blank');
+      link.rel = 'noopener';
+      link.setAttribute('aria-label', m.label);
+      link.innerHTML = '<i class="'+m.icon+'"></i>';
+      row.appendChild(link);
+    }
+  });
+});
+
+// Simple alert for "coming soon" websites
 document.addEventListener('click', function(e){
   const el = e.target.closest('a.coming-soon');
   if(el){

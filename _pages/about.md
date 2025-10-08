@@ -134,7 +134,7 @@ redirect_from:
         </div>
       </details>
 
-      <a class="link-btn" href="https://www.arxiv.org/abs/2510.02526" target="_blank" rel="noopener">PAPER</a>
+      <a class="link-btn" href="https://www.arxiv.org/abs/2510.02526" target="_blank" rel="noopener">ARXIV</a>
       <a class="link-btn coming-soon" href="#">WEBSITE</a>
     </div>
   </div>

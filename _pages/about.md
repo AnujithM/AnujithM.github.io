@@ -23,7 +23,7 @@ redirect_from:
 }
 /* Increase vertical breathing room around the title and content */
 .intro-title {
-  margin-bottom: 26px;   /* more gap between the name and the photo/text */
+  margin-bottom: 30px;   /* more gap between the name and the photo/text */
 }
 
 .intro-grid {

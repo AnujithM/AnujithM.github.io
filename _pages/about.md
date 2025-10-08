@@ -123,7 +123,7 @@ redirect_from:
   <div class="pub-body">
     <span class="pub-year">2025</span>
     <div class="pub-title">U-LAG: Uncertainty-Aware, Lag-Adaptive Goal Retargeting for Robotic Manipulation</div>
-    <div class="pub-auth">Anamika J H*,<strong>Anujith Muraleedharan*</strong>, </div>
+    <div class="pub-auth">Anamika J H*, <strong>Anujith Muraleedharan*</strong> </div>
     <div class="pub-venue">IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments</div>
 
     <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">

@@ -187,7 +187,7 @@ redirect_from:
   clear: both;
 }
 /* On small screens, stack image above text */
-@media (max-width: 1080px){
+@media (max-width: 1280px){
   .about-rect{
     float: none;
     display: block;

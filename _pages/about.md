@@ -30,21 +30,49 @@ redirect_from:
 
 /* ===== Social icon row (centered) ===== */
 .social-inline{
-  display:flex; gap:14px; flex-wrap:wrap;
-  margin:10px 0 28px 0;
+  display:flex; gap:22px; flex-wrap:wrap;
+  margin:16px 0 34px 0;
   justify-content:center;
 }
+
+/* Icon buttons – now borderless & larger */
 .si{
-  width:46px; height:46px; border:1px solid #000; border-radius:12px;
+  width:64px;               /* bigger touch target */
+  height:64px;
+  border:none;              /* remove outline box */
+  border-radius:0;          /* no rounding */
+  background:transparent;   /* no background */
   display:flex; align-items:center; justify-content:center;
-  color:var(--mila); text-decoration:none;
-  transition:transform .12s ease, color .12s ease, border-color .12s ease, box-shadow .12s ease;
+  color:#000;               /* black by default */
+  text-decoration:none;
+  transition:transform .12s ease, color .12s ease, filter .12s ease;
 }
+
+/* Icon glyph size */
+.si svg{
+  width:36px;
+  height:36px;
+  display:block;
+}
+
+/* Hover: Mila color + slight lift like the ref */
 .si:hover{
-  color:var(--mila-hover); border-color:#000;
-  transform:translateY(-1px); box-shadow:0 2px 8px rgba(0,0,0,.08);
+  color:var(--mila);
+  transform:translateY(-1px);
 }
-.si svg{ width:22px; height:22px; display:block; }
+
+/* Optional: focus style for keyboard users */
+.si:focus{
+  outline:2px solid var(--mila);
+  outline-offset:4px;
+}
+
+/* Mobile: scale down slightly so it fits */
+@media (max-width:560px){
+  .social-inline{ gap:16px; }
+  .si{ width:56px; height:56px; }
+  .si svg{ width:32px; height:32px; }
+}
 
 /* Hide left sidebar versions (keep in DOM so JS can read URLs) */
 .author__urls li:has(a[href^="mailto:"]),

@@ -24,70 +24,41 @@ redirect_from:
 .page__content a{ color:var(--mila); font-weight:600; text-decoration:none; }
 .page__content a:hover{ color:var(--mila-hover); text-decoration:underline; }
 
-/* Force social icons to be BLACK by default, Mila on hover */
-.social-inline .si,
-.social-inline .si:link,
-.social-inline .si:visited{
-  color:#000 !important;        /* default black */
-  text-decoration:none;
-}
-
-.social-inline .si:hover{
-  color:var(--mila) !important; /* turn Mila on hover */
-}
-
-
 /* section headers */
 .page__content h2{ font-family:"Roboto","Lato",system-ui,sans-serif; font-size:34px; font-weight:300; line-height:1.25; margin:2.2em 0 .9em 0; text-transform:lowercase; }
 .page__content h3{ font-weight:600; margin:2em 0 .8em 0; }
 
-/* ===== Social icon row (centered) ===== */
 /* ===== Social icon row (centered) ===== */
 .social-inline{
   display:flex; gap:22px; flex-wrap:wrap;
   margin:16px 0 34px 0;
   justify-content:center;
 }
-
-/* Icon buttons – now borderless & larger */
-.si{
-  width:64px;               /* bigger touch target */
-  height:64px;
-  border:none;              /* remove outline box */
-  border-radius:0;          /* no rounding */
-  background:transparent;   /* no background */
-  display:flex; align-items:center; justify-content:center;
-  color:#000;               /* black by default */
+/* Force social icons to be BLACK by default, Mila on hover */
+.social-inline .si,
+.social-inline .si:link,
+.social-inline .si:visited{
+  color:#000 !important;
   text-decoration:none;
+}
+.si{
+  width:64px; height:64px; border:none; border-radius:0; background:transparent;
+  display:flex; align-items:center; justify-content:center;
+  color:#000; text-decoration:none;
   transition:transform .12s ease, color .12s ease, filter .12s ease;
 }
-
-/* Icon glyph size */
-.si svg{
-  width:36px;
-  height:36px;
-  display:block;
-}
-
-/* Hover: Mila color + slight lift like the ref */
-.si:hover{
-  color:var(--mila);
-  transform:translateY(-1px);
-}
-
-/* Optional: focus style for keyboard users */
-.si:focus{
-  outline:2px solid var(--mila);
-  outline-offset:4px;
-}
-
-/* Mobile: scale down slightly so it fits */
+.si svg{ width:36px; height:36px; display:block; }
+.si:hover{ color:var(--mila); transform:translateY(-1px); }
+.si:focus{ outline:2px solid var(--mila); outline-offset:4px; }
 @media (max-width:560px){
   .social-inline{ gap:16px; }
   .si{ width:56px; height:56px; }
   .si svg{ width:32px; height:32px; }
 }
 
+/* ===== Hide unwanted sidebar items ===== */
+/* Hide the circular avatar in the sidebar (support multiple theme selectors) */
+.author__avatar, .sidebar .author__avatar{ display:none !important; }
 /* Hide left sidebar links (keep in DOM so JS can read URLs) */
 .author__urls li:has(a[href^="mailto:"]),
 .author__urls li:has(a[href*="scholar.google"]),
@@ -102,14 +73,40 @@ redirect_from:
 .author__urls a[href*="linkedin.com"],
 .author__urls a[href*="twitter.com"],
 .author__urls a[href*="orcid.org"] { display:none !important; }
-
-/* Also hide common Institution/Location items in the sidebar */
+/* Common institution/location icons */
 .author__urls li:has(i.fa-map-marker),
 .author__urls li:has(i.fa-map-marker-alt),
 .author__urls li:has(i.fa-location-dot),
 .author__urls li:has(i.fa-university),
 .author__urls li:has(i.fa-building),
 .author__urls li:has(i.fa-briefcase) { display:none !important; }
+
+/* ===== Rectangular portrait in main column ===== */
+.about-rect{
+  float: left;
+  width: clamp(260px, 28vw, 360px);  /* responsive, similar to reference */
+  aspect-ratio: 4 / 5;               /* portrait ratio */
+  object-fit: cover;
+  margin: 2px 24px 12px 0;           /* space to the right & below the image */
+  border-radius: 12px;
+  box-shadow: 0 12px 26px rgba(0,0,0,.16);
+}
+/* Clear float after content so later sections don’t wrap */
+.page__content::after{
+  content:"";
+  display: table;
+  clear: both;
+}
+/* On small screens, stack image above text */
+@media (max-width: 720px){
+  .about-rect{
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 18px auto;
+  }
+}
 
 /* ===== Publications ===== */
 .pub-row{ display:flex; align-items:flex-start; gap:22px; margin:26px 0; padding:0 0 20px 0; border-bottom:1px solid rgba(0,0,0,0.08); }
@@ -134,30 +131,26 @@ redirect_from:
 
 /* ===== News box (scrollable) ===== */
 .news-box {
-  max-height: 230px;          /* adjust height if you want */
-  overflow-y: auto;           /* enables vertical scrolling */
+  max-height: 230px;
+  overflow-y: auto;
   border: 1px solid rgba(0,0,0,0.1);
   padding: 12px 15px;
   border-radius: 8px;
   background: #fafafa;
   scroll-behavior: smooth;
 }
-.news-box ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-}
+.news-box ul { list-style-type: none; padding-left: 0; margin: 0; }
 .news-box li { margin-bottom: 8px; }
 
-/* Mobile */
+/* Mobile tweaks for publications area */
 @media (max-width:700px){
   .pub-year{ display:none; }
   .pub-body{ padding-right:0; }
 }
 </style>
 
+<!-- Rectangular portrait placed before the intro paragraph -->
 <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
-
 
 <p>I am a Research Associate working with Prof. <a href="https://ctech.iitd.ac.in/hanmandlu.html">M. Hanmandlu</a>, building practical, human-centered robotic systems. My focus is at the meeting point of learning and perception. The aim is simple: help robots behave reliably around people, stay steady under noise and latency, and work in everyday environments.</p>
 
@@ -165,42 +158,8 @@ redirect_from:
 
 <p>I earned a B.Tech. in Electronics and Communication Engineering from RIT, Kottayam. As an undergraduate researcher in the Centre for Advanced Signal Processing (<a href="http://www.rit.ac.in/ece/CASP/">CASP lab</a>) with <a href="http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE">Dr. Manju Manuel</a>, I worked on FPGA design and implementation. For details on my current directions, see my <a href="https://anujithm.github.io/files/research_statement_2025.html">Research Statement (as of Feb 2025)</a>.</p>
 
-<!-- Centered social icons (auto-filled by JS using your sidebar links) -->
+<!-- Centered social icons (auto-filled by script below) -->
 <div id="social-inline" class="social-inline" aria-label="social-links below research statement"></div>
-/* Hide the circular avatar shown in the left sidebar */
-.sidebar .author__avatar{
-  display: none !important;
-}
-
-/* Hero-style rectangular portrait in the main column (left edge) */
-.about-rect{
-  float: left;
-  width: clamp(260px, 28vw, 360px);  /* responsive width similar to the reference */
-  aspect-ratio: 4 / 5;               /* portrait ratio */
-  object-fit: cover;                  /* safe, neat crop */
-  margin: 2px 24px 12px 0;           /* space to the right & below the image */
-  border-radius: 12px;               /* rounded rectangle edges */
-  box-shadow: 0 12px 26px rgba(0,0,0,.16); /* subtle depth */
-}
-
-/* Clear the float after the main content block so later sections don’t wrap */
-.page__content::after{
-  content:"";
-  display: table;
-  clear: both;
-}
-
-/* On small screens, stack image above text and center it */
-@media (max-width: 720px){
-  .about-rect{
-    float: none;
-    display: block;
-    width: 100%;
-    max-width: 420px;
-    margin: 0 auto 18px auto;
-  }
-}
-
 
 ## selected publications
 <div class="eq-note">* denotes equal contribution.</div>
@@ -323,7 +282,7 @@ redirect_from:
 </div>
 
 <script>
-/* ===== Social icons: render 5 links, no sidebar dependency ===== */
+/* ===== Social icons: render 5 links (no sidebar dependency) ===== */
 (function () {
   /* 1) Fill in your links (leave "" to hide an icon) */
   const LINKS = {

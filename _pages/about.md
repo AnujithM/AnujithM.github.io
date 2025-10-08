@@ -50,7 +50,7 @@ redirect_from:
 }
 
 /* Mobile: stack image + caption above text */
-@media (max-width: 720px){
+@media (max-width: 1100px){
   .portrait{
     float: none;
     width: 100%;
@@ -66,7 +66,7 @@ redirect_from:
 }
 
 .intro-text{
-  max-width: 95ch;                            /* limit line length -> taller column */
+  max-width: 100ch;                            /* limit line length -> taller column */
 }
 /* Increase vertical breathing room around the title and content */
 
@@ -103,7 +103,7 @@ redirect_from:
 }
 
 /* On small screens let it be full width again */
-@media (max-width: 720px){
+@media (max-width: 1100px){
   .intro-text{
     max-width: none;
   }
@@ -113,7 +113,7 @@ redirect_from:
 .page__content{
   font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-size:17px; line-height:1.8; color:#1a1a1a;
-  max-width:780px; margin:0 auto;
+  max-width:1180px; margin:0 auto;
 }
 .page__content p{ margin:0 0 1.3em 0; }
 .page__content a{ color:var(--mila); font-weight:600; text-decoration:none; }

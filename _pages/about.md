@@ -9,32 +9,33 @@ redirect_from:
 
 <!-- ===== Reference-like typography & layout (local to this page) ===== -->
 <style>
-/* Page container */
+/* --- base page --- */
+:root{
+  --mila: #c2185b;      /* Mila Québec primary */
+  --mila-hover:#e91e63; /* hover accent */
+}
 .page__content{
   font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-size:17px; line-height:1.8; color:#1a1a1a;
   max-width:780px; margin:0 auto;
 }
-
-/* Paragraph rhythm */
 .page__content p{ margin:0 0 1.3em 0; }
 
-/* Mila Québec accent for links */
-.page__content a{
-  color:#c2185b;             /* Mila primary */
-  font-weight:600;
-  text-decoration:none;
-}
-.page__content a:hover{
-  color:#e91e63;             /* hover accent */
-  text-decoration:underline;
-}
+/* Links in Mila color */
+.page__content a{ color:var(--mila); font-weight:600; text-decoration:none; }
+.page__content a:hover{ color:var(--mila-hover); text-decoration:underline; }
 
-/* Headings */
-.page__content h2,.page__content h3{
-  font-weight:700;
-  margin:2.4em 0 1.0em 0;
+/* Headings (match reference: larger, lowercase, lighter weight) */
+.page__content h2{
+  font-family:"Roboto","Lato",system-ui,sans-serif;
+  font-size:34px;        /* ~reference scale */
+  font-weight:300;       /* light, not bold */
+  line-height:1.25;
+  margin:2.2em 0 0.9em 0;
   text-transform:lowercase;
+}
+.page__content h3{
+  font-weight:600; margin:2em 0 .8em 0;
 }
 
 /* ---------- Publication cards ---------- */
@@ -49,45 +50,53 @@ redirect_from:
   width:190px; border-radius:10px; flex:0 0 auto;
   box-shadow:0 1px 4px rgba(0,0,0,0.15);
 }
+
 .pub-body{
   flex:1 1 auto; position:relative;
-  padding-right:120px;        /* space so year never overlaps text */
+  padding-right:120px; /* room for year so it never overlaps */
 }
 
-.pub-title{ font-weight:700; font-size:19px; line-height:1.45; margin:0 0 6px 0; }
+/* Title/boldness tuned to reference */
+.pub-title{
+  font-weight:600;       /* lighter than 700 so it reads like ref */
+  font-size:20px;
+  line-height:1.45;
+  margin:0 0 6px 0;
+}
 .pub-auth{ font-size:16px; margin:0 0 4px 0; }
 .pub-venue{ font-style:italic; color:#555; opacity:.9; margin:0 0 6px 0; }
 
-/* Year tag in right gutter */
+/* Year tag to far right */
 .pub-year{
   position:absolute; right:-12px; top:2px;
   font-size:34px; color:rgba(0,0,0,0.08); font-weight:500;
   pointer-events:none;
 }
 
-/* Unified buttons */
+/* Buttons (PAPER/WEBSITE/ARXIV) */
 .link-btn{
   display:inline-flex; align-items:center; justify-content:center;
   padding:6px 12px; min-height:34px; line-height:1;
   font-size:12px; border:1px solid rgba(0,0,0,0.35);
   border-radius:4px; background:#fff; color:inherit; text-decoration:none; cursor:pointer;
 }
-.link-btn:hover{ background:#fafafa; border-color:#c2185b; color:#c2185b; }
+.link-btn:hover{ background:#fafafa; border-color:var(--mila); color:var(--mila); }
 
-/* ABS details — only SUMMARY is styled like a button */
+/* ABS details — Mila colored button + accent abstract box */
 .abs{ display:inline-block; }
 .abs > summary{ list-style:none; }
 .abs > summary::-webkit-details-marker{ display:none; }
 .abs > summary{
   display:inline-flex; align-items:center; justify-content:center;
   padding:6px 12px; min-height:34px; line-height:1; font-size:12px;
-  border:1px solid rgba(0,0,0,0.35); border-radius:4px; background:#fff; cursor:pointer;
+  border:1px solid var(--mila); border-radius:4px; background:#fff; color:var(--mila); cursor:pointer;
 }
-.abs[open] > summary{ background:#fafafa; border-color:#c2185b; color:#c2185b; }
+.abs > summary:hover{ background:#fff4f8; }
+.abs[open] > summary{ background:#fff0f6; border-color:var(--mila-hover); color:var(--mila-hover); }
 
 .abs-box{
   margin-top:8px; padding:10px; background:#fafafa;
-  border-left:3px solid rgba(0,0,0,0.25); max-width:65ch;
+  border-left:3px solid var(--mila); max-width:65ch;
 }
 
 /* News box */

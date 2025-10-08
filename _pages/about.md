@@ -9,65 +9,75 @@ redirect_from:
 
 <!-- ===== Reference-like typography & layout (local to this page) ===== -->
 <style>
-/* Base container */
+/* Page container */
 .page__content{
-  font-family: "Lato","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:16px;
-  line-height:1.78;
+  font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:17px;
+  line-height:1.8;
   color:#1a1a1a;
-  max-width:720px;         /* narrow readable column */
-  margin:0 auto;           /* center column */
+  max-width:780px;                 /* readable column */
+  margin:0 auto;
 }
 
 /* Paragraph rhythm */
-.page__content p{ margin:0 0 1.1em 0; }
+.page__content p{ margin:0 0 1.3em 0; }
 
-/* Links (Stanford-ish accent) */
+/* Mila Québec accent color for links */
 .page__content a{
-  color:#8C1515;           /* Stanford red */
-  text-decoration:none;
+  color:#c2185b;                   /* Mila primary */
   font-weight:600;
+  text-decoration:none;
 }
-.page__content a:hover{ text-decoration:underline; }
+.page__content a:hover{
+  color:#e91e63;                   /* hover accent */
+  text-decoration:underline;
+}
 
 /* Headings */
-.page__content h2,
-.page__content h3{
+.page__content h2,.page__content h3{
   font-weight:700;
-  margin:2.0em 0 0.8em 0;
+  margin:2.4em 0 1.0em 0;
+  text-transform:lowercase;
 }
 
-/* Publication blocks (light, clean) */
+/* ---------- Publication cards (reference-like) ---------- */
 .pub-row{
-  display:flex; align-items:flex-start; gap:16px;
-  margin:18px 0; padding:10px 0;
-  border-bottom:1px solid rgba(0,0,0,.08);
+  display:flex; align-items:flex-start; gap:22px;
+  margin:26px 0; padding-bottom:20px;
+  border-bottom:1px solid rgba(0,0,0,0.08);
 }
 .pub-row:last-of-type{ border-bottom:none; }
+
 .pub-thumb{
-  width:170px; border-radius:8px; flex:0 0 auto;
-}
-.pub-body{ flex:1 1 auto; min-width:0; }
-.pub-title{ font-weight:700; font-size:18px; line-height:1.3; }
-.pub-auth{ margin-top:4px; }
-.pub-venue{ margin-top:4px; font-style:italic; opacity:.9; }
-
-/* Small action buttons (ABS / PAPER / WEBSITE) */
-.link-btn, .abs-toggle{
-  display:inline-block; padding:6px 10px; font-size:12px;
-  border:1px solid rgba(100,100,100,.55); border-radius:4px;
-  text-decoration:none; color:inherit; cursor:pointer;
+  width:190px; border-radius:10px; flex:0 0 auto;
+  box-shadow:0 1px 4px rgba(0,0,0,0.15);
 }
 
-/* Details summary reset */
+.pub-body{ flex:1 1 auto; position:relative; }
+.pub-title{ font-weight:700; font-size:19px; line-height:1.45; margin:0 0 6px 0; }
+.pub-auth{ font-size:16px; margin:0 0 4px 0; }
+.pub-venue{ font-style:italic; color:#555; opacity:.9; margin:0 0 6px 0; }
+
+/* Faint year tag aligned right (optional, include span.pub-year in HTML) */
+.pub-year{
+  position:absolute; right:0; top:0;
+  font-size:30px; color:rgba(0,0,0,0.07); font-weight:500;
+}
+
+/* Buttons */
+.link-btn,.abs-toggle{
+  display:inline-block; padding:6px 12px; font-size:12px;
+  border:1px solid rgba(0,0,0,0.35); border-radius:4px;
+  text-decoration:none; color:inherit; cursor:pointer; background:#fff;
+}
+.link-btn:hover{ background:#fafafa; border-color:#c2185b; color:#c2185b; }
+
+/* Abstract */
 .abs-toggle{ list-style:none; }
 .abs-toggle::-webkit-details-marker{ display:none; }
-
-/* Abstract box */
 .abs-box{
-  margin-top:8px; padding:10px;
-  border-left:3px solid rgba(100,100,100,.35);
-  max-width:62ch;
+  margin-top:8px; padding:10px; background:#fafafa;
+  border-left:3px solid rgba(0,0,0,0.25); max-width:65ch;
 }
 
 /* News box */
@@ -93,12 +103,13 @@ redirect_from:
 ## selected publications
 
 <!-- spacer -->
-<div style="height:8px;"></div>
+<div style="height:6px;"></div>
 
 <!-- ######## U-LAG ######## -->
 <div class="pub-row">
   <img src="/images/ulagg.gif" alt="U-LAG" class="pub-thumb">
   <div class="pub-body">
+    <span class="pub-year">2025</span>
     <div class="pub-title">U-LAG: Uncertainty-Aware, Lag-Adaptive Goal Retargeting for Robotic Manipulation</div>
     <div class="pub-auth"><strong>Anujith Muraleedharan</strong>, Anamika J H</div>
     <div class="pub-venue">IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments</div>
@@ -121,6 +132,7 @@ redirect_from:
 <div class="pub-row">
   <img src="/images/demo_after_1.gif" alt="SPARQ" class="pub-thumb">
   <div class="pub-body">
+    <span class="pub-year">2025</span>
     <div class="pub-title">SPARQ: Selective Progress-Aware Resource Querying</div>
     <div class="pub-auth"><strong>Anujith Muraleedharan</strong>, Anamika J H</div>
     <div class="pub-venue">CoRL 2025 Workshop on Resource-Rational Robot Learning</div>
@@ -143,6 +155,7 @@ redirect_from:
 <div class="pub-row">
   <img src="/images/Ssmi.png" alt="Assistive Robotic Stamp Printing" class="pub-thumb">
   <div class="pub-body">
+    <span class="pub-year">2024</span>
     <div class="pub-title">Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment</div>
     <div class="pub-auth"><strong>Anujith Muraleedharan</strong>, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas</div>
     <div class="pub-venue">ACM Conference on Intelligent User Interfaces (ACM IUI) 2024</div>
@@ -165,6 +178,7 @@ redirect_from:
 <div class="pub-row">
   <img src="/images/Autotaxii.png" alt="Autonomous Taxiing of Aircraft" class="pub-thumb">
   <div class="pub-body">
+    <span class="pub-year">2023</span>
     <div class="pub-title">Developing a Computer Vision based system for Autonomous Taxiing of Aircraft</div>
     <div class="pub-auth">Prashant Gaikwad, Abhishek Mukhopadhyay, <strong>Anujith Muraleedharan</strong>, Mukund Mitra, Pradipta Biswas</div>
     <div class="pub-venue">AVIATION Journal Vol 27 No 4 (2023)</div>

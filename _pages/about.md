@@ -28,10 +28,11 @@ redirect_from:
 .page__content h2{ font-family:"Roboto","Lato",system-ui,sans-serif; font-size:34px; font-weight:300; line-height:1.25; margin:2.2em 0 .9em 0; text-transform:lowercase; }
 .page__content h3{ font-weight:600; margin:2em 0 .8em 0; }
 
-/* ===== Social icon row under Research Statement ===== */
+/* ===== Social icon row (centered) ===== */
 .social-inline{
   display:flex; gap:14px; flex-wrap:wrap;
   margin:10px 0 28px 0;
+  justify-content:center;
 }
 .si{
   width:46px; height:46px; border:1px solid #000; border-radius:12px;
@@ -45,7 +46,7 @@ redirect_from:
 }
 .si svg{ width:22px; height:22px; display:block; }
 
-/* Hide these items from left sidebar (but keep in DOM so JS can read URLs) */
+/* Hide left sidebar versions (keep in DOM so JS can read URLs) */
 .author__urls li:has(a[href^="mailto:"]),
 .author__urls li:has(a[href*="scholar.google"]),
 .author__urls li:has(a[href*="github.com"]),
@@ -56,7 +57,7 @@ redirect_from:
 .author__urls a[href*="github.com"],
 .author__urls a[href*="linkedin.com"] { display:none !important; }
 
-/* ===== Publications (kept from your tuned version) ===== */
+/* ===== Publications ===== */
 .pub-row{ display:flex; align-items:flex-start; gap:22px; margin:26px 0; padding:0 0 20px 0; border-bottom:1px solid rgba(0,0,0,0.08); }
 .pub-row:last-of-type{ border-bottom:none; }
 .pub-thumb{ width:190px; border-radius:10px; flex:0 0 auto; box-shadow:0 1px 4px rgba(0,0,0,0.15); }
@@ -77,6 +78,23 @@ redirect_from:
 
 .eq-note{ font-size:13px; line-height:1.4; color:#6b6b6b; margin:-8px 0 16px 0; font-style:italic; }
 
+/* ===== News box (scrollable) ===== */
+.news-box {
+  max-height: 230px;          /* adjust height if you want */
+  overflow-y: auto;           /* enables vertical scrolling */
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 12px 15px;
+  border-radius: 8px;
+  background: #fafafa;
+  scroll-behavior: smooth;
+}
+.news-box ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+.news-box li { margin-bottom: 8px; }
+
 /* Mobile */
 @media (max-width:700px){
   .pub-year{ display:none; }
@@ -90,7 +108,7 @@ redirect_from:
 
 <p>I earned a B.Tech. in Electronics and Communication Engineering from RIT, Kottayam. As an undergraduate researcher in the Centre for Advanced Signal Processing (<a href="http://www.rit.ac.in/ece/CASP/">CASP lab</a>) with <a href="http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE">Dr. Manju Manuel</a>, I worked on FPGA design and implementation. For details on my current directions, see my <a href="https://anujithm.github.io/files/research_statement_2025.html">Research Statement (as of Feb 2025)</a>.</p>
 
-<!-- Social icons row (will be auto-filled by JS using your sidebar links) -->
+<!-- Centered social icons (auto-filled by JS using your sidebar links) -->
 <div id="social-inline" class="social-inline" aria-label="social-links below research statement"></div>
 
 ## selected publications
@@ -208,13 +226,13 @@ redirect_from:
   </ul>
 </div>
 
-<!-- ClustrMaps Visitor Map (restored) -->
+<!-- ClustrMaps Visitor Map -->
 <div id="visitor-map" style="margin-top: 10px; text-align: center;">
   <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
 </div>
 
 <script>
-/* Build icon row from your sidebar links, but render as inline SVG (no external icon lib) */
+/* Build centered icon row from your sidebar links, render as inline SVG (no external icon lib) */
 (function(){
   const defs = {
     email:  '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>',
@@ -227,7 +245,7 @@ redirect_from:
     { sel:'a[href^="mailto:"]',         key:'email',   label:'Email' },
     { sel:'a[href*="scholar.google"]',  key:'scholar', label:'Google Scholar' },
     { sel:'a[href*="github.com"]',      key:'github',  label:'GitHub' },
-    { sel:'a[href*="linkedin.com"]',    key:'linkedin',label:'LinkedIn' },
+    { sel:'a[href*="linkedin.com"]',    key:'linkedin',label:'LinkedIn' }
   ];
 
   const row = document.getElementById('social-inline');

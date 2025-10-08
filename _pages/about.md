@@ -84,13 +84,14 @@ redirect_from:
 /* ===== Rectangular portrait in main column ===== */
 .about-rect{
   float: left;
-  width: clamp(260px, 28vw, 360px);  /* responsive, similar to reference */
-  aspect-ratio: 4 / 5;               /* portrait ratio */
+  width: clamp(200px, 22vw, 300px);  /* smaller width but same responsiveness */
+  aspect-ratio: 4 / 5;               /* keep portrait ratio identical */
   object-fit: cover;
-  margin: 2px 24px 12px 0;           /* space to the right & below the image */
+  margin: 4px 20px 10px 0;           /* same positioning / slight spacing */
   border-radius: 12px;
   box-shadow: 0 12px 26px rgba(0,0,0,.16);
 }
+
 /* Clear float after content so later sections don’t wrap */
 .page__content::after{
   content:"";

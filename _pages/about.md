@@ -112,6 +112,59 @@ redirect_from:
     margin: 0 auto 18px auto;
   }
 }
+/* Hide theme's default page title (we'll add our own) */
+.page__title { display: none; }
+
+/* Intro layout: title on top, image + text aligned under it */
+.intro-grid{
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) 1fr;
+  column-gap: 28px;
+  align-items: start;
+  margin-top: 4px;
+}
+
+/* Big custom title */
+.intro-title{
+  grid-column: 1 / -1;
+  font-size: clamp(36px, 5vw, 44px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 12px 0;
+}
+
+/* Override when image lives inside intro grid */
+.intro-grid .about-rect{
+  grid-row: 2;
+  grid-column: 1;
+  float: none;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin: 0;
+}
+
+/* Text block sits in column 2 */
+.intro-text{
+  grid-row: 2;
+  grid-column: 2;
+}
+
+/* Stack on mobile */
+@media (max-width: 720px){
+  .intro-grid{
+    grid-template-columns: 1fr;
+  }
+  .intro-grid .about-rect{
+    width: 100%;
+    max-width: 420px;
+    margin: 0 0 18px 0;
+    justify-self: start;
+  }
+  .intro-text{
+    grid-column: 1;
+  }
+}
+
 
 /* ===== Publications ===== */
 .pub-row{ display:flex; align-items:flex-start; gap:22px; margin:26px 0; padding:0 0 20px 0; border-bottom:1px solid rgba(0,0,0,0.08); }
@@ -155,13 +208,20 @@ redirect_from:
 </style>
 
 <!-- Rectangular portrait placed before the intro paragraph -->
-<img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
+<div class="intro-grid">
+  <h1 class="intro-title">Anujith Muraleedharan</h1>
 
-<p>I am a Research Associate working with Prof. <a href="https://ctech.iitd.ac.in/hanmandlu.html">M. Hanmandlu</a>, building practical, human-centered robotic systems. My focus is at the meeting point of learning and perception. The aim is simple: help robots behave reliably around people, stay steady under noise and latency, and work in everyday environments.</p>
+  <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
 
-<p>Earlier, at the <a href="https://cambum.net/I3D.htm">I3D Lab</a> at the Indian Institute of Science (IISc), Bangalore with <a href="https://cambum.net/PB/">Pradipta Biswas</a>, I worked on assistive human–robot interaction and designed the controller for an autonomous aircraft taxiing prototype.</p>
+  <div class="intro-text">
+    <p>I am a Research Associate working with Prof. <a href="https://ctech.iitd.ac.in/hanmandlu.html">M. Hanmandlu</a>, building practical, human-centered robotic systems. My focus is at the meeting point of learning and perception. The aim is simple: help robots behave reliably around people, stay steady under noise and latency, and work in everyday environments.</p>
 
-<p>I earned a B.Tech. in Electronics and Communication Engineering from RIT, Kottayam. As an undergraduate researcher in the Centre for Advanced Signal Processing (<a href="http://www.rit.ac.in/ece/CASP/">CASP lab</a>) with <a href="http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE">Dr. Manju Manuel</a>, I worked on FPGA design and implementation. For details on my current directions, see my <a href="https://anujithm.github.io/files/research_statement_2025.html">Research Statement (as of Feb 2025)</a>.</p>
+    <p>Earlier, at the <a href="https://cambum.net/I3D.htm">I3D Lab</a> at the Indian Institute of Science (IISc), Bangalore with <a href="https://cambum.net/PB/">Pradipta Biswas</a>, I worked on assistive human–robot interaction and designed the controller for an autonomous aircraft taxiing prototype.</p>
+
+    <p>I earned a B.Tech. in Electronics and Communication Engineering from RIT, Kottayam. As an undergraduate researcher in the Centre for Advanced Signal Processing (<a href="http://www.rit.ac.in/ece/CASP/">CASP lab</a>) with <a href="http://www.rit.ac.in/fprofiledisplay.php?penno=603400&dep=ECE">Dr. Manju Manuel</a>, I worked on FPGA design and implementation. For details on my current directions, see my <a href="https://anujithm.github.io/files/research_statement_2025.html">Research Statement (as of Feb 2025)</a>.</p>
+  </div>
+</div>
+
 
 <!-- Centered social icons (auto-filled by script below) -->
 <div id="social-inline" class="social-inline" aria-label="social-links below research statement"></div>

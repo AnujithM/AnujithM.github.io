@@ -66,12 +66,9 @@ redirect_from:
 }
 
 .intro-text{
-  max-width: 65ch;                            /* limit line length -> taller column */
+  max-width: 75ch;                            /* limit line length -> taller column */
 }
 /* Increase vertical breathing room around the title and content */
-.intro-title {
-  margin-bottom: 30px;   /* more gap between the name and the photo/text */
-}
 
 .intro-grid {
   row-gap: 20px;         /* adds vertical spacing between rows (title ↔ image/text) */
@@ -91,9 +88,6 @@ redirect_from:
 }
 
 /* === ~2cm gap between the big name and the photo/text === */
-.intro-title{               /* the big “Anujith Muraleedharan” */
-  margin-bottom: 2cm;       /* ≈ 75.6px; adjust if you want a hair more/less */
-}
 .intro-grid{
   row-gap: 20px;            /* keep some breathing room in the grid */
 }
@@ -193,7 +187,7 @@ redirect_from:
   clear: both;
 }
 /* On small screens, stack image above text */
-@media (max-width: 720px){
+@media (max-width: 980px){
   .about-rect{
     float: none;
     display: block;
@@ -278,6 +272,8 @@ redirect_from:
 </style>
 
 <!-- Photo + caption (floats left; text flows on the right) -->
+<h1 class="intro-title">Anujith Muraleedharan</h1>
+
 <div class="portrait">
   <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
   <div class="photo-caption">
@@ -286,7 +282,6 @@ redirect_from:
   </div>
 </div>
 
-<div class="intro-text">
 
     <p>I am a Research Associate working with Prof. <a href="https://ctech.iitd.ac.in/hanmandlu.html">M. Hanmandlu</a>, building practical, human-centered robotic systems. My focus is at the meeting point of learning and perception. The aim is simple: help robots behave reliably around people, stay steady under noise and latency, and work in everyday environments.</p>
 

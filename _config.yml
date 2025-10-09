@@ -5,7 +5,11 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve -l -H localhost`. If you change this file, please restart the 
 # server process.
+# --- Force GitHub Pages to NOT use a gem theme ---
+theme                    : null
+# -------------------------------------------------
 
+site_theme               : default
 # Basic Site Settings
 locale                   : "en-US"
 title                    : "Home"

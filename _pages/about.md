@@ -300,7 +300,7 @@ redirect_from:
 <div class="portrait">
   <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">
   <div class="photo-caption">
-    <div class="aka">a.k.a <strong>ToNY</strong></div>
+    <!--<div class="aka">a.k.a <strong>ToNY</strong></div>-->
     <div class="role">Research Associate</div>
     <div class="email">anujithmuralidharan[at]gmail[dot]com</div>
   </div>

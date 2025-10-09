@@ -308,6 +308,21 @@ redirect_from:
   }
 }
 
+/* Justify abstract text inside the ABS box */
+.abs-box{
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;            /* nicer ragged edges on narrow screens */
+  text-align-last: left;    /* keep the last line from stretching */
+}
+
+/* If your abstract uses <p> tags, this ensures each paragraph is justified */
+.abs-box p{
+  margin: 0 0 .9em 0;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
 
 
 .eq-note{ font-size:13px; line-height:1.4; color:#6b6b6b; margin:-8px 0 16px 0; font-style:italic; }

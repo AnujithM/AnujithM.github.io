@@ -13,6 +13,7 @@ redirect_from:
   --mila-hover:#e91e63;
   --btn-border: rgba(0,0,0,.55);
 }
+
 /* Photo + caption container (floats left) */
 .portrait{
   float: left;
@@ -68,8 +69,8 @@ redirect_from:
 .intro-text{
   max-width: 100ch;                            /* limit line length -> taller column */
 }
-/* Increase vertical breathing room around the title and content */
 
+/* Increase vertical breathing room around the title and content */
 .intro-grid {
   row-gap: 20px;         /* adds vertical spacing between rows (title ↔ image/text) */
   column-gap: 40px;      /* slight horizontal gap tweak */
@@ -86,10 +87,8 @@ redirect_from:
   .greedy-nav .visible-links > li + li { margin-left: 28px; }
 }
 
-
-  /* equal spacing between Home / Projects / CV */
-  .greedy-nav .visible-links > li + li { margin-left: 28px; }
-}
+/* equal spacing between Home / Projects / CV */
+.greedy-nav .visible-links > li + li { margin-left: 28px; }
 
 /* === ~2cm gap between the big name and the photo/text === */
 .intro-grid{
@@ -112,13 +111,14 @@ redirect_from:
     max-width: none;
   }
 }
+
 .page__content{
   font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-size:17px; line-height:1.8; color:#1a1a1a;
   max-width:1180px; margin:0 auto;
 }
 
-/* base text column */
+/* base text column (duplicate kept — later overrides will adjust) */
 .page__content{
   font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-size:17px; line-height:1.8; color:#1a1a1a;
@@ -159,7 +159,7 @@ redirect_from:
 .si:hover{
   color: var(--mila);
   transform: translateY(-1px);
-  outline: 2px solid var(--mila);
+  outline: 2px solid var(--mila);     /* square shows on hover */
   outline-offset: 4px;
 }
 
@@ -227,21 +227,20 @@ redirect_from:
   line-height: 1.1;
   margin: 0 0 12px 0;
 }
+
 /* Title font (swap to the exact one you prefer later) */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&display=swap');
 
 .intro-title{
   font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
   font-size: clamp(36px, 5vw, 44px);
-  font-weight: 400;           /* <-- normal by default */
+  font-weight: 400;           /* normal by default */
   line-height: 1.1;
   margin: 0 0 12px 0;
   letter-spacing: .2px;
 }
-
 .intro-title .first { font-weight: 600; }  /* Anujith bold */
 .intro-title .last  { font-weight: 350; }  /* Muraleedharan normal */
-
 
 /* Two-line caption directly under the photo */
 .photo-caption{
@@ -250,20 +249,17 @@ redirect_from:
   font-family: "Inter","Roboto","Lato",system-ui,sans-serif;
   line-height: 1.4;
 }
-
 .photo-caption .aka{
   font-size: 17px;
   font-weight: 700;
   color: #222;
   margin-bottom: 2px;
 }
-
 .photo-caption .role{
   font-size: 15px;
   color: #555;
   letter-spacing: .2px;
 }
-
 
 /* ===== Publications ===== */
 .pub-row{ display:flex; align-items:flex-start; gap:22px; margin:26px 0; padding:0 0 20px 0; border-bottom:1px solid rgba(0,0,0,0.08); }
@@ -324,7 +320,6 @@ redirect_from:
   hyphens: auto;
 }
 
-
 .eq-note{ font-size:13px; line-height:1.4; color:#6b6b6b; margin:-8px 0 16px 0; font-style:italic; }
 
 /* ===== News box (scrollable) ===== */
@@ -345,6 +340,7 @@ redirect_from:
   .pub-year{ display:none; }
   .pub-body{ padding-right:0; }
 }
+
 .photo-caption .email{
   font-size: 14px;
   color: #444;
@@ -358,8 +354,77 @@ redirect_from:
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   letter-spacing: .1px;
   margin-top: 2px;
+}
+
+/* ===================================================================== */
+/*                           FLUID / ADAPTIVE OVERRIDES                  */
+/* ===================================================================== */
+
+/* Fluid layout tokens */
+:root{
+  /* page frame width: min 72ch, prefer 92vw, cap at ~120ch */
+  --content-width: clamp(72ch, 92vw, 120ch);
+  /* horizontal padding scales with viewport */
+  --frame-pad: clamp(12px, 3vw, 40px);
+  /* right padding on publication body (used to align with the year) */
+  --pub-pr: clamp(60px, 8vw, 120px);
+}
+
+/* Frame: page content */
+.page__content{
+  max-width: var(--content-width);
+  margin-inline: auto;
+  padding-inline: var(--frame-pad);
+  box-sizing: border-box;
+
+  /* fluid type */
+  font-size: clamp(15px, 0.9vw + 0.5rem, 17px);
+  line-height: 1.8;
+}
+
+/* Frame: masthead */
+@media (min-width:1025px){
+  .masthead__inner-wrap{
+    max-width: var(--content-width);
+    margin-inline: auto;
+    padding-inline: var(--frame-pad);
+    box-sizing: border-box;
+  }
+}
+
+/* Intro column (fluid readable width) */
+.intro-text{
+  max-width: clamp(65ch, 70vw, 90ch);
+  width: 100%;
+}
+
+/* Portrait scales with viewport; margins use fluid spacing */
+.portrait{
+  width: clamp(18rem, 24vw, 28rem);
+  margin: 4px clamp(1rem, 2vw, 1.5rem) 12px 0;
+}
+
+/* Publications: use fluid right padding for the year column */
+.pub-body{
+  padding-right: var(--pub-pr);
+}
+
+/* Abstract box extends to the same visual right edge as the year */
+.abs-box{
+  width: calc(100% + var(--pub-pr));
+  margin-right: calc(var(--pub-pr) * -1);
+  box-sizing: border-box;
+
+  padding: clamp(14px, 1.2vw, 22px);
+  font-size: clamp(14px, 0.3vw + 0.8rem, 16px);
+}
+
+@media (max-width:700px){
+  .pub-body{ padding-right: 0; }
+  .abs-box{ width: 100%; margin-right: 0; }
 }
 </style>
+
 
 <!-- Photo + caption (floats left; text flows on the right) -->
 <h1 class="intro-title">

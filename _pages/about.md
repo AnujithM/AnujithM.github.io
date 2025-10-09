@@ -110,11 +110,17 @@ redirect_from:
 }
 
 /* base text column */
-.page__content{
+.page__content {
   font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:17px; line-height:1.8; color:#1a1a1a;
-  max-width:1180px; margin:0 auto;
+  font-size:17px;
+  line-height:1.8;
+  color:#1a1a1a;
+  max-width:1180px;
+  margin: 0 auto;             /* keeps it centered */
+  padding-left: 2cm;          /* 👈 adds ~2cm space on left */
+  padding-right: 2cm;         /* 👈 adds ~2cm space on right */
 }
+
 .page__content p{ margin:0 0 1.3em 0; }
 .page__content a{ color:var(--mila); font-weight:600; text-decoration:none; }
 .page__content a:hover{ color:var(--mila-hover); text-decoration:underline; }

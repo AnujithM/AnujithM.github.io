@@ -359,6 +359,71 @@ redirect_from:
   letter-spacing: .1px;
   margin-top: 2px;
 }
+/* ---------- THEME-AWARE OVERRIDES FOR ABOUT PAGE ---------- */
+/* Your custom accent tokens, light + dark */
+:root {
+  --mila: #c2185b;
+  --mila-hover: #e91e63;
+  --btn-border: rgba(0,0,0,.45);
+}
+html[data-theme="dark"] {
+  --mila: #ff6b9a;           /* slightly brighter pink in dark */
+  --mila-hover: #ff9ec0;
+  --btn-border: rgba(255,255,255,.35);
+}
+
+/* Base text & links in this page */
+.page__content { color: var(--text); background: var(--bg); }
+.page__content a { color: var(--mila); }
+.page__content a:hover { color: var(--mila-hover); }
+
+/* Photo caption text colors */
+.photo-caption .aka   { color: var(--text); }
+.photo-caption .role  { color: var(--text-muted); }
+.photo-caption .email { color: var(--text-muted); }
+
+/* Social icons: default = text, hover = accent */
+.social-inline .si,
+.social-inline .si:link,
+.social-inline .si:visited { color: var(--text); }
+.social-inline .si:hover { color: var(--mila); }
+
+/* Publication rows and misc borders */
+.pub-row { border-bottom: 1px solid var(--border); }
+hr, .news-box { border-color: var(--border); }
+
+/* Buttons and abstracts: use theme surfaces */
+.link-btn,
+.abs > summary {
+  background: var(--card);
+  color: var(--mila);
+  border: 1px solid var(--btn-border);
+}
+.link-btn:hover,
+.abs > summary:hover {
+  background: color-mix(in oklab, var(--card) 92%, var(--bg));
+  color: var(--mila-hover);
+  border-color: var(--border);
+}
+
+.abs-box {
+  background: color-mix(in oklab, var(--card) 94%, var(--bg));
+  border-left: 3px solid var(--mila);
+}
+
+/* “News” panel follows theme */
+.news-box {
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+/* Links elsewhere that used #000 */
+.si { color: var(--text); }
+
+/* Optional: year watermark color that works in both themes */
+.pub-year { color: color-mix(in oklab, var(--text) 15%, var(--bg)); }
+
+
 </style>
 
 <!-- Photo + caption (floats left; text flows on the right) -->

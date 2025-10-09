@@ -490,9 +490,9 @@ redirect_from:
 
 <div class="news-box">
   <ul>
-    <li><strong>Feb 2024</strong>  Our paper <em>U-LAG</em> was accepted at the 2025 IROS Workshop on Perception and Planning for Mobile Manipulation, showcasing uncertainty-aware, lag-adaptive goal retargeting for manipulation!</li>
-    <li><strong>Feb 2024</strong>  Our paper <em>SPARQ</em> was accepted at the 2025 CoRL Workshop on Resource-Rational Robot Learning, introducing selective progress-aware querying for efficient human-in-the-loop RL!</li>
-    <li><strong>June 2024</strong>  Started working as a Research Associate under the guidance of Prof. M. Hanmandlu at IIT Delhi.</li>
+    <li><strong>Sept 2025</strong>  Our paper <strong>U-LAG<s/trong> was accepted at the <strong>2025 IROS Workshop on Perception and Planning for Mobile Manipulation</strong>, showcasing uncertainty-aware, lag-adaptive goal retargeting for manipulation!</li>
+    <li><strong>Sept 2025</strong>  Our paper <strong>SPARQ</strong> was accepted at the <strong>2025 CoRL Workshop on Resource-Rational Robot Learning</strong>, introducing selective progress-aware querying for efficient human-in-the-loop RL!</li>
+    <li><strong>June 2024</strong>  Started working as a Research Associate under the guidance of Prof. M. Hanmandlu.</li>
     <li><strong>Feb 2024</strong>  A paper regarding assistive HRI accepted in Proc. ACM IUI 2024.</li>
     <li><strong>Nov 2023</strong>  A journal paper on computer-vision-based autonomous taxiing of aircraft accepted at <em>Aviation</em>.</li>
     <li><strong>Aug 2023</strong>  Joined as a Research Assistant at I3D Lab, Indian Institute of Science.</li>

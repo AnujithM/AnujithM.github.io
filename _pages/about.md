@@ -532,6 +532,46 @@ html[data-theme="dark"]{
 .page__content h2#news{
   margin-top: 10px;
 }
+/* ===== ClustrMaps polishing ===== */
+
+/* Center it and add some breathing room from the news box */
+.clustr-wrap{
+  display:block;
+  margin: 16px auto 0;      /* top gap from news; centered */
+  text-align:center;
+  background: transparent;  /* wrapper has NO border/background */
+  border: none;
+}
+
+/* Each map slot should size to its content and be borderless */
+.clustr-slot{
+  display: inline-block;    /* hug the canvas width */
+  border: none !important;
+  background: transparent !important;
+  padding: 0;
+}
+
+/* Remove any borders/shadows the widget might add */
+.clustr-slot canvas,
+.clustr-slot iframe,
+.clustr-slot svg{
+  display:block;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Re-tint continents from blue → mila-ish pink without a border */
+.clustr-slot canvas,
+.clustr-slot svg{
+  filter: hue-rotate(305deg) saturate(1.5) brightness(1.05);
+  border-radius: 6px;       /* optional soft corners */
+}
+
+/* Only one map visible per theme (script will also enforce this) */
+#map-dark{ display:none; }
+html[data-theme="dark"] #map-light{ display:none; }
+html[data-theme="dark"] #map-dark{ display:inline-block; }
 
 </style>
 
@@ -674,10 +714,47 @@ html[data-theme="dark"]{
   </ul>
 </div>
 
-<!-- ClustrMaps Visitor Map -->
-<div id="visitor-map" style="margin-top: 10px; text-align: center;">
-  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
+<!-- Theme-aware ClustrMaps (two instances; JS shows the right one) -->
+<div id="visitor-map" class="clustr-wrap">
+  <!-- Light theme (white bg) -->
+  <div id="map-light" class="clustr-slot">
+    <script id="clustrmaps-light" type="text/javascript"
+      src="//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000">
+    </script>
+  </div>
+
+  <!-- Dark theme (dark bg to blend with your site) -->
+  <div id="map-dark" class="clustr-slot">
+    <script id="clustrmaps-dark" type="text/javascript"
+      src="//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=2b2f36&cmo=3acc3a&cmn=ff5353&ct=ffffff">
+    </script>
+  </div>
 </div>
+<script>
+
+  
+(function(){
+  function currentTheme(){
+    const stored = localStorage.getItem('theme');
+    if (stored) return stored;  // "light" | "dark"
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function apply(){
+    const dark = currentTheme() === 'dark';
+    const lightEl = document.getElementById('map-light');
+    const darkEl  = document.getElementById('map-dark');
+    if (lightEl && darkEl){
+      lightEl.style.display = dark ? 'none' : 'inline-block';
+      darkEl.style.display  = dark ? 'inline-block' : 'none';
+    }
+  }
+  apply();
+
+  // swap instantly when your toggle flips data-theme
+  const obs = new MutationObserver(apply);
+  obs.observe(document.documentElement, { attributes:true, attributeFilter:['data-theme'] });
+})();
+</script>
 
 <script>
 /* ===== Social icons: render 5 links (no sidebar dependency) ===== */

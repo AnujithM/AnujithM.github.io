@@ -392,7 +392,7 @@ redirect_from:
   <div class="pub-body">
     <span class="pub-year">2025</span>
     <div class="pub-title">SPARQ: Selective Progress-Aware Resource Querying</div>
-    <div class="pub-auth"> <strong>Anujith Muraleedharan, Anamika J H</strong></div>
+    <div class="pub-auth"> <strong>Anujith Muraleedharan</strong>, Anamika J H</div>
     <div class="pub-venue">CoRL 2025 Workshop on Resource-Rational Robot Learning</div>
 
     <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">

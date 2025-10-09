@@ -282,6 +282,14 @@ redirect_from:
   margin-top: 2px;
 }
 
+.photo-caption .email{
+  font-size: 14px;
+  color: #444;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  letter-spacing: .1px;
+  margin-top: 2px;
+}
+
 </style>
 
 <!-- Photo + caption (floats left; text flows on the right) -->

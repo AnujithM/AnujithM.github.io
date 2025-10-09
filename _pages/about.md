@@ -490,14 +490,17 @@ redirect_from:
 
 <div class="news-box">
   <ul>
-    <li><strong>Sept 2025</strong>  Our paper <strong>U-LAG<s/trong> was accepted at the <strong>2025 IROS Workshop on Perception and Planning for Mobile Manipulation</strong>, showcasing uncertainty-aware, lag-adaptive goal retargeting for manipulation!</li>
-    <li><strong>Sept 2025</strong>  Our paper <strong>SPARQ</strong> was accepted at the <strong>2025 CoRL Workshop on Resource-Rational Robot Learning</strong>, introducing selective progress-aware querying for efficient human-in-the-loop RL!</li>
-    <li><strong>June 2024</strong>  Started working as a Research Associate under the guidance of Prof. M. Hanmandlu.</li>
-    <li><strong>Feb 2024</strong>  A paper regarding assistive HRI accepted in Proc. ACM IUI 2024.</li>
+    <li><strong>June 2024</strong>  Started working as a Research Associate under the guidance of Prof. M. Hanmandlu at IIT Delhi.</li>
+    <li><strong>April 2024</strong>  Offered admission to M.Tech. Robotics and Autonomous Systems Programme at IISc Bangalore.</li>
+    <li><strong>Feb 2024</strong>  A paper regarding assistive HRI accepted in ACM IUI 2024.</li>
     <li><strong>Nov 2023</strong>  A journal paper on computer-vision-based autonomous taxiing of aircraft accepted at <em>Aviation</em>.</li>
     <li><strong>Aug 2023</strong>  Joined as a Research Assistant at I3D Lab, Indian Institute of Science.</li>
-    <li><strong>Mar 2023</strong>  Secured a position within the top 1.58% of candidates in GATE ECE 2023.</li>
+    <li><strong>Jul 2023</strong>  Offered admission to the M.Tech. programme at IIT Madras and IIT Kharagpur.</li>
+    <li><strong>Jun 2023</strong>  Provisionally selected for M.Tech. Integrated Circuits and Systems at IIT Bombay (RA/RAP).</li>
+    <li><strong>Mar 2023</strong>  Ranked within top 1.58% among 70,361 candidates in ECE.</li>
     <li><strong>Oct 2022</strong>  Started working as Simulation Developer at RobotX Workshops, Berlin.</li>
+    <li><strong>Aug 2022</strong>  Completed B.E. (ECE), APJ Abdul Kalam Technological University.</li>
+    <li><strong>Jan 2021</strong>  Joined as Undergraduate Researcher in CASP Lab, RIT Kottayam.</li>
   </ul>
 </div>
 

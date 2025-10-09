@@ -229,7 +229,7 @@ redirect_from:
 }
 
 .intro-title .first { font-weight: 600; }  /* Anujith bold */
-.intro-title .last  { font-weight: 400; }  /* Muraleedharan normal */
+.intro-title .last  { font-weight: 350; }  /* Muraleedharan normal */
 
 
 /* Two-line caption directly under the photo */

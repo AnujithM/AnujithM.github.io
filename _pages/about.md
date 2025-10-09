@@ -292,6 +292,22 @@ redirect_from:
   font-size:15px;                    /* slightly smaller font */
   line-height:1.7;                   /* improves readability */
 }
+/* Stretch abstract box to the same right edge as the year */
+.abs-box{
+  max-width: none;                     /* remove the old 85ch cap */
+  width: calc(100% + 120px);           /* 120px = .pub-body right padding */
+  margin-right: -120px;                /* pull the box into that padding area */
+  box-sizing: border-box;              /* keep padding inside the calc width */
+}
+
+/* Keep it clean on mobile where the year is hidden and padding collapses */
+@media (max-width:700px){
+  .abs-box{
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
 
 
 .eq-note{ font-size:13px; line-height:1.4; color:#6b6b6b; margin:-8px 0 16px 0; font-style:italic; }

@@ -12,12 +12,6 @@ layout: compress
   </head>
 
   <body>
-    <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle theme"
-        style="position:fixed; right:14px; bottom:14px; z-index:9999;">
-  🌓 Theme
-    </button>
-
-    {% include theme-toggle.html %}
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
@@ -32,8 +26,7 @@ layout: compress
     </div>
 
     {% include scripts.html %}
-    <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
-
+    
 
   </body>
 </html>

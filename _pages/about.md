@@ -75,13 +75,17 @@ redirect_from:
   column-gap: 40px;      /* slight horizontal gap tweak */
 }
 
-/* === Align top nav with the content column & equal spacing === */
-@media (min-width: 1025px){
-  /* shove the masthead (and its inner wrappers) right so its left edge
-     lines up with the main column (approx. sidebar width + gutter) */
-  .masthead,
-  .masthead__inner-wrap,
-  .greedy-nav { padding-left: 340px; }   /* tweak 300–340px if needed */
+/* Keep masthead aligned to the same content width + side padding */
+@media (min-width:1025px){
+  .masthead__inner-wrap{
+    max-width: 1180px;   /* same as .page__content max-width */
+    margin: 0 auto;      /* center it */
+    padding: 0 2cm;      /* same side padding you use for content */
+  }
+  /* keep even spacing between Home / Projects / CV */
+  .greedy-nav .visible-links > li + li { margin-left: 28px; }
+}
+
 
   /* equal spacing between Home / Projects / CV */
   .greedy-nav .visible-links > li + li { margin-left: 28px; }

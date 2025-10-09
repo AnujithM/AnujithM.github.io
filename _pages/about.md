@@ -517,13 +517,42 @@ html[data-theme="dark"]{
   display: none !important;
 }
 
-/* ===== Remove the line above "news" ===== */
-/* ensure the last publication row has no bottom border */
+/* last pub row: no bottom rule + smaller tail margin */
 .pub-row:last-of-type{
   border-bottom: none !important;
+  margin-bottom: 14px;                 /* tighten space before the “news” h2 */
 }
-/* (keep the news box’s own border as-is; remove if you want it borderless) */
-/* .news-box{ border: none; }  <-- uncomment to remove the box border too */
+
+/* if any hr sneaks in just before a section heading, hide it */
+.page__content hr:has(+ h2){
+  display: none !important;
+}
+
+/* optional: tighten the “news” heading spacing a bit */
+.page__content h2#news{
+  margin-top: 10px;
+}
+/* Show only the correct map per theme */
+#map-dark{ display:none; }
+html[data-theme="dark"] #map-light{ display:none; }
+html[data-theme="dark"] #map-dark{ display:block; }
+
+/* Recolor continents from blue → mila-ish pink using a filter.
+   (affects the canvas ClustrMaps draws into) */
+#visitor-map canvas, #visitor-map svg{
+  /* tune if you want a slightly different pink */
+  filter: hue-rotate(305deg) saturate(1.6) brightness(1.05);
+  border-radius: 6px;                 /* optional: soften corners */
+}
+
+/* Match the widget frame to theme surfaces */
+#visitor-map{
+  background: var(--card);
+  border: 1px solid var(--divider);
+  padding: 8px;
+  display: inline-block;              /* hug contents */
+}
+
 
 </style>
 
@@ -666,10 +695,23 @@ html[data-theme="dark"]{
   </ul>
 </div>
 
-<!-- ClustrMaps Visitor Map -->
-<div id="visitor-map" style="margin-top: 10px; text-align: center;">
-  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
+<!-- Theme-aware ClustrMaps: light + dark instances; we show one via CSS -->
+<div id="visitor-map" style="margin-top:10px; text-align:center;">
+  <!-- Light theme instance (white background) -->
+  <div id="map-light">
+    <script id="clustrmaps-light" type="text/javascript"
+      src="//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000">
+    </script>
+  </div>
+
+  <!-- Dark theme instance (dark background) -->
+  <div id="map-dark">
+    <script id="clustrmaps-dark" type="text/javascript"
+      src="//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=2b2f36&cmo=3acc3a&cmn=ff5353&ct=ffffff">
+    </script>
+  </div>
 </div>
+
 
 <script>
 /* ===== Social icons: render 5 links (no sidebar dependency) ===== */

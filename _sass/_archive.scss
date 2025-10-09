@@ -1,0 +1,216 @@
+/* ==========================================================================
+   ARCHIVE
+   ========================================================================== */
+
+   .archive {
+    margin-bottom: 2em;
+  
+    @include breakpoint($medium) {
+      @include span(12 of 12);
+    }
+  
+    @include breakpoint($large) {
+      @include span(10 of 12 last);
+      @include prefix(0.5 of 12);
+    }
+  
+    a {
+      text-decoration: underline;
+  
+      &:hover {
+        text-decoration: underline;
+  
+        img {
+          box-shadow: 0 0 10px rgba(#000, 0.25);
+        }
+      }
+    }
+  }
+  
+  .archive__subtitle {
+    margin: 1.414em 0 0;
+    padding-bottom: 0.5em;
+    font-size: $type-size-5;
+    color: mix(#fff, $gray, 25%);
+    border-bottom: 1px solid $border-color;
+  
+    + .list__item .archive__item-title {
+      margin-top: 0.5em;
+    }
+  }
+  
+  .archive__item-title {
+    margin-bottom: 0.25em;
+    font-family: $sans-serif-narrow;
+  
+    a + a {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Remove border */
+  .page__content {
+    .archive__item-title {
+      margin-top: 1em;
+      border-bottom: none;
+    }
+  }
+  
+  .archive__item-excerpt {
+    margin-top: 0;
+    font-size: $type-size-6;
+  
+    & + p {
+      text-indent: 0;
+    }
+  }
+  
+  .archive__item-teaser {
+    border-radius: $border-radius;
+    overflow: hidden;
+  
+    img {
+      width: 100%;
+    }
+  }
+  
+  .archive__item:hover {
+    .archive__item-teaser {
+      box-shadow: 0 0 10px rgba(#000, 0.25);
+    }
+  
+    .archive__item-title {
+      text-decoration: underline;
+    }
+  }
+  
+  /* ==========================================================================
+     Grid View
+     ========================================================================== */
+  
+  .portfolio-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next row */
+    gap: 20px; /* Spacing between items */
+    justify-content: space-between; /* Distribute items evenly */
+  }
+  
+  .grid__item {
+    flex: 1 1 calc(50% - 20px); /* Two items per row, adjust spacing */
+    max-width: calc(50% - 20px); /* Ensure proper spacing */
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Add vertical spacing */
+  }
+  
+  .grid__item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .grid__item h2 {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 10px;
+  }
+  
+  /* Responsive stacking for smaller screens */
+  @media (max-width: 768px) {
+    .grid__item {
+      flex: 1 1 100%; /* Stack items vertically */
+      max-width: 100%;
+    }
+  }
+  
+  /* ==========================================================================
+     Features
+     ========================================================================== */
+  
+  .feature__wrapper {
+    @include clearfix();
+    margin-bottom: 2em;
+    border-bottom: 1px solid $border-color;
+  }
+  
+  .feature__item {
+    margin-bottom: 2em;
+    font-size: 1.25rem;
+  
+    @include breakpoint($small) {
+      margin-bottom: 0;
+      @include gallery(4 of 12);
+  
+      .feature__item-teaser {
+        max-height: 200px;
+        overflow: hidden;
+      }
+    }
+  
+    &--left {
+      @include full();
+      font-size: 1.25rem;
+  
+      .archive__item-teaser {
+        margin-bottom: 2em;
+      }
+  
+      @include breakpoint($small) {
+        .archive__item-teaser {
+          @include span(5 of 12);
+        }
+  
+        .archive__item-body {
+          @include span(7 of 12 last);
+          @include prefix(0.5 of 12);
+          @include suffix(1 of 12);
+        }
+      }
+    }
+  
+    &--right {
+      @include full();
+      font-size: 1.25rem;
+  
+      .archive__item-teaser {
+        margin-bottom: 2em;
+      }
+  
+      @include breakpoint($small) {
+        text-align: right;
+  
+        .archive__item-teaser {
+          @include span(5 of 12 rtl);
+        }
+  
+        .archive__item-body {
+          @include span(7 of 12 last rtl);
+          @include prefix(0.5 of 12);
+          @include suffix(1 of 12);
+        }
+      }
+    }
+  
+    &--center {
+      @include full();
+      font-size: 1.25rem;
+  
+      .archive__item-teaser {
+        margin-bottom: 2em;
+      }
+  
+      @include breakpoint($small) {
+        text-align: center;
+  
+        .archive__item-teaser {
+          margin: 0 auto;
+          width: span(5 of 12);
+        }
+  
+        .archive__item-body {
+          margin: 0 auto;
+          width: span(7 of 12);
+        }
+      }
+    }
+  }
+  

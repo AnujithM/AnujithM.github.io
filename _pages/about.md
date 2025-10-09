@@ -447,7 +447,7 @@ redirect_from:
     <span class="pub-year">2024</span>
     <div class="pub-title">Eye-Gaze-Enabled Assistive Robotic Stamp Printing System for Individuals with Severe Speech and Motor Impairment</div>
     <div class="pub-auth"><strong>Anujith Muraleedharan</strong>, Anamika J H, Himanshu Vishwakarma, Kudrat Kashyap, Pradipta Biswas</div>
-    <div class="pub-venue">ACM Conference on Intelligent User Interfaces (ACM IUI) 2024</div>
+    <div class="pub-venue">Proceedings of the 29th International Conference on Intelligent User Interfaces</div>
 
     <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
       <details class="abs">

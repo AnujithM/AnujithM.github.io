@@ -228,7 +228,7 @@ redirect_from:
   letter-spacing: .2px;
 }
 
-.intro-title .first { font-weight: 800; }  /* Anujith bold */
+.intro-title .first { font-weight: 600; }  /* Anujith bold */
 .intro-title .last  { font-weight: 400; }  /* Muraleedharan normal */
 
 

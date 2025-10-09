@@ -517,45 +517,6 @@ html[data-theme="dark"]{
   display: none !important;
 }
 
-/* last pub row: no bottom rule + smaller tail margin */
-.pub-row:last-of-type{
-  border-bottom: none !important;
-  margin-bottom: 14px;                 /* tighten space before the “news” h2 */
-}
-
-/* if any hr sneaks in just before a section heading, hide it */
-.page__content hr:has(+ h2){
-  display: none !important;
-}
-
-/* optional: tighten the “news” heading spacing a bit */
-.page__content h2#news{
-  margin-top: 10px;
-}
-
-/* Centered block with space from news; no border */
-.clustr-wrap{
-  display:block;
-  margin:16px auto 0;         /* tighten/loosen with this */
-  text-align:center;
-  background: transparent;
-  border: none;
-}
-
-/* The injected canvas should be clean and borderless */
-.clustr-wrap canvas, .clustr-wrap svg, .clustr-wrap iframe{
-  display:block;
-  border:none !important;
-  outline:none !important;
-  box-shadow:none !important;
-}
-
-/* Recolor continents blue -> mila-ish pink */
-.clustr-wrap canvas, .clustr-wrap svg{
-  filter: hue-rotate(305deg) saturate(1.5) brightness(1.05);
-  border-radius:6px;           /* optional soft corners */
-}
-
 
 </style>
 
@@ -698,65 +659,10 @@ html[data-theme="dark"]{
   </ul>
 </div>
 
-<!-- ClustrMaps (auto theme-aware) -->
-<div id="visitor-map" class="clustr-wrap">
-  <div id="clustrmaps-container"></div>
+<!-- ClustrMaps Visitor Map -->
+<div id="visitor-map" style="margin-top: 10px; text-align: center;">
+  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
 </div>
-
-<script>
-(function () {
-  // Your existing ClustrMaps settings (keep your 'd=' token!)
-  const BASE = "//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU";
-  const CO_LIGHT = "ffffff";  // light bg
-  const CO_DARK  = "2b2f36";  // dark bg to blend with your site
-  const CMO = "3acc3a", CMN = "ff5353"; // marker colors
-  const CT_LIGHT = "000000", CT_DARK = "ffffff"; // title text color
-
-  const holder = document.getElementById("clustrmaps-container");
-  if (!holder) return;
-
-  function currentTheme() {
-    const s = localStorage.getItem("theme");
-    if (s) return s;
-    return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  }
-
-  let lastTheme = null, loadTimer = null;
-
-  function loadMap(theme) {
-    if (theme === lastTheme) return;
-    lastTheme = theme;
-
-    // clear previous content
-    holder.innerHTML = "";
-
-    // build src with theme-specific colors
-    const co = theme === "dark" ? CO_DARK : CO_LIGHT;
-    const ct = theme === "dark" ? CT_DARK : CT_LIGHT;
-    const src = `${BASE}&co=${co}&cmo=${CMO}&cmn=${CMN}&ct=${ct}`;
-
-    const s = document.createElement("script");
-    s.type = "text/javascript";
-    s.id = "clustrmaps";
-    s.src = src;
-    holder.appendChild(s);
-  }
-
-  function scheduleLoad() {
-    // debounce rapid toggles
-    clearTimeout(loadTimer);
-    loadTimer = setTimeout(() => loadMap(currentTheme()), 60);
-  }
-
-  // initial load
-  scheduleLoad();
-
-  // reload on theme toggle (data-theme flips)
-  new MutationObserver(scheduleLoad)
-    .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
-})();
-</script>
-
 
 <script>
 /* ===== Social icons: render 5 links (no sidebar dependency) ===== */

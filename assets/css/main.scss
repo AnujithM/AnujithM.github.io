@@ -9,7 +9,22 @@
  *  - https://twitter.com/mmistakes
  *
 */
+@import "theme/light";
+@import "theme/dark";
 
+/* map tokens to elements */
+html, body { color: var(--text); background: var(--bg); }
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+hr, .page-break, .post-list li, .archive-item { border-color: var(--border); }
+.card, .feature, .post, .highlight, .box {
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+.highlight, pre, code {
+  background: color-mix(in oklab, var(--card) 92%, black);
+  border-color: var(--border);
+}
 @import "vendor/breakpoint/breakpoint"; // media query mixins
 @import "variables";
 @import "mixins";

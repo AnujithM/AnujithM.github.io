@@ -14,12 +14,11 @@ redirect_from:
   --btn-border: rgba(0,0,0,.55);
 }
 /* Photo + caption container (floats left) */
-.portrait {
+.portrait{
   float: left;
-  width: clamp(180px, 22vw, 300px);
-  margin: 4px clamp(18px, 2vw, 28px) 12px 0;
+  width: clamp(200px, 22vw, 300px);
+  margin: 4px 28px 12px 0;  /* space to its right & below */
 }
-
 
 /* The image inside the portrait container */
 .portrait > img{
@@ -50,7 +49,6 @@ redirect_from:
   letter-spacing: .2px;
 }
 
-
 /* Mobile: stack image + caption above text */
 @media (max-width: 1100px){
   .portrait{
@@ -64,51 +62,61 @@ redirect_from:
 
 /* Make the text column read like a tall, narrow column */
 .intro-grid{
-  column-gap: 36px;
-  row-gap: 20px;              /* keep some breathing room in the grid */
+  column-gap: 36px;                           /* a little more breathing room */
 }
 
-/* Right-hand intro copy */
 .intro-text{
-  max-width: 60ch;            /* good readability at all widths */
-  width: 100%;
+  max-width: 100ch;                            /* limit line length -> taller column */
 }
-@media (max-width: 1100px){
-  .intro-text{ max-width: none; }
-}
+/* Increase vertical breathing room around the title and content */
 
-/* Paragraph shaping */
-.intro-text p{
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-  margin: 0 0 1.1em 0;
+.intro-grid {
+  row-gap: 20px;         /* adds vertical spacing between rows (title ↔ image/text) */
+  column-gap: 40px;      /* slight horizontal gap tweak */
 }
 
 /* Keep masthead aligned to the same content width + side padding */
-@media (min-width: 1025px){
+@media (min-width:1025px){
   .masthead__inner-wrap{
-    max-width: min(1180px, 90vw);
-    margin: 0 auto;
-    padding-inline: clamp(24px, 4vw, 60px);
-    box-sizing: border-box;
+    max-width: 1180px;   /* same as .page__content max-width */
+    margin: 0 auto;      /* center it */
+    padding: 0 2cm;      /* same side padding you use for content */
   }
-  /* even spacing between Home / Projects / CV */
+  /* keep even spacing between Home / Projects / CV */
   .greedy-nav .visible-links > li + li { margin-left: 28px; }
 }
 
-/* Base page content container (responsive & consistent on 768p…1440p) */
-.page__content{
-  font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size: clamp(15px, 1vw + 0.5rem, 17px);
-  line-height: 1.8;
-  color:#1a1a1a;
-  max-width: min(1180px, 90vw);              /* scales on very wide screens */
-  margin: 0 auto;
-  padding-inline: clamp(24px, 4vw, 60px);    /* replaces fixed 2cm padding */
-  box-sizing: border-box;
+
+  /* equal spacing between Home / Projects / CV */
+  .greedy-nav .visible-links > li + li { margin-left: 28px; }
 }
 
+/* === ~2cm gap between the big name and the photo/text === */
+.intro-grid{
+  row-gap: 20px;            /* keep some breathing room in the grid */
+}
+/* keep the image left-floated, as you have now */
+.about-rect{ /* your existing rule stays; nothing else to change here */ }
+
+/* Paragraph shaping */
+.intro-text p{
+  text-align: justify;                        /* justify the text */
+  text-justify: inter-word;                   /* better spacing for justification */
+  hyphens: auto;                              /* allow soft hyphenation for cleaner edges */
+  margin: 0 0 1.1em 0;                        /* consistent paragraph spacing */
+}
+
+/* On small screens let it be full width again */
+@media (max-width: 1100px){
+  .intro-text{
+    max-width: none;
+  }
+}
+.page__content{
+  font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:17px; line-height:1.8; color:#1a1a1a;
+  max-width:1180px; margin:0 auto;
+}
 
 /* base text column */
 .page__content{

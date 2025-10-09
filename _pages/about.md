@@ -459,6 +459,42 @@ hr{ border-color: var(--divider); }
 .news-box{
   border: 1px solid var(--divider);
 }
+/* ===== Scrollbar styling for .news-box ===== */
+/* Tokens */
+:root{
+  --scroll-track: transparent;               /* no white rectangle */
+  --scroll-thumb: rgba(0,0,0,.45);
+  --scroll-thumb-hover: rgba(0,0,0,.65);
+}
+html[data-theme="dark"]{
+  --scroll-track: transparent;               /* stays invisible in dark */
+  --scroll-thumb: rgba(255,255,255,.38);
+  --scroll-thumb-hover: rgba(255,255,255,.6);
+}
+
+/* Firefox */
+.news-box{
+  scrollbar-width: thin;                     /* slim */
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+
+/* WebKit (Chrome/Edge/Safari) */
+.news-box::-webkit-scrollbar{
+  width: 10px;                               /* adjust if you want thinner */
+}
+.news-box::-webkit-scrollbar-track{
+  background: var(--scroll-track);           /* hides the white box */
+  border-radius: 8px;
+}
+.news-box::-webkit-scrollbar-thumb{
+  background-color: var(--scroll-thumb);
+  border-radius: 8px;
+  border: 2px solid transparent;             /* avoids white border artifact */
+  background-clip: padding-box;
+}
+.news-box::-webkit-scrollbar-thumb:hover{
+  background-color: var(--scroll-thumb-hover);
+}
 
 
 </style>

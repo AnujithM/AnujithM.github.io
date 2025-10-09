@@ -50,7 +50,7 @@ redirect_from:
 }
 
 /* Mobile: stack image + caption above text */
-@media (max-width: 1200px){
+@media (max-width: 1100px){
   .portrait{
     float: none;
     width: 100%;
@@ -110,31 +110,9 @@ redirect_from:
 }
 .page__content{
   font-family:"Lato","Roboto","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  font-size:17px;
-  line-height:1.8;
-  color:#1a1a1a;
-
-  /* widen the container by the padding we add (2cm + 2cm) */
-  max-width: calc(1180px + 4cm);
-  margin: 0 auto;
-
-  /* add the side whitespace */
-  padding-left: 2cm;
-  padding-right: 2cm;
-
-  /* make padding part of the max-width calculation */
-  box-sizing: border-box;
+  font-size:17px; line-height:1.8; color:#1a1a1a;
+  max-width:1180px; margin:0 auto;
 }
-
-/* smaller side gutters on phones */
-@media (max-width: 720px){
-  .page__content{
-    max-width: none;       /* let it fill the screen */
-    padding-left: 1cm;
-    padding-right: 1cm;
-  }
-}
-
 
 /* base text column */
 .page__content{

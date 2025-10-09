@@ -532,6 +532,28 @@ html[data-theme="dark"]{
 .page__content h2#news{
   margin-top: 10px;
 }
+/* Frame to match your cards */
+.clustr-wrap{
+  background: var(--card);
+  border: 1px solid var(--divider);
+  padding: 8px;
+  display: inline-block;   /* hug the map width */
+  border-radius: 6px;
+}
+
+/* Ensure the canvas shows and recolor the continents toward mila */
+.clustr-wrap canvas,
+.clustr-wrap iframe,
+.clustr-wrap svg{
+  display: block;
+  filter: hue-rotate(305deg) saturate(1.4) brightness(1.05);
+  /* tweak hue-rotate to shift the blue to your mila pink */
+}
+
+/* Optional: light mode tweaks (slightly lighter wrapper) */
+:root .clustr-wrap{
+  background: color-mix(in oklab, var(--card) 96%, var(--bg));
+}
 
 </style>
 
@@ -674,10 +696,13 @@ html[data-theme="dark"]{
   </ul>
 </div>
 
-<!-- ClustrMaps Visitor Map -->
-<div id="visitor-map" style="margin-top: 10px; text-align: center;">
-  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
+<!-- ClustrMaps Visitor Map (single instance) -->
+<div id="visitor-map" class="clustr-wrap">
+  <script type="text/javascript" id="clustrmaps"
+    src="//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=2b2f36&cmo=3acc3a&cmn=ff5353&ct=ffffff">
+  </script>
 </div>
+
 
 <script>
 /* ===== Social icons: render 5 links (no sidebar dependency) ===== */

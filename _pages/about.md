@@ -423,6 +423,43 @@ hr, .news-box { border-color: var(--border); }
 /* Optional: year watermark color that works in both themes */
 .pub-year { color: color-mix(in oklab, var(--text) 15%, var(--bg)); }
 
+/* ====== fix: dividers, year tint, venue color ====== */
+
+/* Tokens */
+:root{
+  /* divider and year tint for LIGHT */
+  --divider: rgba(0,0,0,.12);
+  --year-dim: rgba(0,0,0,.35);
+  --venue-color: #1a1a1a; /* dark text on light bg */
+}
+html[data-theme="dark"]{
+  /* divider and year tint for DARK */
+  --divider: rgba(255,255,255,.14);
+  --year-dim: rgba(255,255,255,.38);
+  --venue-color: #ffffff; /* make venue line white in dark mode */
+}
+
+/* 1) Divider lines under each publication row */
+.pub-row{
+  border-bottom: 1px solid var(--divider);
+}
+hr{ border-color: var(--divider); }
+
+/* 2) Year watermark on the right: make it a soft grey, not white */
+.pub-year{
+  color: var(--year-dim);
+}
+
+/* 3) Venue line: grey in light, white in dark (as requested) */
+.pub-venue{
+  color: var(--venue-color);
+}
+
+/* If your "news" panel border vanished, give it the same divider */
+.news-box{
+  border: 1px solid var(--divider);
+}
+
 
 </style>
 

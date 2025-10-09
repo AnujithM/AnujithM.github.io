@@ -216,6 +216,21 @@ redirect_from:
   line-height: 1.1;
   margin: 0 0 12px 0;
 }
+/* Title font (swap to the exact one you prefer later) */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&display=swap');
+
+.intro-title{
+  font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+  font-size: clamp(36px, 5vw, 44px);
+  font-weight: 400;           /* <-- normal by default */
+  line-height: 1.1;
+  margin: 0 0 12px 0;
+  letter-spacing: .2px;
+}
+
+.intro-title .first { font-weight: 800; }  /* Anujith bold */
+.intro-title .last  { font-weight: 400; }  /* Muraleedharan normal */
+
 
 /* Two-line caption directly under the photo */
 .photo-caption{
@@ -295,7 +310,10 @@ redirect_from:
 </style>
 
 <!-- Photo + caption (floats left; text flows on the right) -->
-<h1 class="intro-title">Anujith Muraleedharan</h1>
+<h1 class="intro-title">
+  <span class="first">Anujith</span> <span class="last">Muraleedharan</span>
+</h1>
+
 
 <div class="portrait">
   <img class="about-rect" src="/images/Image1.png" alt="Anujith Muraleedharan">

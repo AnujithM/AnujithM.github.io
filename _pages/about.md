@@ -612,11 +612,11 @@ hr{ border-color: var(--divider); }
 (function () {
   /* 1) Fill in your links (leave "" to hide an icon) */
   const LINKS = {
-    email:    "mailto:anujithm@example.com",
+    email:    "mailto:anujithmuralidharan@gmail.com",
     scholar:  "https://scholar.google.com/citations?user=YOURID",
     github:   "https://github.com/AnujithM",
-    linkedin: "https://www.linkedin.com/in/YOURID/",
-    twitter:  "https://twitter.com/YOURID"
+    linkedin: "https://www.linkedin.com/in/anujith-muraleedharan-676482312/",
+    twitter:  "https://x.com/AnujithMur5713"
   };
 
   /* 2) SVG icons (use currentColor so CSS controls color) */

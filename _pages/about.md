@@ -496,6 +496,34 @@ html[data-theme="dark"]{
   background-color: var(--scroll-thumb-hover);
 }
 
+/* ===== Navbar: single full-width divider ===== */
+.masthead{
+  border-bottom: 1px solid var(--divider);
+}
+.greedy-nav,
+.masthead__inner-wrap{
+  box-shadow: none !important; /* some themes draw hairlines via shadow */
+}
+/* hide the short edge lines some themes add as pseudo-elements */
+.greedy-nav:before,
+.greedy-nav:after,
+.greedy-nav .visible-links:before,
+.greedy-nav .visible-links:after,
+.masthead:before,
+.masthead:after,
+.masthead__inner-wrap:before,
+.masthead__inner-wrap:after{
+  content: none !important;
+  display: none !important;
+}
+
+/* ===== Remove the line above "news" ===== */
+/* ensure the last publication row has no bottom border */
+.pub-row:last-of-type{
+  border-bottom: none !important;
+}
+/* (keep the news box’s own border as-is; remove if you want it borderless) */
+/* .news-box{ border: none; }  <-- uncomment to remove the box border too */
 
 </style>
 

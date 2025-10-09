@@ -281,7 +281,6 @@ redirect_from:
   letter-spacing: .1px;
   margin-top: 2px;
 }
-
 .photo-caption .email{
   font-size: 14px;
   color: #444;
@@ -289,7 +288,6 @@ redirect_from:
   letter-spacing: .1px;
   margin-top: 2px;
 }
-
 </style>
 
 <!-- Photo + caption (floats left; text flows on the right) -->
@@ -300,7 +298,7 @@ redirect_from:
   <div class="photo-caption">
     <div class="aka">a.k.a <strong>ToNY</strong></div>
     <div class="role">Research Associate</div>
-    <div class="mail">anujithmuralidharan[at]gmail[dot]com</div>
+    <div class="email">anujithmuralidharan[at]gmail[dot]com</div>
   </div>
 </div>
 

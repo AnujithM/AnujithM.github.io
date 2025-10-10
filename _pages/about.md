@@ -714,60 +714,10 @@ h2#news + .news-box{
 </div>
 
 
-<!-- ClustrMaps (theme-adaptive background, centered, no borders) -->
-<div id="visitor-map" class="map-block"></div>
-
-<script>
-(function () {
-  // Your existing token after d=
-  const TOKEN = "wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU";
-  const BASE  = "https://cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=" + TOKEN;
-
-  // Decide theme once (localStorage choice > system preference)
-  function currentTheme() {
-    const s = localStorage.getItem("theme");
-    if (s) return s;                                  // "light" | "dark"
-    return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  }
-
-  const theme = currentTheme();
-  const co    = theme === "dark" ? "2b2f36" : "ffffff";  // background color of the map
-  const ct    = theme === "dark" ? "ffffff" : "000000";  // title text color
-
-  const src = `${BASE}&co=${co}&cmo=3acc3a&cmn=ff5353&ct=${ct}`;
-
-  // Ensure no duplicate script with id="clustrmaps"
-  const old = document.getElementById("clustrmaps");
-  if (old && old.parentNode) old.parentNode.removeChild(old);
-
-  const s = document.createElement("script");
-  s.type = "text/javascript";
-  s.id   = "clustrmaps";
-  s.src  = src;
-
-  const holder = document.getElementById("visitor-map");
-  if (holder) holder.appendChild(s);
-})();
-</script>
-
-<style>
-/* Center align; no borders or extra chrome */
-.map-block{
-  text-align: center;
-  margin: 12px auto 0;      /* space from the news box; tweak if needed */
-  background: transparent;
-  border: 0;
-}
-.map-block canvas,
-.map-block svg,
-.map-block iframe{
-  display: inline-block;
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-}
-</style>
-
+<!-- ClustrMaps Visitor Map -->
+<div id="visitor-map" style="margin-top: 10px; text-align: center;">
+  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
+</div>
 
 <script>
 /* ===== Social icons: render 5 links (no sidebar dependency) ===== */

@@ -546,11 +546,6 @@ html[data-theme="dark"]{
 .news-box a { color: var(--mila); }
 .news-box a:hover { color: var(--mila-hover); }
 
-/* last-resort scaling if the widget forces a fixed size */
-.globe-box > *:first-child{
-  transform: scale(0.45);   /* smaller = lower number */
-}
-.globe-box{ height: 360px; } /* adjust to avoid overflow when scaling */
 
 </style>
 
@@ -694,8 +689,8 @@ html[data-theme="dark"]{
   </ul>
 </div>
 
-<!-- ClustrMaps Globe (scaled smaller) -->
-<div class="globe-box">
+<!-- ClustrMaps Globe (small & centered) -->
+<div class="globe-wrap">
   <script
     type="text/javascript"
     id="clstr_globe"
@@ -704,27 +699,27 @@ html[data-theme="dark"]{
 </div>
 
 <style>
-/* Keep the globe nicely sized and centered */
-.globe-box{
-  max-width: 320px;     /* <- adjust this to your preferred width */
-  margin: 10px auto;    /* center it */
+/* Size of the visible box (edit these) */
+.globe-wrap{
+  width: 320px;          /* your desired width */
+  height: 320px;         /* your desired height */
+  margin: 12px auto;     /* center on page */
+  overflow: hidden;      /* crop the oversized widget */
 }
 
-/* Make whatever the script injects (canvas/SVG/iframe) fit the box */
-.globe-box canvas,
-.globe-box svg,
-.globe-box iframe{
-  width: 100% !important;
-  height: auto !important;
+/* Scale + center whatever the script injects (canvas/iframe/etc.) */
+.globe-wrap > :first-child{
+  position: relative !important;
+  left: 50% !important;
+  transform: translate(-50%, -8%) scale(0.40) !important; /* tweak: move up & shrink */
+  transform-origin: top center !important;
   display: block;
 }
 
-/* Fallback for widgets that ignore width/height: scale the whole thing down */
-@media (min-width: 0){
-  .globe-box > *:first-child{
-    transform-origin: top center;
-  }
-}
+/* (nice-to-have) ensure inner element can shrink properly */
+.globe-wrap canvas,
+.globe-wrap iframe,
+.globe-wrap svg{ display:block; }
 </style>
 
 

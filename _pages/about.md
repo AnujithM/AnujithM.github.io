@@ -689,8 +689,8 @@ html[data-theme="dark"]{
   </ul>
 </div>
 
-<!-- ClustrMaps Globe (compact size) -->
-<div class="globe-wrap">
+<!-- ClustrMaps Globe (robust small + centered) -->
+<div class="globe-wrap" id="globe-wrap">
   <script
     type="text/javascript"
     id="clstr_globe"
@@ -700,27 +700,59 @@ html[data-theme="dark"]{
 
 <style>
 .globe-wrap{
-  width: 260px;          /* reduce width */
-  height: 260px;         /* reduce height */
-  margin: 10px auto;     /* center the globe */
-  overflow: hidden;      /* crop extra edges */
+  width: 240px;           /* final visible size */
+  height: 240px;
+  margin: 12px auto;
+  position: relative;
+  overflow: hidden;       /* crop oversized canvas */
 }
 
-/* Shrink and center the globe canvas */
-.globe-wrap > :first-child{
-  position: relative !important;
-  left: 50% !important;
-  transform: translate(-50%, -5%) scale(0.32) !important; /* smaller + slight vertical shift */
-  transform-origin: top center !important;
-  display: block;
-}
-
-.globe-wrap canvas,
-.globe-wrap iframe,
-.globe-wrap svg{
-  display: block;
+/* the scaler we’ll create in JS */
+.globe-wrap .globe-scale{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform-origin: top center;
 }
 </style>
+
+<script>
+(function(){
+  const WRAP = document.getElementById('globe-wrap');
+  const SCALE = 0.28;        // smaller => smaller globe
+  const YSHIFT = -6;         // vertical nudge in %
+
+  function fitOnce(){
+    // ClustrMaps may inject canvas/iframe/div; grab whichever appears
+    const w = WRAP.querySelector('canvas,iframe,svg,div:not(.globe-scale)');
+    if(!w) return false;
+
+    // Create scaler if missing and move the widget into it
+    let scaler = WRAP.querySelector('.globe-scale');
+    if(!scaler){
+      scaler = document.createElement('div');
+      scaler.className = 'globe-scale';
+      WRAP.appendChild(scaler);
+    }
+    if(w.parentElement !== scaler){
+      scaler.appendChild(w);
+    }
+
+    // Center + scale
+    scaler.style.transform = `translate(-50%, ${YSHIFT}%) scale(${SCALE})`;
+    return true;
+  }
+
+  // Try immediately, then keep trying briefly until the widget appears
+  if(!fitOnce()){
+    let tries = 0;
+    const t = setInterval(()=>{
+      tries++;
+      if(fitOnce() || tries > 40) clearInterval(t); // ~2s max
+    }, 50);
+  }
+})();
+</script>
 
 
 <script>

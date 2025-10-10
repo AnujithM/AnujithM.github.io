@@ -678,16 +678,17 @@ html[data-theme="dark"]{
 
 <div class="news-box">
   <ul>
-    <li><strong>Sept 2025</strong>  Our work, U-LAG, on uncertainty-aware, lag-adaptive goal retargeting, was accepted at the IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments.</li>
-    <li><strong>Sept 2025</strong>  Our paper, SPARQ, on progress-aware, selective human-in-the-loop querying, was accepted at the CoRL 2025 Workshop on Resource-Rational Robot Learning.</li>
+    <li><strong>Sept 2025</strong>  Our work, U-LAG, on uncertainty-aware, lag-adaptive goal retargeting, was accepted at the <a href="https://autonomousrobots.nl/workshops/2025-iros" target="_blank" rel="noopener">IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments</a>.</li>
+    <li><strong>Sept 2025</strong>  Our paper, SPARQ, on progress-aware, selective human-in-the-loop querying, was accepted at the <a href="https://rational-robots.github.io/" target="_blank" rel="noopener">CoRL 2025 Workshop on Resource-Rational Robot Learning</a>.</li>
     <li><strong>June 2024</strong>  Started working as a Research Associate under the guidance of Prof. M. Hanmandlu.</li>
-    <li><strong>Feb 2024</strong>  A paper regarding assistive HRI accepted in ACM IUI 2024.</li>
-    <li><strong>Nov 2023</strong>  A journal paper on computer-vision-based autonomous taxiing of aircraft accepted at <em>Aviation</em>.</li>
-    <li><strong>Aug 2023</strong>  Joined as a Research Assistant at I3D Lab, Indian Institute of Science.</li>
-    <li><strong>Mar 2023</strong>  Qualified GATE 2023 (ECE) with top 1.58 percentile ranking among 70,000+ registered candidates.</li>
-    <li><strong>Oct 2022</strong>  Started working as Simulation Developer at RobotX Workshops, Berlin.</li>
+    <li><strong>Feb 2024</strong>  A paper regarding assistive HRI accepted in <a href="https://iui.acm.org/2024/proceedings.html" target="_blank" rel="noopener">ACM IUI 2024</a>.</li>
+    <li><strong>Nov 2023</strong>  A journal paper on computer-vision-based autonomous taxiing of aircraft accepted at <a href="https://journals.vilniustech.lt/index.php/Aviation/article/view/20588" target="_blank" rel="noopener"><em>Aviation</em></a>.</li>
+    <li><strong>Aug 2023</strong>  Joined as a Research Assistant at <a href="https://cambum.net/I3D.htm" target="_blank" rel="noopener">I3D Lab</a>, Indian Institute of Science.</li>
+    <li><strong>Mar 2023</strong>  Qualified <a href="https://gate.iitk.ac.in/GATE2023/" target="_blank" rel="noopener">GATE 2023</a> (ECE) with top 1.58 percentile ranking among 70,000+ registered candidates.</li>
+    <li><strong>Oct 2022</strong>  Started working as Simulation Developer at <a href="https://robotxworkshops.tech/" target="_blank" rel="noopener">RobotX Workshops</a>, Berlin.</li>
   </ul>
 </div>
+
 
 <!-- ClustrMaps Visitor Map -->
 <div id="visitor-map" style="margin-top: 10px; text-align: center;">

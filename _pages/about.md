@@ -689,8 +689,14 @@ html[data-theme="dark"]{
   </ul>
 </div>
 
-<!-- ClustrMaps Globe (robust small + centered) -->
-<div class="globe-wrap" id="globe-wrap">
+<!-- ClustrMaps Globe (stable small size) -->
+<div id="cm-globe-wrap" style="
+  width: 240px;          /* final visible width */
+  height: 240px;         /* final visible height */
+  margin: 12px auto;     /* center on page */
+  position: relative;
+  overflow: hidden;      /* crop any overflow */
+">
   <script
     type="text/javascript"
     id="clstr_globe"
@@ -698,59 +704,39 @@ html[data-theme="dark"]{
   </script>
 </div>
 
-<style>
-.globe-wrap{
-  width: 240px;           /* final visible size */
-  height: 240px;
-  margin: 12px auto;
-  position: relative;
-  overflow: hidden;       /* crop oversized canvas */
-}
-
-/* the scaler we’ll create in JS */
-.globe-wrap .globe-scale{
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform-origin: top center;
-}
-</style>
-
 <script>
 (function(){
-  const WRAP = document.getElementById('globe-wrap');
-  const SCALE = 0.28;        // smaller => smaller globe
-  const YSHIFT = -6;         // vertical nudge in %
+  const WRAP   = document.getElementById('cm-globe-wrap');
+  const SCALE  = 0.26;   // ↓ smaller number = smaller globe (try 0.22–0.30)
+  const YSHIFT = -6;     // vertical nudge in %, negative = move up a bit
 
-  function fitOnce(){
-    // ClustrMaps may inject canvas/iframe/div; grab whichever appears
-    const w = WRAP.querySelector('canvas,iframe,svg,div:not(.globe-scale)');
-    if(!w) return false;
+  function styleNode(node){
+    // Only act on elements ClustrMaps may create
+    if(!(node instanceof HTMLElement)) return;
+    if(!/^(canvas|iframe|svg|div)$/i.test(node.tagName)) return;
 
-    // Create scaler if missing and move the widget into it
-    let scaler = WRAP.querySelector('.globe-scale');
-    if(!scaler){
-      scaler = document.createElement('div');
-      scaler.className = 'globe-scale';
-      WRAP.appendChild(scaler);
-    }
-    if(w.parentElement !== scaler){
-      scaler.appendChild(w);
-    }
-
-    // Center + scale
-    scaler.style.transform = `translate(-50%, ${YSHIFT}%) scale(${SCALE})`;
-    return true;
+    // Center + shrink
+    Object.assign(node.style, {
+      position: 'relative',
+      left: '50%',
+      transformOrigin: 'top center',
+      transform: `translate(-50%, ${YSHIFT}%) scale(${SCALE})`,
+      display: 'block'
+    });
   }
 
-  // Try immediately, then keep trying briefly until the widget appears
-  if(!fitOnce()){
-    let tries = 0;
-    const t = setInterval(()=>{
-      tries++;
-      if(fitOnce() || tries > 40) clearInterval(t); // ~2s max
-    }, 50);
-  }
+  // 1) If already present (after a reload), style immediately
+  WRAP.querySelectorAll('canvas,iframe,svg,div').forEach(styleNode);
+
+  // 2) Watch for whatever the script injects and style it
+  const mo = new MutationObserver(muts => {
+    for (const m of muts){
+      m.addedNodes && m.addedNodes.forEach(styleNode);
+      // Some widgets replace nodes; restyle existing children too
+      WRAP.querySelectorAll('canvas,iframe,svg,div').forEach(styleNode);
+    }
+  });
+  mo.observe(WRAP, {childList:true, subtree:true});
 })();
 </script>
 

@@ -690,10 +690,93 @@ html[data-theme="dark"]{
 </div>
 
 
-<!-- ClustrMaps Visitor Map -->
-<div id="visitor-map" style="margin-top: 10px; text-align: center;">
-  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
+<!-- ClustrMaps Visitor Map (theme-adaptive, bracket-safe) -->
+<div id="visitor-map" style="margin-top:10px; text-align:center;">
+  <div id="clustrmaps-container"></div>
 </div>
+
+<script>
+(function(){
+  // ---- Your constants (edit if needed) ----
+  var MAP_ID = "wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU"; // ClustrMaps d= hash
+  var WIDTH  = 460;    // width in px
+  var TYPE   = "tt";   // map type
+  var CL     = "2d78ad";
+  var CMO    = "3acc3a";
+  var CMN    = "ff5353";
+  // -----------------------------------------
+
+  var container = document.getElementById("clustrmaps-container");
+  if (!container) return;
+
+  function isDark(){
+    var html = document.documentElement;
+    var attr = (html.getAttribute("data-theme") || "").toLowerCase();
+    if (attr === "dark") return true;
+    if (attr === "light") return false;
+    return (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  }
+
+  function buildSrc(dark){
+    var bg  = dark ? "2b2b2b" : "ffffff"; // co (background)
+    var txt = dark ? "ffffff" : "000000"; // ct (text)
+    var params = [
+      "cl=" + CL,
+      "w="  + WIDTH,
+      "t="  + TYPE,
+      "d="  + MAP_ID,
+      "co=" + bg,
+      "cmo="+ CMO,
+      "cmn="+ CMN,
+      "ct=" + txt
+    ].join("&");
+    return "//cdn.clustrmaps.com/map_v2.js?" + params;
+  }
+
+  function mountMap(){
+    // wipe old widget/script
+    container.innerHTML = "";
+    var old = document.getElementById("clustrmaps-script");
+    if (old && old.parentNode){ old.parentNode.removeChild(old); }
+
+    // insert new script with theme params
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.id   = "clustrmaps-script";
+    s.src  = buildSrc(isDark());
+    container.style.display = "inline-block";
+    container.style.border  = "none";
+    container.appendChild(s);
+  }
+
+  // initial render
+  mountMap();
+
+  // re-render on data-theme changes (your site toggle)
+  var mo = new MutationObserver(function(muts){
+    for (var i=0; i<muts.length; i++){
+      if (muts[i].type === "attributes" && muts[i].attributeName === "data-theme"){
+        mountMap();
+        break;
+      }
+    }
+  });
+  mo.observe(document.documentElement, { attributes: true });
+
+  // re-render if system theme flips
+  if (window.matchMedia){
+    try{
+      var mq = window.matchMedia("(prefers-color-scheme: dark)");
+      if (mq.addEventListener){
+        mq.addEventListener("change", mountMap);
+      } else if (mq.addListener){
+        mq.addListener(mountMap);
+      }
+    }catch(e){}
+  }
+})();
+</script>
+
 
 <script>
 /* ===== Social icons: render 5 links (no sidebar dependency) ===== */

@@ -689,7 +689,7 @@ html[data-theme="dark"]{
   </ul>
 </div>
 
-<!-- ClustrMaps Globe (small & centered) -->
+<!-- ClustrMaps Globe (compact size) -->
 <div class="globe-wrap">
   <script
     type="text/javascript"
@@ -699,27 +699,27 @@ html[data-theme="dark"]{
 </div>
 
 <style>
-/* Size of the visible box (edit these) */
 .globe-wrap{
-  width: 320px;          /* your desired width */
-  height: 320px;         /* your desired height */
-  margin: 12px auto;     /* center on page */
-  overflow: hidden;      /* crop the oversized widget */
+  width: 260px;          /* reduce width */
+  height: 260px;         /* reduce height */
+  margin: 10px auto;     /* center the globe */
+  overflow: hidden;      /* crop extra edges */
 }
 
-/* Scale + center whatever the script injects (canvas/iframe/etc.) */
+/* Shrink and center the globe canvas */
 .globe-wrap > :first-child{
   position: relative !important;
   left: 50% !important;
-  transform: translate(-50%, -8%) scale(0.40) !important; /* tweak: move up & shrink */
+  transform: translate(-50%, -5%) scale(0.32) !important; /* smaller + slight vertical shift */
   transform-origin: top center !important;
   display: block;
 }
 
-/* (nice-to-have) ensure inner element can shrink properly */
 .globe-wrap canvas,
 .globe-wrap iframe,
-.globe-wrap svg{ display:block; }
+.globe-wrap svg{
+  display: block;
+}
 </style>
 
 

@@ -715,68 +715,56 @@ h2#news + .news-box{
 
 
 <!-- ClustrMaps (theme-adaptive background, centered, no borders) -->
-<div id="visitor-map" class="map-block">
-  <div id="clustrmaps-container"></div>
-</div>
+<div id="visitor-map" class="map-block"></div>
 
 <script>
 (function () {
-  // Keep your token ("d=") the same
-  const BASE = "//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU";
-  const CO_LIGHT = "ffffff";   // light background
-  const CO_DARK  = "2b2f36";   // dark grey background (matches your site)
-  const CMO = "3acc3a";        // marker (old) color
-  const CMN = "ff5353";        // marker (new) color
-  const CT_LIGHT = "000000";   // title text in light bg
-  const CT_DARK  = "ffffff";   // title text in dark bg
+  // Your existing token after d=
+  const TOKEN = "wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU";
+  const BASE  = "https://cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=" + TOKEN;
 
-  const holder = document.getElementById("clustrmaps-container");
-  if (!holder) return;
-
-  function theme() {
-    const stored = localStorage.getItem("theme");
-    if (stored) return stored;                                   // "light" | "dark"
+  // Decide theme once (localStorage choice > system preference)
+  function currentTheme() {
+    const s = localStorage.getItem("theme");
+    if (s) return s;                                  // "light" | "dark"
     return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
 
-  let last = null, t = null;
+  const theme = currentTheme();
+  const co    = theme === "dark" ? "2b2f36" : "ffffff";  // background color of the map
+  const ct    = theme === "dark" ? "ffffff" : "000000";  // title text color
 
-  function load() {
-    const th = theme();
-    if (th === last) return;
-    last = th;
+  const src = `${BASE}&co=${co}&cmo=3acc3a&cmn=ff5353&ct=${ct}`;
 
-    holder.innerHTML = "";                                       // clear previous map
-    const co = th === "dark" ? CO_DARK : CO_LIGHT;
-    const ct = th === "dark" ? CT_DARK : CT_LIGHT;
-    const s = document.createElement("script");
-    s.type = "text/javascript";
-    s.id = "clustrmaps";
-    s.src = `${BASE}&co=${co}&cmo=${CMO}&cmn=${CMN}&ct=${ct}`;
-    holder.appendChild(s);
-  }
+  // Ensure no duplicate script with id="clustrmaps"
+  const old = document.getElementById("clustrmaps");
+  if (old && old.parentNode) old.parentNode.removeChild(old);
 
-  function schedule() { clearTimeout(t); t = setTimeout(load, 50); }
+  const s = document.createElement("script");
+  s.type = "text/javascript";
+  s.id   = "clustrmaps";
+  s.src  = src;
 
-  // initial
-  schedule();
-
-  // reload when your toggle flips the html[data-theme]
-  new MutationObserver(schedule)
-    .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
-
-  // also react if the OS preference changes
-  try {
-    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", schedule);
-  } catch (_) {}
+  const holder = document.getElementById("visitor-map");
+  if (holder) holder.appendChild(s);
 })();
 </script>
 
 <style>
-/* centered, no borders */
-.map-block{ text-align:center; margin: 12px auto 0; background: transparent; border: 0; }
-.map-block canvas, .map-block svg, .map-block iframe{
-  display: inline-block; border: 0 !important; outline: 0 !important; box-shadow: none !important;
+/* Center align; no borders or extra chrome */
+.map-block{
+  text-align: center;
+  margin: 12px auto 0;      /* space from the news box; tweak if needed */
+  background: transparent;
+  border: 0;
+}
+.map-block canvas,
+.map-block svg,
+.map-block iframe{
+  display: inline-block;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
 }
 </style>
 

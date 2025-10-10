@@ -690,39 +690,42 @@ html[data-theme="dark"]{
 </div>
 
 
-<!-- ClustrMaps (theme-adaptive via CSS) -->
-<div id="visitor-map" class="visitor-map">
-  <!-- Light theme: white land + grey ocean -->
-  <a class="map-light" href="https://clustrmaps.com/site/1c7ji" title="Visit tracker">
-    <img alt="Visitor map (light)" 
-         src="//clustrmaps.com/map_v2.png?cl=080808&w=a&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&ct=808080" />
-  </a>
-
-  <!-- Dark theme: black land + white ocean (dark grey bg) -->
-  <a class="map-dark" href="https://clustrmaps.com/site/1c7ji" title="Visit tracker">
-    <img alt="Visitor map (dark)" 
-         src="//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=454545&ct=808080" />
+<!-- ClustrMaps (auto + manual dark/light support) -->
+<div id="visitor-map" style="margin-top:10px; text-align:center;">
+  <a href="https://clustrmaps.com/site/1c7ji" title="Visit tracker" style="display:inline-block;">
+    <!-- Light theme version: white land, grey ocean -->
+    <img
+      class="map-img map-light"
+      src="//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=454545&ct=808080"
+      alt="Visitor map (light)"
+      style="max-width:460px; width:100%; height:auto;"
+    />
+    <!-- Dark theme version: black land, white ocean -->
+    <img
+      class="map-img map-dark"
+      src="//clustrmaps.com/map_v2.png?cl=080808&w=a&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&ct=808080"
+      alt="Visitor map (dark)"
+      style="max-width:460px; width:100%; height:auto;"
+    />
   </a>
 </div>
 
 <style>
-  /* Centered, responsive, no borders */
-  .visitor-map { text-align:center; margin-top:10px; }
-  .visitor-map a { display:inline-block; border:0; line-height:0; }
-  .visitor-map img { max-width:100%; height:auto; border:0; }
+  /* Default: show light map, hide dark map */
+  .map-dark { display: none; }
+  .map-light { display: inline; }
 
-  /* Default: show light, hide dark */
-  .visitor-map .map-dark { display:none; }
-
-  /* If your toggle sets <html data-theme="dark"> */
-  html[data-theme="dark"] .visitor-map .map-light { display:none; }
-  html[data-theme="dark"] .visitor-map .map-dark  { display:inline-block; }
-
-  /* Fallback to system preference if data-theme isn’t set */
+  /* Respect system preference if you don't manually force a theme */
   @media (prefers-color-scheme: dark) {
-    html:not([data-theme]) .visitor-map .map-light { display:none; }
-    html:not([data-theme]) .visitor-map .map-dark  { display:inline-block; }
+    .map-light { display: none; }
+    .map-dark  { display: inline; }
   }
+
+  /* If your toggle sets <html data-theme="dark"> or "light", override */
+  html[data-theme="dark"]  .map-light { display: none !important; }
+  html[data-theme="dark"]  .map-dark  { display: inline !important; }
+  html[data-theme="light"] .map-light { display: inline !important; }
+  html[data-theme="light"] .map-dark  { display: none !important; }
 </style>
 
 

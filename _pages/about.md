@@ -649,12 +649,13 @@ html[data-theme="dark"]{
 
 <div class="news-box">
   <ul>
-    <li><strong>June 2024</strong>  Started working as a Research Associate under the guidance of Prof. M. Hanmandlu at IIT Delhi.</li>
-    <li><strong>April 2024</strong>  Offered admission to M.Tech. Robotics and Autonomous Systems Programme at IISc Bangalore.</li>
+    <li><strong>Sept 2025</strong>  our work, U-LAG, on uncertainty-aware, lag-adaptive goal retargeting, was accepted at the IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments.</li>
+    <li><strong>Sept 2025</strong>  our paper, SPARQ, on progress-aware, selective human-in-the-loop querying, was accepted at the CoRL 2025 Workshop on Resource-Rational Robot Learning.</li>
+    <li><strong>June 2024</strong>  Started working as a Research Associate under the guidance of Prof. M. Hanmandlu.</li>
     <li><strong>Feb 2024</strong>  A paper regarding assistive HRI accepted in ACM IUI 2024.</li>
     <li><strong>Nov 2023</strong>  A journal paper on computer-vision-based autonomous taxiing of aircraft accepted at <em>Aviation</em>.</li>
     <li><strong>Aug 2023</strong>  Joined as a Research Assistant at I3D Lab, Indian Institute of Science.</li>
-    <li><strong>Mar 2023</strong>  Ranked within top 1.58% among 70,361 candidates in ECE.</li>
+    <li><strong>Mar 2023</strong>  Qualified GATE 2023 (ECE) with top 1.58 percentile ranking among 70,000+ registered candidates.</li>
     <li><strong>Oct 2022</strong>  Started working as Simulation Developer at RobotX Workshops, Berlin.</li>
   </ul>
 </div>

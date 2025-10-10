@@ -75,30 +75,21 @@ redirect_from:
   column-gap: 40px;      /* slight horizontal gap tweak */
 }
 
-/* Align top nav with page content */
-:root{
-  --content-max: 1180px;   /* keep in sync with .page__content */
-  --content-pad: 24px;     /* side padding */
+/* Keep masthead aligned to the same content width + side padding */
+@media (min-width:1025px){
+  .masthead__inner-wrap{
+    max-width: 1180px;   /* same as .page__content max-width */
+    margin: 0 auto;      /* center it */
+    padding: 0 2cm;      /* same side padding you use for content */
+  }
+  /* keep even spacing between Home / Projects / CV */
+  .greedy-nav .visible-links > li + li { margin-left: 28px; }
 }
 
-.masthead .masthead__inner-wrap{
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 0 var(--content-pad);
-}
 
-.page__inner-wrap,
-.page__content{
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding-left: var(--content-pad);
-  padding-right: var(--content-pad);
-}
+  /* equal spacing between Home / Projects / CV */
+  .greedy-nav .visible-links > li + li { margin-left: 28px; }
 
-/* Nav layout: title left, links right */
-.masthead .greedy-nav{ display:flex; align-items:center; }
-.masthead .greedy-nav .site-title{ margin-right:auto; }
-.masthead .greedy-nav .visible-links{ margin-left:auto; display:flex; gap:20px; }
 
 /* === ~2cm gap between the big name and the photo/text === */
 .intro-grid{

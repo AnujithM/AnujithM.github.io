@@ -690,44 +690,10 @@ html[data-theme="dark"]{
 </div>
 
 
-<!-- ClustrMaps (auto + manual dark/light support) -->
-<div id="visitor-map" style="margin-top:10px; text-align:center;">
-  <a href="https://clustrmaps.com/site/1c7ji" title="Visit tracker" style="display:inline-block;">
-    <!-- Light theme version: white land, grey ocean -->
-    <img
-      class="map-img map-light"
-      src="//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=454545&ct=808080"
-      alt="Visitor map (light)"
-      style="max-width:460px; width:100%; height:auto;"
-    />
-    <!-- Dark theme version: black land, white ocean -->
-    <img
-      class="map-img map-dark"
-      src="//clustrmaps.com/map_v2.png?cl=080808&w=a&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&ct=808080"
-      alt="Visitor map (dark)"
-      style="max-width:460px; width:100%; height:auto;"
-    />
-  </a>
+<!-- ClustrMaps Visitor Map -->
+<div id="visitor-map" style="margin-top: 10px; text-align: center;">
+  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
 </div>
-
-<style>
-  /* Default: show light map, hide dark map */
-  .map-dark { display: none; }
-  .map-light { display: inline; }
-
-  /* Respect system preference if you don't manually force a theme */
-  @media (prefers-color-scheme: dark) {
-    .map-light { display: none; }
-    .map-dark  { display: inline; }
-  }
-
-  /* If your toggle sets <html data-theme="dark"> or "light", override */
-  html[data-theme="dark"]  .map-light { display: none !important; }
-  html[data-theme="dark"]  .map-dark  { display: inline !important; }
-  html[data-theme="light"] .map-light { display: inline !important; }
-  html[data-theme="light"] .map-dark  { display: none !important; }
-</style>
-
 
 <script>
 /* ===== Social icons: render 5 links (no sidebar dependency) ===== */

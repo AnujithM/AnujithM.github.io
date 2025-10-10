@@ -689,17 +689,38 @@ html[data-theme="dark"]{
   </ul>
 </div>
 
-<!-- ClustrMaps Globe Widget -->
-<div id="visitor-globe" style="margin-top:10px; text-align:center;">
+<!-- ClustrMaps Globe (scaled smaller) -->
+<div class="globe-box">
   <script
     type="text/javascript"
     id="clstr_globe"
     src="https://clustrmaps.com/globe.js?d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU">
   </script>
-  <noscript>
-    <a href="https://clustrmaps.com/site/1bw8o" title="Visitor Map">Visitor Map</a>
-  </noscript>
 </div>
+
+<style>
+/* Keep the globe nicely sized and centered */
+.globe-box{
+  max-width: 320px;     /* <- adjust this to your preferred width */
+  margin: 10px auto;    /* center it */
+}
+
+/* Make whatever the script injects (canvas/SVG/iframe) fit the box */
+.globe-box canvas,
+.globe-box svg,
+.globe-box iframe{
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* Fallback for widgets that ignore width/height: scale the whole thing down */
+@media (min-width: 0){
+  .globe-box > *:first-child{
+    transform-origin: top center;
+  }
+}
+</style>
 
 
 <script>

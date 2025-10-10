@@ -690,10 +690,41 @@ html[data-theme="dark"]{
 </div>
 
 
-<!-- ClustrMaps Visitor Map -->
-<div id="visitor-map" style="margin-top: 10px; text-align: center;">
-  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
+<!-- ClustrMaps (theme-adaptive via CSS) -->
+<div id="visitor-map" class="visitor-map">
+  <!-- Light theme: white land + grey ocean -->
+  <a class="map-light" href="https://clustrmaps.com/site/1c7ji" title="Visit tracker">
+    <img alt="Visitor map (light)" 
+         src="//clustrmaps.com/map_v2.png?cl=080808&w=a&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&ct=808080" />
+  </a>
+
+  <!-- Dark theme: black land + white ocean (dark grey bg) -->
+  <a class="map-dark" href="https://clustrmaps.com/site/1c7ji" title="Visit tracker">
+    <img alt="Visitor map (dark)" 
+         src="//clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=454545&ct=808080" />
+  </a>
 </div>
+
+<style>
+  /* Centered, responsive, no borders */
+  .visitor-map { text-align:center; margin-top:10px; }
+  .visitor-map a { display:inline-block; border:0; line-height:0; }
+  .visitor-map img { max-width:100%; height:auto; border:0; }
+
+  /* Default: show light, hide dark */
+  .visitor-map .map-dark { display:none; }
+
+  /* If your toggle sets <html data-theme="dark"> */
+  html[data-theme="dark"] .visitor-map .map-light { display:none; }
+  html[data-theme="dark"] .visitor-map .map-dark  { display:inline-block; }
+
+  /* Fallback to system preference if data-theme isn’t set */
+  @media (prefers-color-scheme: dark) {
+    html:not([data-theme]) .visitor-map .map-light { display:none; }
+    html:not([data-theme]) .visitor-map .map-dark  { display:inline-block; }
+  }
+</style>
+
 
 <script>
 /* ===== Social icons: render 5 links (no sidebar dependency) ===== */

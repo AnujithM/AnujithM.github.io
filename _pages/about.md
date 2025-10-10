@@ -546,29 +546,44 @@ html[data-theme="dark"]{
 .news-box a { color: var(--mila); }
 .news-box a:hover { color: var(--mila-hover); }
 
-/* ===== Tighten the gap between the last publication and "news" ===== */
+<!-- ClustrMaps (theme-adaptive background, centered, no borders) -->
+<div id="visitor-map" style="text-align:center; margin:12px auto 0;"></div>
 
-/* kill any divider right before the news heading */
-.page__content hr:has(+ h2#news){
-  display: none !important;
-}
+<script>
+/* Decide the background before loading the widget, then inject exactly one script.
+   This avoids the “hidden while loading” issue that can make the map vanish. */
+(function () {
+  var token = "wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU";  // keep yours
+  function theme() {
+    var s = localStorage.getItem("theme");
+    if (s) return s;  // "light" | "dark"
+    return (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  }
+  var dark = theme() === "dark";
+  var co   = dark ? "2b2f36" : "ffffff";   // map background color
+  var ct   = dark ? "ffffff" : "000000";   // title text color
 
-/* shrink the bottom space of the final pub row */
-.pub-row:last-of-type{
-  margin-bottom: 6px !important;   /* was larger before */
-  border-bottom: none !important;  /* no extra line */
-}
+  var url = "https://cdn.clustrmaps.com/map_v2.js"
+          + "?cl=2d78ad&w=460&t=tt"
+          + "&d=" + token
+          + "&co=" + co
+          + "&cmo=3acc3a&cmn=ff5353"
+          + "&ct=" + ct;
 
-/* pull the "news" heading up and keep a small bottom gap */
-.page__content h2#news{
-  margin-top: 6px !important;      /* reduce big top margin */
-  margin-bottom: 10px !important;  /* small space to the box */
-}
+  // Inject the script right here in the flow so ClustrMaps renders immediately
+  document.write('<scr' + 'ipt id="clustrmaps" src="' + url + '"></scr' + 'ipt>');
+})();
+</script>
 
-/* ensure the box sits close to the heading */
-h2#news + .news-box{
-  margin-top: 6px !important;
+<style>
+/* keep the widget clean: no borders/shadows; centered by its parent */
+#visitor-map canvas, #visitor-map svg, #visitor-map iframe{
+  display:inline-block;
+  border:0 !important;
+  outline:0 !important;
+  box-shadow:none !important;
 }
+</style>
 
 
 </style>

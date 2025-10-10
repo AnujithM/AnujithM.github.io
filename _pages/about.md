@@ -546,6 +546,30 @@ html[data-theme="dark"]{
 .news-box a { color: var(--mila); }
 .news-box a:hover { color: var(--mila-hover); }
 
+/* ===== Tighten the gap between the last publication and "news" ===== */
+
+/* kill any divider right before the news heading */
+.page__content hr:has(+ h2#news){
+  display: none !important;
+}
+
+/* shrink the bottom space of the final pub row */
+.pub-row:last-of-type{
+  margin-bottom: 6px !important;   /* was larger before */
+  border-bottom: none !important;  /* no extra line */
+}
+
+/* pull the "news" heading up and keep a small bottom gap */
+.page__content h2#news{
+  margin-top: 6px !important;      /* reduce big top margin */
+  margin-bottom: 10px !important;  /* small space to the box */
+}
+
+/* ensure the box sits close to the heading */
+h2#news + .news-box{
+  margin-top: 6px !important;
+}
+
 
 </style>
 

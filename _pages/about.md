@@ -546,6 +546,11 @@ html[data-theme="dark"]{
 .news-box a { color: var(--mila); }
 .news-box a:hover { color: var(--mila-hover); }
 
+/* last-resort scaling if the widget forces a fixed size */
+.globe-box > *:first-child{
+  transform: scale(0.45);   /* smaller = lower number */
+}
+.globe-box{ height: 360px; } /* adjust to avoid overflow when scaling */
 
 </style>
 

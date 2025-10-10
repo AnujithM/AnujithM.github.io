@@ -649,8 +649,8 @@ html[data-theme="dark"]{
 
 <div class="news-box">
   <ul>
-    <li><strong>Sept 2025</strong>  our work, U-LAG, on uncertainty-aware, lag-adaptive goal retargeting, was accepted at the IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments.</li>
-    <li><strong>Sept 2025</strong>  our paper, SPARQ, on progress-aware, selective human-in-the-loop querying, was accepted at the CoRL 2025 Workshop on Resource-Rational Robot Learning.</li>
+    <li><strong>Sept 2025</strong>  Our work, U-LAG, on uncertainty-aware, lag-adaptive goal retargeting, was accepted at the IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments.</li>
+    <li><strong>Sept 2025</strong>  Our paper, SPARQ, on progress-aware, selective human-in-the-loop querying, was accepted at the CoRL 2025 Workshop on Resource-Rational Robot Learning.</li>
     <li><strong>June 2024</strong>  Started working as a Research Associate under the guidance of Prof. M. Hanmandlu.</li>
     <li><strong>Feb 2024</strong>  A paper regarding assistive HRI accepted in ACM IUI 2024.</li>
     <li><strong>Nov 2023</strong>  A journal paper on computer-vision-based autonomous taxiing of aircraft accepted at <em>Aviation</em>.</li>

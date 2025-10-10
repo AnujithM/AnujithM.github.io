@@ -516,6 +516,35 @@ html[data-theme="dark"]{
   content: none !important;
   display: none !important;
 }
+/* ===== News list: date column + gutter (like the reference) ===== */
+/* markup you already use: <li><strong>Sept 2025</strong> Your text…</li> */
+
+.news-box ul { list-style: none; padding-left: 0; margin: 0; }
+
+/* create a 2-column feel: fixed date column + flowing content */
+.news-box li{
+  position: relative;
+  padding-left: 118px;        /* = date column (90) + gutter (28) */
+  margin: 0 0 14px 0;         /* spacing between items */
+  line-height: 1.6;
+}
+
+/* the date (your first <strong>) sits in the left column */
+.news-box li strong:first-child{
+  position: absolute;
+  left: 16px;                 /* inner left padding of the box */
+  top: 0;
+  width: 90px;                /* date column width */
+  text-align: left;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+  white-space: normal;        /* allow wrap if the date is long */
+}
+
+/* keep links readable and on-brand */
+.news-box a { color: var(--mila); }
+.news-box a:hover { color: var(--mila-hover); }
 
 
 </style>

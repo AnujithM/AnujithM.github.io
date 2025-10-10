@@ -6,6 +6,8 @@
 # `jekyll serve -l -H localhost`. If you change this file, please restart the 
 # server process.
 # --- Force GitHub Pages to NOT use a gem theme ---
+include:
+  - google6cf31b1aa6879b9c.html
 theme                    : null
 # -------------------------------------------------
 

@@ -546,6 +546,14 @@ html[data-theme="dark"]{
 .news-box a { color: var(--mila); }
 .news-box a:hover { color: var(--mila-hover); }
 
+/* Remove the "Follow" button on mobile */
+@media (max-width: 768px){
+  .author__urls-wrapper,
+  .author__urls-wrapper .btn,
+  .author__urls-wrapper .btn--inverse {
+    display: none !important;
+  }
+}
 
 </style>
 

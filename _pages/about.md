@@ -714,10 +714,72 @@ h2#news + .news-box{
 </div>
 
 
-<!-- ClustrMaps Visitor Map -->
-<div id="visitor-map" style="margin-top: 10px; text-align: center;">
-  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
+<!-- ClustrMaps (theme-adaptive background, centered, no borders) -->
+<div id="visitor-map" class="map-block">
+  <div id="clustrmaps-container"></div>
 </div>
+
+<script>
+(function () {
+  // Keep your token ("d=") the same
+  const BASE = "//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU";
+  const CO_LIGHT = "ffffff";   // light background
+  const CO_DARK  = "2b2f36";   // dark grey background (matches your site)
+  const CMO = "3acc3a";        // marker (old) color
+  const CMN = "ff5353";        // marker (new) color
+  const CT_LIGHT = "000000";   // title text in light bg
+  const CT_DARK  = "ffffff";   // title text in dark bg
+
+  const holder = document.getElementById("clustrmaps-container");
+  if (!holder) return;
+
+  function theme() {
+    const stored = localStorage.getItem("theme");
+    if (stored) return stored;                                   // "light" | "dark"
+    return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+
+  let last = null, t = null;
+
+  function load() {
+    const th = theme();
+    if (th === last) return;
+    last = th;
+
+    holder.innerHTML = "";                                       // clear previous map
+    const co = th === "dark" ? CO_DARK : CO_LIGHT;
+    const ct = th === "dark" ? CT_DARK : CT_LIGHT;
+    const s = document.createElement("script");
+    s.type = "text/javascript";
+    s.id = "clustrmaps";
+    s.src = `${BASE}&co=${co}&cmo=${CMO}&cmn=${CMN}&ct=${ct}`;
+    holder.appendChild(s);
+  }
+
+  function schedule() { clearTimeout(t); t = setTimeout(load, 50); }
+
+  // initial
+  schedule();
+
+  // reload when your toggle flips the html[data-theme]
+  new MutationObserver(schedule)
+    .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+  // also react if the OS preference changes
+  try {
+    matchMedia("(prefers-color-scheme: dark)").addEventListener("change", schedule);
+  } catch (_) {}
+})();
+</script>
+
+<style>
+/* centered, no borders */
+.map-block{ text-align:center; margin: 12px auto 0; background: transparent; border: 0; }
+.map-block canvas, .map-block svg, .map-block iframe{
+  display: inline-block; border: 0 !important; outline: 0 !important; box-shadow: none !important;
+}
+</style>
+
 
 <script>
 /* ===== Social icons: render 5 links (no sidebar dependency) ===== */

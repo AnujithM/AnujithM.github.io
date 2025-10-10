@@ -555,6 +555,18 @@ html[data-theme="dark"]{
   }
 }
 
+
+/* Remove the author profile card on mobile (kills the leftover gap) */
+@media (max-width: 768px){
+  .page__content > .h-card,
+  .page__content > .author__profile,
+  .author__urls-wrapper { 
+    display: none !important;
+  }
+  /* safety: nuke any margins if the theme keeps the node */
+  .h-card { margin: 0 !important; padding: 0 !important; }
+}
+
 </style>
 
 <!-- Photo + caption (floats left; text flows on the right) -->

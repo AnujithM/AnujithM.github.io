@@ -678,9 +678,9 @@ html[data-theme="dark"]{
 
 <div class="news-box">
   <ul>
-    <li><strong>Sept 2025</strong>  Our work, U-LAG, on uncertainty-aware, lag-adaptive goal retargeting, was accepted at the <a href="https://autonomousrobots.nl/workshops/2025-iros" target="_blank" rel="noopener">IROS 2025 Workshop on Perception and Planning for Mobile Manipulation in Changing Environments</a>.</li>
-    <li><strong>Sept 2025</strong>  Our paper, SPARQ, on progress-aware, selective human-in-the-loop querying, was accepted at the <a href="https://rational-robots.github.io/" target="_blank" rel="noopener">CoRL 2025 Workshop on Resource-Rational Robot Learning</a>.</li>
-    <li><strong>June 2024</strong>  Started working as a Research Associate under the guidance of Prof. M. Hanmandlu.</li>
+    <li><strong>Sept 2025</strong>  Our work, U-LAG, on uncertainty-aware, lag-adaptive goal retargeting, was accepted at the IROS 2025 Workshop on<a href="https://autonomousrobots.nl/workshops/2025-iros" target="_blank" rel="noopener">Perception and Planning for Mobile Manipulation in Changing Environments</a>.</li>
+    <li><strong>Sept 2025</strong>  Our paper, SPARQ, on progress-aware, selective human-in-the-loop querying, was accepted at the CoRL 2025 Workshop on<a href="https://rational-robots.github.io/" target="_blank" rel="noopener">Resource-Rational Robot Learning</a>.</li>
+    <li><strong>June 2024</strong>  Started working as a Research Associate under the guidance of <a href="https://ctech.iitd.ac.in/hanmandlu.html" target="_blank" rel="noopener">Prof. M Hanmandlu</a>.</li>
     <li><strong>Feb 2024</strong>  A paper regarding assistive HRI accepted in <a href="https://iui.acm.org/2024/proceedings.html" target="_blank" rel="noopener">ACM IUI 2024</a>.</li>
     <li><strong>Nov 2023</strong>  A journal paper on computer-vision-based autonomous taxiing of aircraft accepted at <a href="https://journals.vilniustech.lt/index.php/Aviation/article/view/20588" target="_blank" rel="noopener"><em>Aviation</em></a>.</li>
     <li><strong>Aug 2023</strong>  Joined as a Research Assistant at <a href="https://cambum.net/I3D.htm" target="_blank" rel="noopener">I3D Lab</a>, Indian Institute of Science.</li>

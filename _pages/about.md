@@ -566,6 +566,21 @@ html[data-theme="dark"]{
   /* safety: nuke any margins if the theme keeps the node */
   .h-card { margin: 0 !important; padding: 0 !important; }
 }
+/* Kill the extra space under the header + above the footer on mobile */
+@media (max-width: 768px){
+  /* top side */
+  .masthead{ margin-bottom: 0 !important; }
+  #main, .initial-content, .page, .page__inner-wrap{
+    padding-top: 6px !important;   /* was ~2em */
+  }
+  .page__content > :first-child{ margin-top: 0 !important; } /* your H1 */
+
+  /* bottom side */
+  .page, .page__inner-wrap, .page__content{
+    padding-bottom: 6px !important;
+  }
+  .page__content > :last-child{ margin-bottom: 0 !important; }
+}
 
 </style>
 

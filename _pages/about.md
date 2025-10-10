@@ -689,11 +689,18 @@ html[data-theme="dark"]{
   </ul>
 </div>
 
-
-<!-- ClustrMaps Visitor Map -->
-<div id="visitor-map" style="margin-top: 10px; text-align: center;">
-  <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=2d78ad&w=460&t=tt&d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=000000'></script>
+<!-- ClustrMaps Globe Widget -->
+<div id="visitor-globe" style="margin-top:10px; text-align:center;">
+  <script
+    type="text/javascript"
+    id="clstr_globe"
+    src="https://clustrmaps.com/globe.js?d=wgbk0X6esLxDulxNcW-HfijKARwiI6c1OHBgMMi-ZmU">
+  </script>
+  <noscript>
+    <a href="https://clustrmaps.com/site/1bw8o" title="Visitor Map">Visitor Map</a>
+  </noscript>
 </div>
+
 
 <script>
 /* ===== Social icons: render 5 links (no sidebar dependency) ===== */

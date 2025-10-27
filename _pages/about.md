@@ -619,7 +619,7 @@ html[data-theme="dark"]{
 
 <!-- ######## U-LAG ######## -->
 <div class="pub-row">
-  <img src="/images/ulagg.gif" alt="U-LAG" class="pub-thumb">
+  <img src="/images/ulag.webp" alt="U-LAG" class="pub-thumb">
   <div class="pub-body">
     <span class="pub-year">2025</span>
     <div class="pub-title">U-LAG: Uncertainty-Aware, Lag-Adaptive Goal Retargeting for Robotic Manipulation</div>

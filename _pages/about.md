@@ -742,7 +742,7 @@ html[data-theme="dark"]{
 <script>
 (function(){
   const WRAP   = document.getElementById('cm-globe-wrap');
-  const SCALE  = 0.26;   // ↓ smaller number = smaller globe (try 0.22–0.30)
+  const SCALE  = 0.20;   // ↓ smaller number = smaller globe (try 0.22–0.30)
   const YSHIFT = -6;     // vertical nudge in %, negative = move up a bit
 
   function styleNode(node){

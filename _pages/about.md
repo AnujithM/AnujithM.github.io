@@ -595,7 +595,7 @@ html[data-theme="dark"]{
   <div class="photo-caption">
     <!--<div class="aka">a.k.a <strong>ToNY</strong></div>-->
     <div class="role">Research Engineer</div>
-    <div class="email">AnujithM[at]mbzuai[dot]ac[dot]ae</div>
+    <div class="email">Anujith[dot]M[at]mbzuai[dot]ac[dot]ae</div>
   </div>
 </div>
 
